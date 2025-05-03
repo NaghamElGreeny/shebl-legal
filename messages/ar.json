@@ -2,5 +2,8 @@
     "HomePage": {
       "title": "مرحبااا ...",
       "about": "من نحن -> "
+    },
+    "AboutPage":{
+"ourVision" : "نغم محمد ... ^_^"
     }
   }

@@ -3,10 +3,12 @@ import { Link } from "@/i18n/navigation";
 
 export default function HomePage() {
   const t = useTranslations("HomePage");
+  const ab = useTranslations("AboutPage");
   return (
     <div>
       <h1>{t("title")}</h1>
       <Link href="/about">{t("about")}</Link>
+      <p>{ab("ourVision")}</p>
     </div>
   );
 }
