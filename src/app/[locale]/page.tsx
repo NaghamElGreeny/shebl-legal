@@ -8,7 +8,7 @@ export default function HomePage() {
     <div>
       <h1>{t("title")}</h1>
       <Link href="/about">{t("about")}</Link>
-      <p className="bg-red-700 text-rose-300">{ab("ourVision")}</p>
+      <p className="md:bg-red-700 bg-green-500   text-rose-300 vision">{ab("ourVision")}</p>
       <h1 className="text-xl font-bold underline text-green-600">
         Hello world!
       </h1>

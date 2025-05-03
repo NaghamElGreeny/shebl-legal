@@ -1,11 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* :root {
+:root {
   --background: #ffffff;
-  --foreground: #e68c8c;
+  --foreground: #00e30b;
 }
-
+$main-color: #d4c266;
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -24,4 +24,14 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-} */
+  .vision {
+    // background-color: rgb(74 222 128 / var(--tw-bg-opacity, 1));
+   color: $main-color;
+   @apply bg-gray-500 #{!important};
+  }
+}
+@media (screen(sm)) {
+  .vision {
+    background-color: blue;
+  }
+}
