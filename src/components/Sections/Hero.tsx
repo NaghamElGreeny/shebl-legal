@@ -8,22 +8,36 @@ import ContactBtn from '../ui/ContactBtn';
 export default function HeroSection() {
     const t = useTranslations("Hero");
     return (
-        <div className="hero-section flex bg-[url('/assets/images/hero-bg.jpg')] bg-cover">
-            <div className="hero-container">
-                <div className="title flex wrap">
+        <div className="hero-section flex flex-col bg-[url('/assets/images/hero-bg.jpg')] bg-cover">
+            <div className="hero-container lg:ps-12 md:ps-12 sm:ps-3 xs:ps-3 lg:p-48 pt-[150px] ">
+                <div className="title flex wrap ">
                     <img src={'/assets/icons/hero-title-icon.png'} />
                     <p>{t("title")}</p>
                 </div>
                 <div className="description">
-                    <h1>{t("description")} </h1>
-                    <p> {t("subDescription")} </p>
+                    <h1 className='font-semibold lg:text-[80px] md:text-[60px] sm:text-[50px]'>{t("description")} </h1>
+                    <p className='font-normal sm:text-sm text-xl'> {t("subDescription")} </p>
                 </div>
                 <div className="contact flex wrap items-center">
                     <ContactBtn />
                     <p> {t("contactAdvice")} </p>
                 </div>
             </div>
+            <div className="features flex wrap  overflow-x-auto">
+                <div className="feature-card min-w-[330px]">
+                    <img src={'/assets/icons/hero-1.png'} />
+                    <div>{t("card1")}</div>
+                </div>
+                <div className="feature-card min-w-[330px]">
+                    <img src={'/assets/icons/hero-2.png'} />
+                    <div>{t("card2")}</div>
+                </div>
+                <div className="feature-card min-w-[330px]">
+                    <img src={'/assets/icons/hero-3.png'} />
+                    <div>{t("card3")}</div>
+                </div>
 
+            </div>
         </div>
     );
 }

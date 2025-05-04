@@ -1,2 +1,33 @@
 @import './theme/dark.scss';
 @import './theme/light.scss';
+
+// عشان اعمل دارك مود
+:root {
+    --main-color: #111;
+    --bg-color: #fff;
+    --bg-color: #F2F4F5;
+    --card: #FCFAF8;
+    --card-icon: #FFFFFF;
+    --font-main: #000000;
+    --font-sub1: #666666;
+    --font-sub2: #B3B3B3;
+    --primary-btn: #CC966A;
+    --primary-btn-icon: #ffffff66;
+    --secondary-btn: #FFFFFF24;
+    --secondary-btn-icon: #c1987766;
+}
+
+.dark {
+    --main-color: #fff;
+    --bg-color: #111;
+    $dark-bg-color: #001C34;
+    --card: #1A3348;
+    --card-icon: #33495D;
+    --font-main: #FFFFFF;
+    --font-sub1: #E5E5E5;
+    --font-sub2: #B3B3B3;
+    --primary-btn: #C19877;
+    --primary-btn-icon: #ffffff66;
+    --secondary-btn: #FFFFFF24;
+    --secondary-btn-icon: #c1987766;
+}

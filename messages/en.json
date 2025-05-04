@@ -29,7 +29,10 @@
     "title": "One of the best law firms",
     "description": "Legal solutions tailored to your individual and corporate needs",
     "subDescription": "We put our clients' interests first and strive to achieve the best possible results in every case.",
-    "contactAdvice": "Do not hesitate to seek legal advice."
+    "contactAdvice": "Do not hesitate to seek legal advice.",
+    "card1": "A team of certified and qualified lawyers",
+    "card2": "Legal successes proven by our valued clients",
+    "card3": "Extensive experience in all legal specialties"
   },
   "Footer": {
     "title": "شبل القانونية",
