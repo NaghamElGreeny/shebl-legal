@@ -1,9 +1,16 @@
 {
-    "HomePage": {
-      "title": "Hello world!",
-      "about": "Go to the about page"
-    },
-       "AboutPage":{
-      "ourVision" : "Nagham Mohammed... ^_^"
-          }
+  "HomePage": {
+    "title": "Hello world!",
+    "about": "Go to the about page",
+    "aboutUs": "about us",
+    "ourServices": "services",
+    "commonQuestions": "common questions",
+    "contactUs": "contact us",
+    "description": "Legal solutions tailored to meet your individual and corporate needs.",
+    "subDescription": "We put our clients' interests first and strive to achieve the best possible results in every case.",
+    "contact-advice": "Do not hesitate to seek legal advice."
+  },
+  "AboutPage": {
+    "ourVision": "Nagham Mohammed... ^_^"
   }
+}

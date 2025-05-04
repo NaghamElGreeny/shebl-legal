@@ -1,11 +1,71 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 :root {
   --background: #ffffff;
   --foreground: #00e30b;
 }
-$main-color: #d4c266;
+
+$main-color: #F2F4F5;
+
+@layer base {
+  @font-face {
+    font-family: "Din";
+    font-weight: 300;
+    src: url("../../public/assets/fonts/din/ArbFONTS-DINNEXTLTARABIC-LIGHT-.ttf");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Din";
+    font-weight: 400;
+    src: url("../../public/assets/fonts/din/ArbFONTS-DINNextLTArabic-Regular.ttf");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Din";
+    font-weight: 400;
+    src: url("../../public/assets/fonts/din/ArbFONTS-DINNextLTArabic-Regular.ttf");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Din";
+    font-weight: 500;
+
+    src: url("../../public/assets/fonts/din/ArbFONTS-DINNextLTArabic-Medium.ttf");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Din";
+    font-weight: 600;
+
+    src: url("../../public/assets/fonts/din/ArbFONTS-DINNextLTArabic-Heavy.ttf");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Din";
+    font-weight: 700;
+
+    src: url("../../public/assets/fonts/din/ArbFONTS-DINNextLTArabic-Bold.ttf");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Din";
+    font-weight: 900;
+    src: url("../../public/assets/fonts/din/ArbFONTS-DINNextLTArabic-Black.ttf");
+    font-display: swap;
+  }
+
+
+
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -15,7 +75,7 @@ $main-color: #d4c266;
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #193210;
     --foreground: #ededed;
   }
 }
@@ -23,13 +83,18 @@ $main-color: #d4c266;
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  height: 250vh;
+  // font-family: Arial, Helvetica, sans-serif;
+  @apply font-[din];
+
   .vision {
     // background-color: rgb(74 222 128 / var(--tw-bg-opacity, 1));
-   color: $main-color;
-   @apply bg-gray-500 #{!important};
+    color: $main-color;
+
+    //  @apply bg-gray-500 #{!important};
   }
 }
+
 @media (screen(sm)) {
   .vision {
     background-color: blue;

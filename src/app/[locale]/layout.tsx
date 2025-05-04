@@ -2,9 +2,10 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import "../globals.scss";
-export const metadata = {
-  title: "Shebl",
-};
+import Navbar from "@/components/layout/Navbar";
+// export const metadata = {
+//   title: "SHEBL",
+// };
 export default async function LocaleLayout({
   children,
   params,
@@ -20,7 +21,11 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
+      <head>
+      <title>{locale === "ar" ? "شبل" : "shebl"}</title>
+      </head>
       <body>
+        <Navbar />
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>
     </html>
