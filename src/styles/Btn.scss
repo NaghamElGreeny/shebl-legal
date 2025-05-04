@@ -1,0 +1,19 @@
+@import './variables';
+
+.contact-btn {
+    background-color: $light-primary-btn;
+    color: $light-font-main;
+    visibility: visible;
+    width: 124;
+    height: 48;
+    border-radius: 40px;
+    gap: 8px;
+    padding: 16px;
+
+    .btn-icon {
+        width: 20px;
+        height: 20px;
+        background-color: $light-primary-btn-icon;
+        border-radius: 50%;
+    }
+}

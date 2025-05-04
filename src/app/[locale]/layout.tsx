@@ -22,11 +22,14 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
       <head>
-      <title>{locale === "ar" ? "شبل" : "shebl"}</title>
+        <title>{locale === "ar" ? "شبل" : "shebl"}</title>
+        <link rel="icon" href="/assets/logo/logo-head.png" />
       </head>
       <body>
-        <Navbar />
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider>
+          <Navbar />
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );
