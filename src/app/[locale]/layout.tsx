@@ -29,7 +29,7 @@ export default async function LocaleLayout({
       <body>
 
         <NextIntlClientProvider>
-          <div className="wrapper bg-gray-500 w-full h-full">
+          <div className="wrapper  w-full h-full">
             <Navbar />
             {children}
             {/* <Footer /> */}

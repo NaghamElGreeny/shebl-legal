@@ -11,10 +11,38 @@
         height: 100%;
         background: linear-gradient(180deg, rgba(0, 28, 52, 0.9) 6.45%, rgba(0, 28, 52, 0.4) 100%);
         box-sizing: content-box;
-        margin: 293px 48pxx;
+        padding: 200px;
+        padding-inline-start: 48px;
         display: flex;
         flex-wrap: wrap;
-        flex-direction: row;
-        gap: 88px
+        flex-direction: column;
+        gap: 24px;
+
+        .description {
+            h1 {
+                font-family: Ya Modern Pro;
+                font-weight: 600;
+                font-size: 80px;
+                word-spacing: 2%;
+
+            }
+
+            p {
+                font-family: din;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 100%;
+                margin-top: 24px;
+            }
+        }
+
+        .contact {
+            margin-top: 36px;
+            gap: 16px;
+
+            p {
+                color: $light-font-sub2;
+            }
+        }
     }
 }

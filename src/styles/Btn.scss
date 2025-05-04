@@ -2,20 +2,21 @@
 
 .contact-primary-btn {
     background-color: $light-primary-btn;
-    color: $light-font-main;
+    color: $dark-font-main;
     visibility: visible;
-    width: 124px;
+    width: 171px;
     height: 48px;
     border-radius: 40px;
     gap: 8px;
     padding: 16px;
+    align-items: center;
     cursor: pointer;
 
     .btn-text {
         font-family: din;
         color: $dark-font-main;
         font-weight: 700;
-        font-size: 14px;
+        font-size: 13px;
         line-height: 100%;
     }
 
@@ -30,7 +31,7 @@
 
         img {
             width: 12px;
-            // transform: scaleX(-1);
         }
     }
+
 }
