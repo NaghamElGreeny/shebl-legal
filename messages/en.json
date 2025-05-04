@@ -18,5 +18,23 @@
     "services": "Services",
     "faq": "FAQ",
     "contact": "Contact Us"
+  },
+  "Btns": {
+    "contact": "Contact Us",
+    "moreAbout": "More about Us",
+    "reserve": "Book your legal consultation",
+    "showAll": "Show all"
+  },
+  "Hero": {
+    "title": "من أفضل مكاتب المحاماة",
+    "description": "Legal solutions tailored to your individual and corporate needs",
+    "subDescription": "We put our clients' interests first and strive to achieve the best possible results in every case.",
+    "contactAdvice": "Do not hesitate to seek legal advice."
+  },
+  "Footer": {
+    "title": "شبل القانونية",
+    "description": "Learn about our vision, mission, and values. Discover the story of our firm's founding and the legal journey that has made us one of the most prominent law firms. We work with dedication to achieving justice and serving our clients.",
+    "Terms": "Terms and Conditions",
+    "privacyPolicy": "Privacy policy"
   }
 }

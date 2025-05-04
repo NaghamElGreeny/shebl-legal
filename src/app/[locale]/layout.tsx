@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import "../globals.scss";
 import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 // export const metadata = {
 //   title: "SHEBL",
 // };
@@ -26,9 +27,14 @@ export default async function LocaleLayout({
         <link rel="icon" href="/assets/logo/logo-head.png" />
       </head>
       <body>
+
         <NextIntlClientProvider>
-          <Navbar />
-          {children}
+          <div className="wrapper bg-gray-500 w-full h-full">
+            <Navbar />
+            {children}
+            {/* <Footer /> */}
+          </div>
+
         </NextIntlClientProvider>
       </body>
     </html>

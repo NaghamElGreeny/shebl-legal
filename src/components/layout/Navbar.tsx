@@ -4,12 +4,12 @@ import '../../styles/Nav.scss'
 import Link from "next/link";
 import { useTranslations, useLocale } from 'next-intl';
 import { useRouter, usePathname } from 'next/navigation';
-import ContactBtn from '../ui/ContactBtn';
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const t = useTranslations('Nav');
+    const tBtn = useTranslations('Btns');
     const locale = useLocale();
     const router = useRouter();
     const pathname = usePathname();
@@ -39,12 +39,10 @@ export default function Navbar() {
             } `}>
             <div className='logodiv px-2'>
                 <Link href="/" className="flex items-center space-x-8  rtl:space-x-reverse">
-                    <img src={"/assets/logo/Layer 1.png"} className='h-10' alt="shebl-logo" />
+                    <img src={"/assets/logo/Logo-main.png"} className='h-10' alt="shebl-logo" />
                 </Link>
             </div>
             <div className="flex md:order-2 space-x-1 md:space-x-2 rtl:space-x-reverse ">
-
-
                 <button
                     onClick={toggleLocale}
                     className="items-center px-2 py-1 flex flex-row gap-1 "
@@ -54,7 +52,7 @@ export default function Navbar() {
                 </button>
 
                 <div className="contact-btn invisible !sm:invisible flex flex-row justify-around content-center gap-1">
-                    <div className="btn-text">contact us</div>
+                    <div className="btn-text">{tBtn("contact")}</div>
                     <div className="btn-icon">
                         <img src={"/assets/icons/vector.png"} alt="arrow-vector" />
                     </div>

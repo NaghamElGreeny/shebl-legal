@@ -1,0 +1,20 @@
+@import './variables';
+
+.hero-section {
+    width: 100%;
+    height: min(1042px);
+    display: flex;
+    position: static;
+
+    .hero-container {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, rgba(0, 28, 52, 0.9) 6.45%, rgba(0, 28, 52, 0.4) 100%);
+        box-sizing: content-box;
+        margin: 293px 48pxx;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 88px
+    }
+}

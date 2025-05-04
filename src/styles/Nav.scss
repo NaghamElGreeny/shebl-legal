@@ -27,7 +27,7 @@ nav {
                 font-family: din;
                 color: $dark-font-main;
                 font-weight: 700;
-                font-size: 14px;
+                font-size: 13px;
                 line-height: 100%;
             }
 
@@ -47,11 +47,17 @@ nav {
         }
     }
 
-    // .logodiv {
-    //     width: 470px;
-    //     height: 50px;
-    //     padding-right: 50px;
-    //     display: flex;
-    //     align-items: center;
-    // }
+    .logodiv {
+        // width: 470px;
+        // height: 50px;
+        // padding-right: 50px;
+        // display: flex;
+        // align-items: center;
+        // @apply: md:w-[470px] md:h-[50px];
+
+        img {
+            width: 57px;
+            height: 72px;
+        }
+    }
 }

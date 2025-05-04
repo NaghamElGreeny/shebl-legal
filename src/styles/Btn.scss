@@ -1,19 +1,36 @@
 @import './variables';
 
-.contact-btn {
+.contact-primary-btn {
     background-color: $light-primary-btn;
     color: $light-font-main;
     visibility: visible;
-    width: 124;
-    height: 48;
+    width: 124px;
+    height: 48px;
     border-radius: 40px;
     gap: 8px;
     padding: 16px;
+    cursor: pointer;
+
+    .btn-text {
+        font-family: din;
+        color: $dark-font-main;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 100%;
+    }
 
     .btn-icon {
         width: 20px;
         height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         background-color: $light-primary-btn-icon;
         border-radius: 50%;
+
+        img {
+            width: 12px;
+            // transform: scaleX(-1);
+        }
     }
 }

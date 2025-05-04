@@ -1,0 +1,13 @@
+@import './variables';
+
+footer {
+    width: 100%;
+    // bottom: 0;
+    // top: 100vh;
+
+    .foot-container {
+
+        background: linear-gradient(286.75deg, rgba(2, 28, 50, 0) 47.19%, #021C32 72.94%),
+            linear-gradient(0deg, rgba(0, 28, 52, 0.9), rgba(0, 28, 52, 0.9));
+    }
+}

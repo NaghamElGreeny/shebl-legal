@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import '../styles/variables.scss';
 
 :root {
   --background: #ffffff;
@@ -81,7 +82,10 @@ $main-color: #F2F4F5;
 }
 
 body {
-  background: var(--background);
+  margin: 0;
+  padding: 0;
+  min-width: 100%;
+  background: $light-bg-color;
   color: var(--foreground);
   height: 250vh;
   @apply font-[din];
