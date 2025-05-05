@@ -23,7 +23,8 @@
     "contact": "Contact Us",
     "moreAbout": "More about Us",
     "reserve": "Book your legal consultation",
-    "showAll": "Show all"
+    "showAll": "Show all",
+    "arrow": "/assets/icons/vectoren.png"
   },
   "Hero": {
     "title": "One of the best law firms",
@@ -35,7 +36,7 @@
     "card3": "Extensive experience in all legal specialties"
   },
   "Footer": {
-    "title": "شبل القانونية",
+    "title": "Legal Shebl",
     "description": "Learn about our vision, mission, and values. Discover the story of our firm's founding and the legal journey that has made us one of the most prominent law firms. We work with dedication to achieving justice and serving our clients.",
     "Terms": "Terms and Conditions",
     "privacyPolicy": "Privacy policy"

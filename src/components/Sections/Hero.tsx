@@ -23,7 +23,7 @@ export default function HeroSection() {
                     <p> {t("contactAdvice")} </p>
                 </div>
             </div>
-            <div className="features flex wrap  overflow-x-auto">
+            <div className="features z-2 flex wrap  overflow-x-auto">
                 <div className="feature-card min-w-[330px]">
                     <img src={'/assets/icons/hero-1.png'} />
                     <div>{t("card1")}</div>

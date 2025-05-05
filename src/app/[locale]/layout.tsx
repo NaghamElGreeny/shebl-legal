@@ -32,7 +32,7 @@ export default async function LocaleLayout({
           <div className="wrapper  w-full h-full">
             <Navbar />
             {children}
-            {/* <Footer /> */}
+            <Footer />
           </div>
 
         </NextIntlClientProvider>

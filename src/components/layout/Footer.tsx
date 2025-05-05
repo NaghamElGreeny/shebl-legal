@@ -10,39 +10,48 @@ export default function Footer() {
     const locale = useLocale();
     const router = useRouter();
     return (
-        <footer className='w-full bg-cover bg-no-repeat bg-[url("/assets/footer/footer.png")] min-h-72 relative '>
-            <div className="foot-container w-full h-full flex flex-col justify-between py-10 px-6">
-                <div className="footer-shebl">
+        <footer className='w-full bg-cover bg-no-repeat bg-[url("/assets/footer/footer.png")] relative '>
+            <div className="foot-container w-full flex gap-10 flex-col">
+                <div className="footer-shebl flex gap-6">
                     <div className="logo">
-                        <img src={'/assets/logo/logo-main.png'} className='w-8' />
+                        <img src={'/assets/logo/logo-main.png'} className='w-[78px] h-[98px]' />
                     </div>
-                    <div className="description">
-                        <h3>
+                    <div className="description flex flex-col justify-end lg:w-[615px] md:w-[615px] h-[98px] gap-3">
+                        <h3 className='font-bold text-2xl'>
                             {t("title")}
                         </h3>
-                        <p>
+                        <p className='text-sm font-normal'>
                             {t("description")}
                         </p>
                     </div>
                 </div>
-                <div className="footer-links">
-                    <div className="terms-privacy">
+                <div className="line"></div>
+                <div className="footer-links flex  justify-between ">
+                    <div className="terms-privacy flex flex-row gap-4">
                         <p>{t("Terms")}</p>
                         <p>{t("privacyPolicy")}</p>
                     </div>
                     <div className="social-links">
-                        <ul className="flex  p-4 md:p-0 mt-4 font-medium border  md:space-x-8 rtl:space-x-reverse flex-row md:mt-0  ">
+                        <ul className="flex gap-8">
                             <li>
-                                <Link href="whatsapp.com" className="block py-2 px-3 md:p-0"> <img src={'/assets/footer/whatsapp.png'} /> </Link>
+                                <Link href="https://www.whatsapp.com" target='_blank'>
+                                    <img src={'/assets/footer/whatsapp.png'} />
+                                </Link>
                             </li>
                             <li>
-                                <Link href="twitter.com" className="block py-2 px-3 md:p-0"><img src={'/assets/footer/x.png'} /></Link>
+                                <Link href="https://www.twitter.com" target='_blank'>
+                                    <img src={'/assets/footer/x.png'} />
+                                </Link>
                             </li>
                             <li>
-                                <Link href="instagram.com" className="block py-2 px-3 md:p-0 "> <img src={'/assets/footer/instagram.png'} /></Link>
+                                <Link href="https://www.instagram.com" target='_blank' >
+                                    <img src={'/assets/footer/instagram.png'} />
+                                </Link>
                             </li>
                             <li>
-                                <Link href="facebook.com" className="block py-2 px-3 md:p-0 "> <img src={'/assets/footer/facebook.png'} /></Link>
+                                <Link href="https://www.facebook.com" target='_blank' >
+                                    <img src={'/assets/footer/facebook.png'} />
+                                </Link>
                             </li>
                         </ul>
                     </div>

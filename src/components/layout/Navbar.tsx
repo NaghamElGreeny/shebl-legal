@@ -54,7 +54,7 @@ export default function Navbar() {
                 <div className="contact-btn invisible !sm:invisible flex flex-row justify-around content-center gap-1">
                     <div className="btn-text">{tBtn("contact")}</div>
                     <div className="btn-icon">
-                        <img src={"/assets/icons/vector.png"} alt="arrow-vector" />
+                        <img src={tBtn("arrow")} alt="arrow-vector" />
                     </div>
                 </div>
 
