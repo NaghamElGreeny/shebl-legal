@@ -15,7 +15,7 @@ export default function Navbar() {
     const pathname = usePathname();
     useEffect(() => {
         const handleScroll = () => {
-            setScrolled(window.scrollY > window.innerHeight);
+            setScrolled(window.scrollY > 1000);
         };
 
         window.addEventListener('scroll', handleScroll);
