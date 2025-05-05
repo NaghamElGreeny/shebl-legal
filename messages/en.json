@@ -43,7 +43,8 @@
     "card3": "Strong defense and innovative legal strategies",
     "card4": "Accurate legal advice based on the latest laws",
     "subDescription": "A wide range of legal services",
-    "btnText": "More about us"
+    "btnText": "More about us",
+    "arrow": "/assets/icons/vectoren.png"
   },
   "Why-us-section": {
     "title": "Why us",
@@ -52,7 +53,8 @@
     "card2": "Years of experience",
     "card3": "Valued customers happy with the service",
     "card4": "Legal successes proven by our valued clients",
-    "btnText": "Book your legal consultation"
+    "btnText": "Book your legal consultation",
+    "arrow": "/assets/icons/vectoren.png"
   },
   "Our-Services": {
     "title": "Our services",
