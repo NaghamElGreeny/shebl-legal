@@ -35,6 +35,25 @@
     "card2": "Legal successes proven by our valued clients",
     "card3": "Extensive experience in all legal specialties"
   },
+  "About-section": {
+    "title": "Who We Are",
+    "description": "Learn about our vision, mission, and values. Discover the story of our firm's founding and the legal journey that has made us one of the most prominent law firms. We work with dedication to achieving justice and serving our clients.",
+    "card1": "Quick response and personal attention to every issue",
+    "card2": "Effective legal procedures to protect your rights and interests",
+    "card3": "Strong defense and innovative legal strategies",
+    "card4": "Accurate legal advice based on the latest laws",
+    "subDescription": "A wide range of legal services",
+    "btnText": "More about us"
+  },
+  "Why-us-section": {
+    "title": "Why us",
+    "description": "Because we are distinguished by our experience, credibility, and complete commitment to serving our clients. With us, you will receive the legal solutions you deserve with unparalleled expertise and professionalism.",
+    "card1": "A team of certified lawyers",
+    "card2": "Years of experience",
+    "card3": "Valued customers happy with the service",
+    "card4": "Legal successes proven by our valued clients",
+    "btnText": "Book your legal consultation"
+  },
   "Footer": {
     "title": "Legal Shebl",
     "description": "Learn about our vision, mission, and values. Discover the story of our firm's founding and the legal journey that has made us one of the most prominent law firms. We work with dedication to achieving justice and serving our clients.",
