@@ -54,6 +54,19 @@
     "card4": "Legal successes proven by our valued clients",
     "btnText": "Book your legal consultation"
   },
+  "Our-Services": {
+    "title": "Our services",
+    "description": "At Shabl Legal, we offer a comprehensive range of legal services tailored to meet our clients' needs. Whether you are an individual seeking legal advice or a company in need of comprehensive legal support, we are here to be your trusted legal partner."
+  },
+  "Contact-us": {
+    "title": "Contact us",
+    "description": "We're here to help! Contact us by phone, email, or visit our office. You can also use the interactive map to see our exact location.",
+    "contacts-header": "Shabl Legal - Your Trusted Legal Partner",
+    "gmail": "Sheblforlawfirm@gmail.com",
+    "phone": "+966 18637 1873",
+    "work-hrs": "Daily, 8:00 AM to 4:00 PM",
+    "location": "Riyadh, Saudi Arabia"
+  },
   "Footer": {
     "title": "Legal Shebl",
     "description": "Learn about our vision, mission, and values. Discover the story of our firm's founding and the legal journey that has made us one of the most prominent law firms. We work with dedication to achieving justice and serving our clients.",
