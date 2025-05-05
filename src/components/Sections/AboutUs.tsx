@@ -13,12 +13,12 @@ export default function name() {
         <>
             <div className="about-us bg-green-300 w-full h-[707px] grid grid-cols-2 gap-14">
 
-                <div className="group1">
-                    <div className="who-r-we">
-                        <h2 style={{ color: 'var(--font-main)' }}>
+                <div className="group1 flex flex-col gap-14">
+                    <div className="who-r-we flex flex-col gap-4 ">
+                        <h2 style={{ color: 'var(--font-main)' }} className='font-bold text-[40px]'>
                             {t("title")}
                         </h2>
-                        <p style={{ color: 'var(--font-sub2)' }}>
+                        <p style={{ color: 'var(--font-sub2)' }} className='text-base font-normal'>
                             {t("description")}
                         </p>
                     </div>
