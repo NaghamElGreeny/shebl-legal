@@ -1,10 +1,10 @@
 @import './variables';
-
+$default-width:  171px; 
 .contact-primary-btn {
     background-color: $light-primary-btn;
     color: $dark-font-main;
     visibility: visible;
-    width: 171px;
+    width: $default-width;
     height: 48px;
     border-radius: 40px;
     gap: 8px;

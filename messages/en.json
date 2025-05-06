@@ -50,9 +50,13 @@
     "title": "Why us",
     "description": "Because we are distinguished by our experience, credibility, and complete commitment to serving our clients. With us, you will receive the legal solutions you deserve with unparalleled expertise and professionalism.",
     "card1": "A team of certified lawyers",
+    "card1-num":"10",
     "card2": "Years of experience",
+    "card2-num":"6",
     "card3": "Valued customers happy with the service",
+    "card3-num":"90",
     "card4": "Legal successes proven by our valued clients",
+    "card4-num":"200",
     "btnText": "Book your legal consultation",
     "arrow": "/assets/icons/vectoren.png"
   },

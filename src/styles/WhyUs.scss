@@ -1,8 +1,55 @@
-@import './variables';
+@import "./variables";
+// --numbers-gradient:linear-gradient(264.73deg, #CC966A 4.98%, #D39A6B 93.5%);
+.why-us {
+  .overlay {
+    background: #001c34e6;
+  }
+  .container {
+    padding: 40px 72px;
+    gap: 88px;
+    .group2 {
+      .card {
+        width: 148px;
+        height: 112px;
+        gap: 8px;
 
-.why-us{
-    .container{
-        background: linear-gradient(180deg, rgba(0, 28, 52, 0.9) 6.45%, rgba(0, 28, 52, 0.4) 100%);
-        box-sizing: content-box;
+        .icon {
+          position: relative;
+        //   width: 100px;
+          height: 83px;
+          h2 {
+            font-family: "Din";
+            font-weight: 800;
+            font-size: 64px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: left;
+            color: #d39a6b;
+          }
+          img {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 40px;
+            height: 40px;
+            gap: 8px;
+            border-radius: 32px;
+            padding: 8px;
+            background: rgba(255, 255, 255, 0.14);
+            backdrop-filter: blur(28.2px);
+            box-shadow: var(--numbers-gradient);
+          }
+        }
+        p {
+          font-family: "Din";
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 100%;
+          letter-spacing: 0%;
+          text-align: right;
+          color: var(--font-sub2);
+        }
+      }
     }
+  }
 }
