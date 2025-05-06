@@ -3,12 +3,23 @@
 .about-us {
     // width: 1512px;
     // height: 707px;
-    justify-content: space-between;
-    padding-top: 88px;
-    padding-right: 48px;
-    padding-bottom: 88px;
+    // justify-content: space-between;
+    // padding-top: 88px;
+    // padding-right: 48px;
+    // padding-bottom: 88px;
 
     .group1 {
-        .who-r-we {}
+      .services-icons{
+        .groupServices{
+            
+            img{
+                width: 50px;
+                height: 50px;
+                border-radius: 48px;
+                border: 3.5px solid var(--bg-color);      
+            }
+        }
+      }
+
     }
 }

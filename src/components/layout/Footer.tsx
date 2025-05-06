@@ -14,7 +14,7 @@ export default function Footer() {
             <div className="foot-container w-full flex gap-10 flex-col">
                 <div className="footer-shebl flex gap-6">
                     <div className="logo">
-                        <img src={'/assets/logo/logo-main.png'} className='w-min-[78px] h-[98px]' />
+                        <img src={'/assets/logo/logo-main.png'} className='w-[78px] h-[98px] sm:w-[58px] sm:h-[78px]' />
                     </div>
                     <div className="description flex flex-col justify-end lg:w-[615px] md:w-[615px] h-[98px] gap-3">
                         <h3 className='font-bold text-2xl'>
