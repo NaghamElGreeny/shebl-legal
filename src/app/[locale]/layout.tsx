@@ -29,11 +29,11 @@ export default async function LocaleLayout({
       <body>
 
         <NextIntlClientProvider>
-          <div className="wrapper  w-full h-full">
+          <>
             <Navbar />
             {children}
             <Footer />
-          </div>
+          </>
 
         </NextIntlClientProvider>
       </body>

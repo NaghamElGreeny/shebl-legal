@@ -38,6 +38,8 @@
   "About-section": {
     "title": "Who We Are",
     "description": "Learn about our vision, mission, and values. Discover the story of our firm's founding and the legal journey that has made us one of the most prominent law firms. We work with dedication to achieving justice and serving our clients.",
+    "description2": "We put our clients' interests first and strive to achieve the best possible results in every case.",
+    "image": "/assets/images/whorwe.png",
     "card1": "Quick response and personal attention to every issue",
     "card2": "Effective legal procedures to protect your rights and interests",
     "card3": "Strong defense and innovative legal strategies",
