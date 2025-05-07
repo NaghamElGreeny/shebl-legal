@@ -1,37 +1,44 @@
-@import './variables';
-$default-width:  171px; 
+@import "./variables";
+$default-width: 171px;
 .contact-primary-btn {
-    background-color: $light-primary-btn;
+  background-color: $light-primary-btn;
+  color: $dark-font-main;
+  visibility: visible;
+  // width: $default-width;
+  height: 48px;
+  border-radius: 40px;
+  gap: 8px;
+  padding: 16px;
+  align-items: center;
+  cursor: pointer;
+
+  .btn-text {
+    font-family: "din";
     color: $dark-font-main;
-    visibility: visible;
-    width: $default-width;
-    height: 48px;
-    border-radius: 40px;
-    gap: 8px;
-    padding: 16px;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 100%;
+  }
+
+  .btn-icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
     align-items: center;
-    cursor: pointer;
+    justify-content: center;
+    background-color: $light-primary-btn-icon;
+    border-radius: 50%;
 
-    .btn-text {
-        font-family: din;
-        color: $dark-font-main;
-        font-weight: 700;
-        font-size: 13px;
-        line-height: 100%;
+    img {
+      width: 12px;
     }
-
-    .btn-icon {
-        width: 20px;
-        height: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: $light-primary-btn-icon;
-        border-radius: 50%;
-
-        img {
-            width: 12px;
-        }
-    }
-
+  }
+}
+.second-btn-clr {
+  background-color: var(--secondary-btn);
+  backdrop-filter: blur(14px);
+  //   color: var(--secondary-btn);
+  .btn-text {
+    color: var(--secondary-btn-txt) !important ;
+  }
 }

@@ -1,39 +1,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import '../styles/variables.scss';
+@import "../styles/variables.scss";
 
 :root {
   --main-color: #111;
   --bg-color: #fff;
-  --bg-color: #F2F4F5;
-  --card: #FCFAF8;
-  --card-icon: #FFFFFF;
+  // --bg-color: #F2F4F5;
+  --card: #fcfaf8;
+  --card-icon: #ffffff;
   --font-main: #000000;
   --font-sub1: #666666;
-  --font-sub2: #B3B3B3;
-  --primary-btn: #CC966A;
+  --font-sub2: #b3b3b3;
+  --primary-btn: #cc966a;
   --primary-btn-icon: #ffffff66;
-  --secondary-btn: #FFFFFF24;
+  --secondary-btn: #ffffff24;
   --secondary-btn-icon: #c1987766;
+  --secondary-btn-txt: #c19877;
 }
 
 .dark {
   --main-color: #fff;
   --bg-color: #111;
-  $dark-bg-color: #001C34;
-  --card: #1A3348;
-  --card-icon: #33495D;
-  --font-main: #FFFFFF;
-  --font-sub1: #E5E5E5;
-  --font-sub2: #B3B3B3;
-  --primary-btn: #C19877;
+  $dark-bg-color: #001c34;
+  --card: #1a3348;
+  --card-icon: #33495d;
+  --font-main: #ffffff;
+  --font-sub1: #e5e5e5;
+  --font-sub2: #b3b3b3;
+  --primary-btn: #c19877;
   --primary-btn-icon: #ffffff66;
-  --secondary-btn: #FFFFFF24;
+  --secondary-btn: #ffffff24;
   --secondary-btn-icon: #c1987766;
 }
 
-$main-color: #F2F4F5;
+$main-color: #f2f4f5;
 
 @layer base {
   @font-face {
@@ -87,9 +88,6 @@ $main-color: #F2F4F5;
     src: url("../../public/assets/fonts/din/ArbFONTS-DINNextLTArabic-Black.ttf");
     font-display: swap;
   }
-
-
-
 }
 
 @theme inline {
@@ -112,7 +110,7 @@ body {
   min-width: 100%;
   background: $light-bg-color;
   color: var(--foreground);
-  height: 250vh;
+  min-height: 550vh;
   @apply font-[din];
 
   &::-webkit-scrollbar {

@@ -22,7 +22,7 @@ export default function Whyus() {
                                 {t("description")}
                             </p>
                         </div>
-                        <div className="group2 grid lg:grid-cols-4 sm:grid-cols-2 w-full place-items-center ">
+                        <div className="group2 grid lg:grid-cols-4 grid-cols-2 w-full place-items-center ">
                             <div className="card">
                                 <div className="icon">
                                     <img src={"/assets/icons/card-1.png"} />
@@ -50,7 +50,7 @@ export default function Whyus() {
                                 <p>{t("card4")}</p></div>
                         </div>
                         <div className="group3">
-                            <Link href={''}>  <PrimaryBtn text={t("btnText")} arrow={t("arrow")} width='255' /></Link>
+                            <Link href={''}>  <PrimaryBtn text={t("btnText")} arrow={t("arrow")} width='255px' /></Link>
                         </div>
                     </div>
                 </div>

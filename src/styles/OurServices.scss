@@ -1,18 +1,42 @@
 .our-services {
+  padding-top: 80px;
+  padding-right: 48px;
+  padding-bottom: 80px;
+  padding-left: 48px;
   .group2 {
-    // width: ;
     height: 542px;
     gap: 24px;
     .card {
-        height: 195px;
+      height: 195px;
+      background-color: var(--card);
+      border-radius: 24px;
+      height: 259;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 40px;
+      padding: 32px;
+
+      .icon {
+        width: 64px;
+        height: 64px;
+        gap: 8px;
+        border-radius: 40px;
+        padding: 12px;
+        background-color: #fff;
+
+        img {
+          width: 40px;
+          height: 40px;
+        }
+      }
       .service {
         //         width: 392;
         // height: 91px;
         flex-direction: column;
         gap: 18px;
         display: flex;
-        background-color: var(--card);
-        border-radius: 24px;
+
         h3 {
           font-family: "din";
           font-weight: 700;
