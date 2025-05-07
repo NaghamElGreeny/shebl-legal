@@ -108,9 +108,10 @@ body {
   margin: 0;
   padding: 0;
   min-width: 100%;
-  background: $light-bg-color;
-  color: var(--foreground);
-  min-height: 550vh;
+  // background: $light-bg-color;
+  background-color: #f2f4f5 !important;
+  // color: var(--foreground);
+  // min-height: 200vh;
   @apply font-[din];
 
   &::-webkit-scrollbar {

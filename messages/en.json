@@ -87,7 +87,8 @@
   "Contact-us": {
     "title": "Contact us",
     "description": "We're here to help! Contact us by phone, email, or visit our office. You can also use the interactive map to see our exact location.",
-    "contacts-header": "Shabl Legal - Your Trusted Legal Partner",
+    "contacts-header": "Shabl Legal",
+    "contacts-header-description": "Your Trusted Legal Partner",
     "gmail": "Sheblforlawfirm@gmail.com",
     "phone": "+966 18637 1873",
     "work-hrs": "Daily, 8:00 AM to 4:00 PM",
