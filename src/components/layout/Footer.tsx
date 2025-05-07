@@ -14,19 +14,19 @@ export default function Footer() {
             <div className="foot-container w-full flex gap-10 flex-col">
                 <div className="footer-shebl flex gap-6">
                     <div className="logo">
-                        <img src={'/assets/logo/logo-main.png'} className='w-[78px] h-[98px] sm:w-[58px] sm:h-[78px]' />
+                        <img src={'/assets/logo/logo-main.png'} className='lg:w-[78px] lg:h-[98px] md:w-[62px] md:h-[78px] w-[46px] h-[58px]' />
                     </div>
-                    <div className="description flex flex-col justify-end lg:w-[615px] md:w-[615px] h-[98px] gap-3">
-                        <h3 className='font-bold text-2xl'>
+                    <div className="description flex flex-col justify-end lg:w-[615px] md:w-[615px] w-[299px] h-[98px] gap-3">
+                        <h3 className='font-bold text-base '>
                             {t("title")}
                         </h3>
-                        <p className='text-sm font-normal'>
+                        <p className='lg:text-sm font-normal text-xs'>
                             {t("description")}
                         </p>
                     </div>
                 </div>
                 <div className="line"></div>
-                <div className="footer-links flex  justify-between ">
+                <div className="footer-links flex md:flex-row lg:flex-row flex-col items-center gap-3 justify-between ">
                     <div className="terms-privacy flex flex-row gap-4">
                         <p>{t("Terms")}</p>
                         <p>{t("privacyPolicy")}</p>

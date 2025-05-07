@@ -108,24 +108,14 @@ body {
   margin: 0;
   padding: 0;
   min-width: 100%;
+  height: auto;
   // background: $light-bg-color;
   background-color: #f2f4f5 !important;
-  // color: var(--foreground);
+  color: var(--foreground);
   // min-height: 200vh;
   @apply font-[din];
 
   &::-webkit-scrollbar {
     display: none;
-  }
-
-  .vision {
-    color: $main-color;
-    //  @apply bg-gray-500 #{!important};
-  }
-}
-
-@media (screen(sm)) {
-  .vision {
-    background-color: blue;
   }
 }
