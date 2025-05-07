@@ -17,9 +17,9 @@ export default function Faq() {
                             <h3 className='font-bold lg:text-[40px] text-2xl'>{t("title")}</h3>
                             <Link href={''}>  <PrimaryBtn text={t("btnText")} arrow={t("arrow")} width='151px' classs='second-btn-clr' /></Link>
                         </div>
-                        <div className="group2">
+                        <div className="group2 flex flex-col justify-between w-full ">
                             <div className="question">
-                                <div className="q-ans">
+                                <div className="q-ans gap-4 flex flex-col justify-between">
                                     <h4>
                                         1.
                                         {t("q1")}
@@ -29,25 +29,27 @@ export default function Faq() {
                                 <h4>-</h4>
 
                             </div>
+                            <div className="line"></div>
                             <div className="question">
                                 <h4>
-                                    1.
+                                    2.
                                     {t("q1")}
                                 </h4>
                                 <h4>+</h4>
 
                             </div>
+                            <div className="line"></div>
                             <div className="question">
                                 <h4>
-                                    1.
+                                    3.
                                     {t("q1")}
-
                                 </h4>
                                 <h4>+</h4>
                             </div>
+                            <div className="line"></div>
                             <div className="question">
                                 <h4>
-                                    1.
+                                    4.
                                     {t("q1")}
                                 </h4>
                                 <h4>+</h4>

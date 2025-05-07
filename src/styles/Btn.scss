@@ -12,13 +12,13 @@ $default-width: 171px;
   align-items: center;
   cursor: pointer;
 
-  .btn-text {
-    font-family: "din";
-    color: $dark-font-main;
-    font-weight: 700;
-    font-size: 13px;
-    line-height: 100%;
-  }
+  // .btn-text {
+  //   font-family: "din";
+  //   color: $dark-font-main;
+  //   font-weight: 700;
+  //   font-size: 13px;
+  //   line-height: 100%;
+  // }
 
   .btn-icon {
     width: 20px;
@@ -37,8 +37,8 @@ $default-width: 171px;
 .second-btn-clr {
   background-color: var(--secondary-btn);
   backdrop-filter: blur(14px);
-  //   color: var(--secondary-btn);
-  .btn-text {
-    color: var(--secondary-btn-txt) !important ;
+  color: var(--secondary-btn-txt) !important ;
+  .btn-icon {
+    color: var(--secondary-btn);
   }
 }

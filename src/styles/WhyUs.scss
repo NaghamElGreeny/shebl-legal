@@ -1,6 +1,7 @@
 @import "./variables";
 // --numbers-gradient:linear-gradient(264.73deg, #CC966A 4.98%, #D39A6B 93.5%);
 .why-us {
+  min-height: fit-content;
   .overlay {
     background: #001c34e6;
   }
@@ -15,7 +16,7 @@
 
         .icon {
           position: relative;
-        //   width: 100px;
+          //   width: 100px;
           height: 83px;
           h2 {
             font-family: "Din";
