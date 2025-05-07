@@ -6,9 +6,11 @@
     align-items: center;
     position: static;
     border: 2px solid blue;
+    background: linear-gradient(180deg, rgba(0, 28, 52, 0.9) 6.45%, rgba(0, 28, 52, 0.4) 100%),url('../../public/assets/images/hero-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 .overlay{
     border: 2px solid red;
-    background: linear-gradient(180deg, rgba(0, 28, 52, 0.9) 6.45%, rgba(0, 28, 52, 0.4) 100%);
 }
     .hero-container {
         height: 100%;   

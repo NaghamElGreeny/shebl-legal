@@ -8,8 +8,8 @@ import ContactBtn from '../ui/ContactBtn';
 export default function HeroSection() {
     const t = useTranslations("Hero");
     return (
-        <div className="hero-section relative flex flex-col bg-[url('/assets/images/hero-bg.jpg')] bg-cover h-[1000px] w-full">
-            <div className="overlay absolute inset-0 z-0 w-full h-full top-0 left-0"> </div>
+        <div className="hero-section relative flex flex-col  h-[1000px] w-full">
+            {/* <div className="overlay absolute inset-0 z-0 w-full h-full top-0 left-0"> </div> */}
             <div className="hero-container relative lg:ps-12 md:ps-12 sm:ps-3 xs:ps-3 lg:p-48 pt-[150px] ">
                 <div className="title flex wrap ">
                     <img src={'/assets/icons/hero-title-icon.png'} />
