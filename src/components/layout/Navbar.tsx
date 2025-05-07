@@ -68,16 +68,16 @@ export default function Navbar() {
             <div className={`items-center justify-between hidden w-full md:flex md:w-auto md:order-1 ${isOpen ? 'block' : 'hidden'}`} id="navbar-sticky">
                 <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
                     <li>
-                        <Link href="#" className="block py-2 px-3 md:p-0" aria-current="page"> {t("about")} </Link>
+                        <Link href="/about-us" className="block py-2 px-3 md:p-0" aria-current="page"> {t("about")} </Link>
                     </li>
                     <li>
-                        <Link href="#" className="block py-2 px-3 md:p-0">{t("services")}</Link>
+                        <Link href="/our-services" className="block py-2 px-3 md:p-0">{t("services")}</Link>
                     </li>
                     <li>
-                        <Link href="#" className="block py-2 px-3 md:p-0 "> {t("faq")}</Link>
+                        <Link href="/faq" className="block py-2 px-3 md:p-0 "> {t("faq")}</Link>
                     </li>
                     <li>
-                        <Link href="#" className="block py-2 px-3 md:p-0 "> {t("contact")}</Link>
+                        <Link href="/contact-us" className="block py-2 px-3 md:p-0 "> {t("contact")}</Link>
                     </li>
                 </ul>
             </div>
