@@ -7,10 +7,10 @@ export default function OurGoals() {
         <>
             <div className="our-goals">
                 <div className="container grid grid-cols-4 gap-6">
-                    <div className="group1 rounded-3xl h-[439px] w-[381px] overflow-hidden">
+                    <div className="group1 rounded-3xl h-[439px] w-[381px] relative overflow-hidden">
                         <h3>العدل</h3>
-                        <img src="/assets/images/goals.png" alt="goals" className='z-10' />
-                    </div>
+                        <div className="img">  <img src="/assets/images/goals.png" alt="goals" className='z-10' />
+                        </div></div>
                     <div className="group2 ltr:ml-8 rtl:mr-8 col-span-3">
                         <div className="icon rounded-full p-3 gap-2 w-14 h-14 bg-white"><img src="/assets/icons/hero-3.png" /></div>
                         <div className="goals flex flex-col gap-10">
