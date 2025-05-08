@@ -88,6 +88,10 @@ $main-color: #f2f4f5;
     src: url("../../public/assets/fonts/din/ArbFONTS-DINNextLTArabic-Black.ttf");
     font-display: swap;
   }
+  @font-face {
+    font-family: "amoshref-thulth";
+    src: url("../../public/assets/fonts/arfonts-amoshref-thulth.ttf");
+  }
 }
 
 @theme inline {

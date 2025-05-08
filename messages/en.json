@@ -62,6 +62,15 @@
     "btnText": "Book your legal consultation",
     "arrow": "/assets/icons/vectoren.png"
   },
+  "Our-goals": {
+    "title": "Our Goals",
+    "description": "Shebl Law Firm aims to provide an integrated legal platform that allows users to access legal services easily and professionally. The company's main objectives include:",
+    "goal1": "Enabling users to quickly search and access services",
+    "goal2": "Achieving a smooth and efficient user experience",
+    "goal3": "Providing an integrated management system",
+    "goal4": "Providing specialized legal services",
+    "goal5": "Enhancing communication and trust with clients"
+  },
   "Our-Services": {
     "title": "Our services",
     "description": "At Shabl Legal, we offer a comprehensive range of legal services tailored to meet our clients' needs. Whether you are an individual seeking legal advice or a company in need of comprehensive legal support, we are here to be your trusted legal partner.",

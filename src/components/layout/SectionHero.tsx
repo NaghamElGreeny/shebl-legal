@@ -15,10 +15,10 @@ export default function SectionHero({ title, description, image }: {
         <>
             <div className="section-hero">
                 {/* <div className={`container w-full h-[556px] relative pr-12 pl-12 pt-[206px] bg-cover `} style={{ backgroundImage: `url(${image})` }}> */}
-                <div className={`container w-full h-[556px] relative pr-12 pl-12 pt-[206px] bg-cover `} >
+                <div className={`container w-full h-[556px] relative pr-12 pl-12 pt-[206px] bg-cover flex flex-col justify-center items-center`} >
                     <div className="overlay absolute inset-0"> </div>
 
-                    <h2 style={{ color: 'var(--font-main)' }} className='font-bold text-[40px]'>
+                    <h2 style={{ color: 'var(--bg-color)' }} className='font-bold text-[40px]'>
                         {title}
                     </h2>
                     <p style={{ color: 'var(--font-sub2)' }} className='text-base font-normal'>

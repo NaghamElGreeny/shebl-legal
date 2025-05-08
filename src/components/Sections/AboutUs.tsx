@@ -33,9 +33,9 @@ export default function AboutUs() {
                     </div>
                     <div className="services-icons flex gap-4 items-center">
                         <div className="groupServices flex relative">
-                            <img src={'assets/images/serv1.png'} className={`z-30`} />
-                            <img src={'assets/images/serv2.png'} className={`z-20 ${locale === 'en' ? '-ml-[20]' : '-mr-[20]'}`} />
-                            <img src={'assets/images/serv3.png'} className={`z-10 ${locale === 'en' ? '-ml-[20]' : '-mr-[20]'}`} />
+                            <img src={'/assets/images/serv1.png'} className={`z-30`} />
+                            <img src={'/assets/images/serv2.png'} className={`z-20 ${locale === 'en' ? '-ml-[20]' : '-mr-[20]'}`} />
+                            <img src={'/assets/images/serv3.png'} className={`z-10 ${locale === 'en' ? '-ml-[20]' : '-mr-[20]'}`} />
                         </div>
                         <p style={{ color: 'var(--font-sub2)' }}>{t("subDescription")}</p>
                     </div>
@@ -44,7 +44,7 @@ export default function AboutUs() {
                     </div>
                 </div>
                 <div className="group2">
-                    <img src={'assets/images/group 1.png'} className='w-auto' />
+                    <img src={'/assets/images/group 1.png'} className='w-auto' />
                 </div>
             </div>
         </>
