@@ -22,7 +22,7 @@ export default function Whyus() {
                                 {t("description")}
                             </p>
                         </div>
-                        <div className="group2 grid lg:grid-cols-4 grid-cols-2 w-full place-items-center ">
+                        <div className="group2 grid lg:grid-cols-4 grid-cols-2 w-full place-items-center relative">
                             <div className="card">
                                 <div className="icon">
                                     <img src={"/assets/icons/card-1.png"} />

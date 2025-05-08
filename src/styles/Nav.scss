@@ -1,64 +1,64 @@
-@import './variables';
+@import "./variables";
 
 nav {
-    width: 100%;
-    height: 100px;
-    background-color: #091C2F33;
-    backdrop-filter: blur(28.20px);
-    padding: 48PX;
-    transition: background-color 1s smooth;
+  @apply w-full h-[100px] bg-primary/10 dark:bg-black;
 
-    &.on-scroll {
-        background-color: $light-bg-color;
-        color: $light-font-sub1;
+  //   background-color: #091c2f33;
+  backdrop-filter: blur(28.2px);
+  padding: 48px;
+  transition: background-color 1s smooth;
 
-        .contact-btn {
-            background-color: $light-primary-btn;
-            color: $light-font-main;
-            visibility: visible;
-            width: 124px;
-            height: 48px;
-            border-radius: 40px;
-            gap: 8px;
-            padding: 16px;
-            cursor: pointer;
-            align-items: center;
+  &.on-scroll {
+    background-color: $light-bg-color;
+    color: $light-font-sub1;
 
-            .btn-text {
-                font-family: din;
-                color: $dark-font-main;
-                font-weight: 700;
-                font-size: 13px;
-                line-height: 100%;
-            }
+    .contact-btn {
+      background-color: $light-primary-btn;
+      color: $light-font-main;
+      visibility: visible;
+      width: 124px;
+      height: 48px;
+      border-radius: 40px;
+      gap: 8px;
+      padding: 16px;
+      cursor: pointer;
+      align-items: center;
 
-            .btn-icon {
-                width: 20px;
-                height: 20px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background-color: $light-primary-btn-icon;
-                border-radius: 50%;
+      .btn-text {
+        font-family: din;
+        color: $dark-font-main;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 100%;
+      }
 
-                img {
-                    width: 12px;
-                }
-            }
-        }
-    }
-
-    .logodiv {
-        // width: 470px;
-        // height: 50px;
-        // padding-right: 50px;
-        // display: flex;
-        // align-items: center;
-        // @apply: md:w-[470px] md:h-[50px];
+      .btn-icon {
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $light-primary-btn-icon;
+        border-radius: 50%;
 
         img {
-            width: 57px;
-            height: 72px;
+          width: 12px;
         }
+      }
     }
+  }
+
+  .logodiv {
+    // width: 470px;
+    // height: 50px;
+    // padding-right: 50px;
+    // display: flex;
+    // align-items: center;
+    // @apply: md:w-[470px] md:h-[50px];
+
+    img {
+      width: 57px;
+      height: 72px;
+    }
+  }
 }

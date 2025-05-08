@@ -6,12 +6,13 @@ export default function OurGoals() {
     return (
         <>
             <div className="our-goals">
-                <div className="container grid grid-cols-4 gap-6">
+                <div className="container grid lg:grid-cols-4 md:grid-cols-4 grid-rows-4 gap-6">
                     <div className="group1 rounded-3xl h-[439px] w-[381px] relative overflow-hidden">
                         <h3>العدل</h3>
                         <div className="img">  <img src="/assets/images/goals.png" alt="goals" className='z-10' />
-                        </div></div>
-                    <div className="group2 ltr:ml-8 rtl:mr-8 col-span-3">
+                        </div>
+                    </div>
+                    <div className="group2 ltr:ml-8 rtl:mr-8 lg:col-span-3 md:col-span-3 row-span-3">
                         <div className="icon rounded-full p-3 gap-2 w-14 h-14 bg-white"><img src="/assets/icons/hero-3.png" /></div>
                         <div className="goals flex flex-col gap-10">
                             <div className="title gap-5 flex flex-col">

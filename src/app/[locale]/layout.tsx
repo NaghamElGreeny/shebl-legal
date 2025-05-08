@@ -4,9 +4,12 @@ import { routing } from "@/i18n/routing";
 import "../globals.scss";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import { cookies } from "next/headers";
+import ChangeThem from "@/components/layout/changeThem";
 // export const metadata = {
 //   title: "SHEBL",
 // };
+
 export default async function LocaleLayout({
   children,
   params,
@@ -20,14 +23,18 @@ export default async function LocaleLayout({
     notFound();
   }
 
+  const appCookies = await cookies()
+
+  const themeMode = appCookies.get('modeLayout')
+
   return (
-    <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
+    <html className={`${themeMode ? themeMode : ''}`} lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
       <head>
         <title>{locale === "ar" ? "شبل" : "shebl"}</title>
         <link rel="icon" href="/assets/logo/logo-head.png" />
       </head>
       <body>
-
+        {/* <ChangeThem /> */}
         <NextIntlClientProvider>
           <>
             <Navbar />

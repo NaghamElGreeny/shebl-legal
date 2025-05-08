@@ -2,19 +2,23 @@
   align-items: center;
   width: 100%;
   position: static;
-  background: linear-gradient(
-      180deg,
-      rgba(0, 28, 52, 0.9) 6.45%,
-      rgba(0, 28, 52, 0.4) 100%
-    ),
-    url("../../public/assets/images/hero-bg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+  // background: linear-gradient(
+  //     180deg,
+  //     rgba(0, 28, 52, 0.9) 6.45%,
+  //     rgba(0, 28, 52, 0.4) 100%
+  //   ),
+  //   url("../../public/assets/images/hero-bg.jpg");
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // .overlay {
+  //   // background: linear-gradient(
+  //   //   180deg,
+  //   //   rgba(0, 28, 52, 0.9) 27.28%,
+  //   //   rgba(0, 28, 52, 0.7) 100%
+  //   // );
+
+  // }
   .overlay {
-    // background: linear-gradient(
-    //   180deg,
-    //   rgba(0, 28, 52, 0.9) 27.28%,
-    //   rgba(0, 28, 52, 0.7) 100%
-    // );
+    background: #001c34af;
   }
 }

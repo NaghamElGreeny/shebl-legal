@@ -51,7 +51,7 @@ export default function ContactUs() {
                         </div>
                     </div>
                     <div className="group2">
-                        <img src={'assets/images/contact.png'} className='w-auto' />
+                        <img src={'/assets/images/contact.png'} className='w-auto' />
                     </div>
                 </div>
             </div>

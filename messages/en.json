@@ -79,6 +79,7 @@
   "Our-Services": {
     "title": "Our services",
     "description": "At Shabl Legal, we offer a comprehensive range of legal services tailored to meet our clients' needs. Whether you are an individual seeking legal advice or a company in need of comprehensive legal support, we are here to be your trusted legal partner.",
+    "image": "/assets/images/services.png",
     "service1-title": "Advocacy and defense",
     "service1-description": "Our professional team represents our clients before courts and various judicial authorities to ensure their rights and achieve justice.",
     "service2-title": "Contract drafting",
@@ -92,6 +93,7 @@
   },
   "Faq": {
     "title": "Frequently Asked Questions",
+    "description": "All the questions you have to know more about Shabl Law Firm",
     "btnText": "Show all",
     "q1": "What legal services does Shebl Law Firm provide?",
     "ans1": "We offer a variety of legal services, including: legal consultations, litigation and defense before courts, contract drafting, company formation, and judicial representation.",
@@ -103,6 +105,7 @@
   "Contact-us": {
     "title": "Contact us",
     "description": "We're here to help! Contact us by phone, email, or visit our office. You can also use the interactive map to see our exact location.",
+    "image": "/assets/images/contactus.png",
     "contacts-header": "Shabl Legal",
     "contacts-header-description": "Your Trusted Legal Partner",
     "gmail": "Sheblforlawfirm@gmail.com",

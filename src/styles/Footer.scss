@@ -1,49 +1,55 @@
-@import './variables';
+@import "./variables";
 
 footer {
-    top: 100vh;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  .overlay {
+    background: #001c34ec;
+  }
+  .foot-container {
+    // height: min(298px);
+    // background: linear-gradient(286.75deg, #021c3200 47.19%, #021c32 72.94%),
+    //   linear-gradient(0deg, #001c34e6, #001c34e6);
+    padding: 40px 80px 54px 75px;
 
-    .foot-container {
-        height: min(298px);
-        background: linear-gradient(286.75deg, #021c3200 47.19%, #021c32 72.94%), linear-gradient(0deg, #001c34e6, #001c34e6);
-        padding: 40px 80px 54px 75px;
-
-        .footer-shebl {
-            .logo {
-                width: 78px;
-                height: 98px;
-                img {
-                    width:100%;
-                    // width: 78px;
-                    // height: 98px;
-                }
-            }
-
-            .description {
-                p {
-                    color: $light-font-sub2;
-                }
-            }
+    .footer-shebl {
+      .logo {
+        width: 78px;
+        height: 98px;
+        img {
+          width: 100%;
+          // width: 78px;
+          // height: 98px;
         }
+      }
 
-        .line {
-            width:100%;
-            border-width: 1px;
-            border: 1px solid var(--Secondary-Secondary-80, #33495D)
+      .description {
+        p {
+          color: $light-font-sub2;
         }
-
-        .footer-links {
-            ul {
-                li {
-                    width: 56;
-                    height: 56;
-                    gap: 8px;
-                    border-width: 1px;
-                    border-radius: 32px;
-                    padding: 16px;
-                    border: 1px solid var(--Secondary-Secondary-90, #1A3348)
-                }
-            }
-        }
+      }
     }
+
+    .line {
+      width: 100%;
+      border-width: 1px;
+      border: 1px solid var(--Secondary-Secondary-80, #33495d);
+    }
+
+    .footer-links {
+      ul {
+        li {
+          width: 56px;
+          height: 56px;
+          gap: 8px;
+          border-width: 1px;
+          border-radius: 32px;
+          padding: 16px;
+          border: 1px solid var(--Secondary-Secondary-90, #1a3348);
+          //   border: 1px solid #1a3348;
+        }
+      }
+    }
+  }
 }
