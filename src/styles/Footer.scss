@@ -6,23 +6,15 @@ footer {
   bottom: 0px;
   .overlay {
     @apply bg-overlay;
-    // background: linear-gradient(286.75deg, rgba(2, 28, 50, 0) 47.19%, #021C32 72.94%),
-    // linear-gradient(0deg, rgba(0, 28, 52, 0.9), rgba(0, 28, 52, 0.9));
-    background-color: #001c34cb;
   }
   .foot-container {
     @apply pt-10 pr-20 pb-14 pl-20;
-    // padding: 40px 80px 54px 75px;
 
     .footer-shebl {
       .logo {
         @apply w-20 h-24;
-        // width: 78px;
-        // height: 98px;
         img {
           width: 100%;
-          // width: 78px;
-          // height: 98px;
         }
       }
 
@@ -44,7 +36,6 @@ footer {
         li {
           @apply size-14 gap-2 border-2 rounded-full p-4;
           border: 1px solid var(--Secondary-Secondary-90, #1a3348);
-          //   border: 1px solid #1a3348;
         }
       }
     }

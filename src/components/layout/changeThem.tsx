@@ -1,26 +1,30 @@
 'use client'
-
+import '../../styles/ThemeBtn.scss'
 import Cookies from "js-cookie"
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
-export default function () {
+export default function ThemeButton() {
+    const [theme, setTheme] = useState<'light' | 'dark'>(() => {
+        return Cookies.get('modeLayout') === 'dark' ? 'dark' : 'light'
+    });
 
-    const themLayout = Cookies.get('modeLayout')
-    const changeMode = () => {
-        if (themLayout) {
-            if (themLayout === 'light') {
-                Cookies.set('modeLayout', 'dark')
-            } else {
-
-                Cookies.set('modeLayout', 'light')
-            }
-
+    useEffect(() => {
+        if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
         }
-        document.documentElement.classList.toggle('dark')
+        Cookies.set('modeLayout', theme);
+    }, [theme]);
+
+    const toggleTheme = () => {
+        setTheme(prev => (prev === 'light' ? 'dark' : 'light'));
     }
+
     return (
-        <button type='button' className="text-black bg-MainColor size-5 rounded-full" onClick={changeMode}>
-            {themLayout}
+        <button type='button' id="mode" className="mode" onClick={toggleTheme} dir='ltr'>
+            <span className="icon"></span>
+            <p>{theme === 'light' ? '☀️' : '🌙'}</p>
         </button>
-    )
+    );
 }

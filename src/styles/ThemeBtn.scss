@@ -1,0 +1,14 @@
+.mode {
+  @apply w-10 h-5 p-[3px] rounded-3xl relative cursor-pointer flex flex-row items-center justify-center box-content gap-[2px]
+  dark:bg-primaryCard bg-darkCard transition duration-500 ease-in-out border border-2 border-primaryCard dark:border-darkCard;
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  .icon {
+    @apply z-10 dark:translate-x-5 inline-block size-5 translate-x-0 rounded-full  transition duration-200 ease-in-out bottom-[2px] 
+    bg-primaryCard dark:bg-darkCard;
+  }
+  p {
+    @apply translate-x-0 dark:-translate-x-[22px] text-sm;
+  }
+}

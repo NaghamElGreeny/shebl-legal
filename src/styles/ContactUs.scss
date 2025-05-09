@@ -9,18 +9,16 @@
     .group1 {
       .shebl-contact-info {
         .feature-card {
-          width: 282px;
+          @apply w-72 h-14 gap-2 p-4 rounded-3xl bg-primaryCard dark:bg-darkCard border-SharedFontSub/30;
+          // width: 282px;
           height: 56px;
           gap: 8px;
           padding: 16px;
           border-radius: 32px;
           border-width: 1px;
-          border: 1px solid var(--Natural-Colors-Natural-Colors-5, #f2f2f2);
-          background: var(--Primary-Primary-5, #fcfaf8);
           p {
+            @apply text-primaryFont dark:text-darkFont;
             font-family: "din";
-            font-weight: 400;
-            font-size: 16px;
             line-height: 100%;
             letter-spacing: 0%;
           }

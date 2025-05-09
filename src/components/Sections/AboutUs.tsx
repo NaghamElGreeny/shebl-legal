@@ -15,14 +15,6 @@ export default function AboutUs() {
 
                 <div className="group1 flex flex-col gap-14">
                     <TitleDescription title={t("title")} description={t("description")} />
-                    {/* <div className="who-r-we flex flex-col gap-4 ">
-                        <h2 style={{ color: 'var(--font-main)' }} className='font-bold text-[40px]'>
-                            {t("title")}
-                        </h2>
-                        <p style={{ color: 'var(--font-sub2)' }} className='text-base font-normal'>
-                            {t("description")}
-                        </p>
-                    </div> */}
                     <div className="our-features grid lg:grid-cols-2  gap-4">
                         <div className="feature-card flex">
                             <img src={'/assets/icons/hero-title-icon.png'} /> <p style={{ color: 'var(--font-main)' }}>{t("card1")}</p></div>

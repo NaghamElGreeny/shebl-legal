@@ -12,7 +12,6 @@ export default function Faq() {
             <div className="wrapper w-full flex justify-center items-center">
                 <div className="faq relative flex justify-center items-center w-[95%] gap-16 rounded-[40px] bg-[url('/assets/images/faq.png')] bg-cover  ">
                     <div className="overlay absolute inset-0 rounded-[40px]"> </div>
-                    {/* <div className="container relative flex flex-col justify-center items-center  w-full h-full"> */}
                     <div className="container relative flex flex-col justify-center items-center  w-full px-3">
                         <div className="group1 flex justify-between w-full">
                             <h3 className='font-bold lg:text-[40px] text-2xl'>{t("title")}</h3>

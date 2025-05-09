@@ -36,19 +36,6 @@ export default function Navbar() {
         e.stopPropagation(); // يمنع الكليك من الوصول للـ document
         setIsOpen(prevState => !prevState);
     };
-    // useEffect(() => {
-    //     const handleClick = () => {
-    //         setTimeout(() => {
-    //             setIsOpen(false);
-    //         }, 50);
-    //     };
-
-    //     document.addEventListener('mousedown', handleClick);
-
-    //     return () => {
-    //         document.removeEventListener('mousedown', handleClick);
-    //     };
-    // }, []);
 
     useEffect(() => {
         const handleClickOutside = (e: PointerEvent) => {
@@ -77,7 +64,7 @@ export default function Navbar() {
                     <img src={"/assets/logo/Logo-main.png"} className='h-10' alt="shebl-logo" />
                 </Link>
             </div>
-            <div className="iconsdiv flex md:order-2 space-x-1 md:space-x-2 rtl:space-x-reverse ">
+            <div className="iconsdiv flex md:order-2 space-x-1 md:space-x-2 rtl:space-x-reverse items-center">
                 <Link href={'/contact-us'}>
                     <div className="contact-btn invisible !sm:invisible flex flex-row justify-around content-center gap-1">
                         <div className="btn-text">{tBtn("contact")}</div>

@@ -1,5 +1,6 @@
 'use client'
 import React from 'react'
+import '../../styles/TitleDescription.scss'
 
 export default function SectionHero({ title, description }: {
     title: string;
