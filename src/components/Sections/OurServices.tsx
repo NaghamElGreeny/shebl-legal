@@ -7,13 +7,13 @@ export default function OurServices() {
 
     return (
         <>
-            <div className="wrapper h-fit w-full flex justify-center items-center px-[48px]">
-                <div className="our-services relative flex flex-col gap-[64px]  w-full h-full">
+            <div className="wrapper  w-full flex justify-center items-center">
+                <div className="our-services relative flex flex-col gap-[64px]  w-full">
                     <div className="group1 w-[835px] flex flex-col lg:gap-10 md:gap-4  gap-3">
-                        <h2 style={{ color: 'var(--font-main)' }} className='font-bold lg:text-[40px] text-xl'>
+                        <h2 style={{ color: 'var(--font-main)' }} className='font-bold lg:text-5xl text-xl'>
                             {t("title")}
                         </h2>
-                        <p style={{ color: 'var(--font-sub2)' }} className='lg:text-base text-xs font-normal'>
+                        <p style={{ color: 'var(--font-sub2)' }} className='lg:text-base text-sm font-normal'>
                             {t("description")}
                         </p>
                     </div>

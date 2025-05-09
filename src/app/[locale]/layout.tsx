@@ -33,7 +33,7 @@ export default async function LocaleLayout({
         <title>{locale === "ar" ? "شبل" : "shebl"}</title>
         <link rel="icon" href="/assets/logo/logo-head.png" />
       </head>
-      <body>
+      <body className=" flex flex-col min-h-screen">
         {/* <ChangeThem /> */}
         <NextIntlClientProvider>
           <>

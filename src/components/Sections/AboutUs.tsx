@@ -10,7 +10,7 @@ export default function AboutUs() {
 
     return (
         <>
-            <div className="about-us w-full h-min-[607px] pt-[88px] grid lg:grid-cols-2 gap-14 ltr:pl-16 rtl:pr-16">
+            <div className="about-us w-full grid lg:grid-cols-2 grid-cols-1 gap-14 ">
 
                 <div className="group1 flex flex-col gap-14">
                     <div className="who-r-we flex flex-col gap-4 ">

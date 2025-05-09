@@ -1,19 +1,11 @@
 .contact-us {
   width: 100%;
-  height: 687px;
+
   gap: 32px;
-  padding-top: 40px;
-  padding-right: 48px;
-  padding-bottom: 40px;
-  padding-left: 48px;
-  border-width: 1px;
+  padding-inline: 48px;
 
   .wrapper {
     width: 100%;
-    height: 511px;
-    gap: 132px;
-    padding-right: 72px;
-    padding-left: 72px;
     .group1 {
       .shebl-contact-info {
         .feature-card {
@@ -36,8 +28,8 @@
       }
     }
     .group2 {
-      width: 570px;
-      height: 511px;
+      // width: 570px;
+      // height: 511px;
     }
   }
 }

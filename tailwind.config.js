@@ -12,7 +12,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#091C2F",
+        primaryNav: "#091C2F",
+        sharedFont: "#ffffff",
+        primaryFont: "#000000",
+        darkFont: "ffffff",
+        SharedFontSub: "#b3b3b3",
+        primaryBg: "f2f4f5",
+        darkBg: "#001c34",
+        primaryCard: "#fcfaf8",
+        darkCard: "#1a3348",
+        primaryIcon: "ffffff",
+        darkIcon: "#33495d",
+        MainColor: "#cc966a",
       },
     },
     screens: {

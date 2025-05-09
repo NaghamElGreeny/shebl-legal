@@ -8,13 +8,13 @@ import ContactUs from "@/components/Sections/ContactUs";
 export default function HomePage() {
 
   return (
-    <>
+    <div className=" space-y-12">
       <HeroSection />
       <AboutUs />
       <Whyus />
-      <OurServices />
+      {/* <OurServices /> */}
       <Faq />
       <ContactUs />
-    </>
+    </div>
   );
 }

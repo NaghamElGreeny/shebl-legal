@@ -1,10 +1,4 @@
 .faq {
-  padding-top: 80px;
-  padding-right: 48px;
-  padding-bottom: 80px;
-  padding-left: 48px;
-  border-radius: 40px;
-
   .overlay {
     background: #001c34e6;
   }
@@ -23,6 +17,7 @@
         display: flex;
         justify-content: space-between;
         gap: 16px;
+        color: var(--bg-color);
         p {
           font-family: "din";
           font-weight: 400;

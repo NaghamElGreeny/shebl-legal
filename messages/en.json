@@ -94,6 +94,7 @@
   "Faq": {
     "title": "Frequently Asked Questions",
     "description": "All the questions you have to know more about Shabl Law Firm",
+    "image": "/assets/images/faq.png",
     "btnText": "Show all",
     "q1": "What legal services does Shebl Law Firm provide?",
     "ans1": "We offer a variety of legal services, including: legal consultations, litigation and defense before courts, contract drafting, company formation, and judicial representation.",

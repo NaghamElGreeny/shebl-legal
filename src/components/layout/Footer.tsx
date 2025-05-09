@@ -11,7 +11,7 @@ export default function Footer() {
     const router = useRouter();
     return (
         <>
-            <footer className="w-full  relative flex justify-center items-center gap-16 bg-[url('/assets/footer/footer.png')] bg-cover  ">
+            <footer className="w-full mt-auto  relative flex justify-center items-center gap-16 bg-[url('/assets/footer/footer.png')] bg-cover  ">
                 <div className="overlay absolute inset-0"> </div>
                 <div className="foot-container w-full relative flex gap-10 flex-col">
                     <div className="footer-shebl flex gap-6">
@@ -28,7 +28,7 @@ export default function Footer() {
                         </div>
                     </div>
                     <div className="line"></div>
-                    <div className="footer-links flex md:flex-row lg:flex-row flex-col items-center gap-3 justify-between ">
+                    <div className="footer-links flex md:flex-row lg:flex-row flex-col items-center gap-5 justify-between ">
                         <div className="terms-privacy flex flex-row gap-4">
                             <p>{t("Terms")}</p>
                             <p>{t("privacyPolicy")}</p>

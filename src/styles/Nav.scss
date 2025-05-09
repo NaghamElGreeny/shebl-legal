@@ -1,15 +1,14 @@
 @import "./variables";
 
 nav {
-  @apply w-full h-[100px] bg-primary/10 dark:bg-black;
-
-  //   background-color: #091c2f33;
+  @apply w-full h-[100px] bg-primaryNav/10 dark:bg-black;
   backdrop-filter: blur(28.2px);
   padding: 48px;
   transition: background-color 1s smooth;
 
   &.on-scroll {
-    background-color: $light-bg-color;
+    @apply bg-primaryCard dark:bg-darkCard;
+    // background-color: $light-bg-color;
     color: $light-font-sub1;
 
     .contact-btn {
@@ -46,19 +45,32 @@ nav {
         }
       }
     }
+    .menublock {
+      ul {
+        @apply w-full bg-primaryCard/80 dark:bg-darkCard text-MainColor mt-4;
+        backdrop-filter: blur(28.2px);
+      }
+    }
+
+    .logodiv {
+      img {
+        width: 57px;
+        height: 72px;
+      }
+    }
+    .iconsdiv {
+      #toggleBtn {
+        border-radius: 50%;
+        &:active {
+          background-color: var(--bg-color);
+        }
+      }
+    }
   }
-
-  .logodiv {
-    // width: 470px;
-    // height: 50px;
-    // padding-right: 50px;
-    // display: flex;
-    // align-items: center;
-    // @apply: md:w-[470px] md:h-[50px];
-
-    img {
-      width: 57px;
-      height: 72px;
+  .menublock {
+    ul {
+      @apply w-full bg-primaryNav/90 text-MainColor mt-12;
+      backdrop-filter: blur(30px);
     }
   }
 }
