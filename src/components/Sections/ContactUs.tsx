@@ -10,7 +10,7 @@ export default function ContactUs() {
         <>
             <div className="contact-us w-full  gap-14">
                 <div className="contact-us-header flex flex-col gap-4  ">
-                    <h2 className='text-primary font-bold  text-4xl'>
+                    <h2 className='text-primaryFont font-bold  text-4xl'>
                         {t("title")}
                     </h2>
                     <p style={{ color: 'var(--font-sub2)' }} className='text-sub'>

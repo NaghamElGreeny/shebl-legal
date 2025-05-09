@@ -1,60 +1,38 @@
 .our-services {
-  padding-top: 80px;
-  padding-right: 48px;
-  padding-bottom: 80px;
-  padding-left: 48px;
-  .group2 {
-    height: 542px;
-    gap: 24px;
-    .card {
-      height: 195px;
-      background-color: var(--card);
-      border-radius: 24px;
-      height: 259;
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      gap: 40px;
-      padding: 32px;
+  padding-inline: 48px;
+  padding-block: 20px;
+  .card {
+    @apply min-h-64 bg-primaryCard dark:bg-darkCard rounded-3xl;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 40px;
+    padding: 32px;
 
-      .icon {
-        width: 64px;
-        height: 64px;
-        gap: 8px;
-        border-radius: 40px;
-        padding: 12px;
-        background-color: #fff;
+    .icon {
+      @apply size-16 p-3 rounded-full bg-primaryIcon dark:bg-darkIcon;
+      background-color: #fff;
 
-        img {
-          width: 40px;
-          height: 40px;
-        }
+      img {
+        @apply size-10;
       }
-      .service {
-        //         width: 392;
-        // height: 91px;
-        flex-direction: column;
-        gap: 18px;
-        display: flex;
+    }
+    .service {
+      @apply flex flex-col gap-5 lg:w-96;
+      // width: 392px;
+      // // height: 91px;
+      // flex-direction: column;
+      // gap: 18px;
+      // display: flex;
 
-        h3 {
-          font-family: "din";
-          font-weight: 700;
-          font-size: 24px;
-          line-height: 100%;
-          letter-spacing: 0%;
-          // text-align: right;
-          color: var(--font-main);
-        }
-        p {
-          font-family: "Din";
-          font-weight: 400;
-          font-size: 16px;
-          line-height: 100%;
-          letter-spacing: 0%;
-          // text-align: right;
-          color: var(--font-sub2);
-        }
+      h3 {
+        @apply font-bold text-2xl text-primaryFont dark:text-darkFont;
+        font-family: "Din";
+      }
+      p {
+        @apply text-SharedFontSub;
+        font-family: "Din";
+        line-height: 100%;
       }
     }
   }
