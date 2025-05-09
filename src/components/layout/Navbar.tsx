@@ -4,6 +4,7 @@ import '../../styles/Nav.scss'
 import Link from "next/link";
 import { useTranslations, useLocale } from 'next-intl';
 import { useRouter, usePathname } from 'next/navigation';
+import ChangeThem from './changeThem';
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
@@ -98,6 +99,7 @@ export default function Navbar() {
                         <img src={'/assets/icons/nav bar.png'} />
                     </div>
                 </button>
+                <ChangeThem />
             </div>
             <div ref={menuRef} className={`linksdiv items-center justify-between w-full md:flex md:w-auto md:order-1 ${isOpen ? 'block menublock' : 'hidden'}`} id="navbar-sticky">
                 <ul className="flex flex-col  p-4 md:p-0 mt-4 font-medium border rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">

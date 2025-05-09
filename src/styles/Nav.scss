@@ -1,12 +1,12 @@
 @import "./variables";
 
 nav {
-  @apply w-full h-[100px] bg-primaryNav/10 dark:bg-black text-SharedFontSub p-12;
+  @apply w-full h-[100px] bg-primaryNav/10  text-SharedFontSub p-12;
   backdrop-filter: blur(28.2px);
   transition: background-color 1s smooth;
 
   &.on-scroll {
-    @apply bg-primaryCard dark:bg-darkCard text-primaryFont;
+    @apply bg-primaryCard dark:bg-darkCard text-primaryFont dark:text-darkFont;
     .contact-btn {
       @apply bg-MainColor text-sharedFont visible w-32 h-12 gap-2 p-4 cursor-pointer items-center;
       border-radius: 40px;
@@ -40,7 +40,8 @@ nav {
       #toggleBtn {
         border-radius: 50%;
         &:active {
-          background-color: var(--bg-color);
+          @apply bg-MainColor/30;
+          // background-size: cover;
         }
       }
     }

@@ -19,8 +19,8 @@ export default function () {
         document.documentElement.classList.toggle('dark')
     }
     return (
-        <button type='button' className="text-black " onClick={changeMode}>
-            dark
+        <button type='button' className="text-black bg-MainColor size-5 rounded-full" onClick={changeMode}>
+            {themLayout}
         </button>
     )
 }

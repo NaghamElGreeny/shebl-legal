@@ -15,7 +15,7 @@ module.exports = {
         primaryNav: "#091C2F",
         sharedFont: "#ffffff",
         primaryFont: "#000000",
-        darkFont: "ffffff",
+        darkFont: "#ffffff",
         SharedFontSub: "#b8b8b8",
         primaryBg: "f2f4f5",
         darkBg: "#001c34",
