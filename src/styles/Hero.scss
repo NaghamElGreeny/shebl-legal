@@ -4,7 +4,7 @@
   width: 100%;
   height: min(1000px);
   align-items: center;
-  position: static;
+  // position: static;
   background: linear-gradient(
       180deg,
       rgba(0, 28, 52, 0.9) 6.45%,
@@ -45,35 +45,21 @@
   }
 
   .features {
-    @apply w-[90%] h-[104px] justify-between px-4 py-6 rounded-3xl bg-primaryBg dark:bg-darkBg overflow-x-hidden;
-    // width: 90%;
-    // overflow-x: none;
+    @apply w-[90%] h-[104px] -bottom-14 absolute justify-between px-4 py-6 rounded-3xl bg-primaryCard dark:bg-darkCard  z-10 flex flex-row items-center overflow-x-auto overflow-y-hidden;
     &::-webkit-scrollbar {
       display: none;
     }
 
     .feature-card {
-      @apply w-[461px] gap-6 flex border-SharedFontSub;
-      width: 461px;
-      height: 56px;
-      gap: 24px;
-      display: flex;
-      // border-inline-end: 1px $light-font-sub2;
+      @apply w-[461px] h-14 gap-6 flex border-SharedFontSub items-center;
       border-inline-end: 1px;
 
       img {
         @apply size-10 bg-primaryIcon dark:bg-darkIcon gap-2 rounded-full p-2;
-        // background-color: $light-card-icon;
-        // width: 40px;
-        // height: 40px;
-        // gap: 8px;
-        // border-radius: 32px;
-        // padding: 8px;
       }
 
       div {
         @apply text-SharedFontSub;
-        // color: $light-font-sub1;
       }
     }
   }
