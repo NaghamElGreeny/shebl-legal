@@ -16,7 +16,7 @@ module.exports = {
         sharedFont: "#ffffff",
         primaryFont: "#000000",
         darkFont: "ffffff",
-        SharedFontSub: "#b3b3b3",
+        SharedFontSub: "#b8b8b8",
         primaryBg: "f2f4f5",
         darkBg: "#001c34",
         primaryCard: "#fcfaf8",

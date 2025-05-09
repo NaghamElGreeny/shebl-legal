@@ -1,8 +1,11 @@
 .our-goals {
   width: 100%;
-  height: 560px;
-  gap: 132px;
-  padding: 80px 48px;
+  // height: 560px;s
+  // gap: 132px;
+  padding-block: 48px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 
   .container {
     width: 100%;
@@ -32,17 +35,18 @@
       }
     }
     .group2 {
-      width: 93%;
-      height: 400px;
+      // width: 93%;
+      min-height: 400px;
       gap: 32px;
       border-radius: 24px;
       padding: 32px;
       background-color: var(--card);
       .goals-sec {
         ul {
+          @apply lg:w-96;
           list-style: disc;
           height: 88px;
-          width: 486.5px;
+          // width: 486.5px;
           gap: 8px;
 
           li {
