@@ -18,14 +18,14 @@
         justify-content: space-between;
         gap: 16px;
         color: var(--bg-color);
+        h4 {
+          @apply text-primaryFont dark:text-darkFont;
+        }
         p {
-          font-family: "din";
-          font-weight: 400;
-          font-size: 16px;
+          @apply text-SharedFontSub;
+          font-family: "Din";
           line-height: 100%;
           letter-spacing: 0%;
-          // text-align: right;
-          color: var(--font-sub2);
         }
       }
     }

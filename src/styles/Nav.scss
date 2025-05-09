@@ -1,44 +1,22 @@
 @import "./variables";
 
 nav {
-  @apply w-full h-[100px] bg-primaryNav/10 dark:bg-black;
+  @apply w-full h-[100px] bg-primaryNav/10 dark:bg-black text-SharedFontSub p-12;
   backdrop-filter: blur(28.2px);
-  padding: 48px;
   transition: background-color 1s smooth;
 
   &.on-scroll {
-    @apply bg-primaryCard dark:bg-darkCard;
-    // background-color: $light-bg-color;
-    color: $light-font-sub1;
-
+    @apply bg-primaryCard dark:bg-darkCard text-primaryFont;
     .contact-btn {
-      background-color: $light-primary-btn;
-      color: $light-font-main;
-      visibility: visible;
-      width: 124px;
-      height: 48px;
+      @apply bg-MainColor text-sharedFont visible w-32 h-12 gap-2 p-4 cursor-pointer items-center;
       border-radius: 40px;
-      gap: 8px;
-      padding: 16px;
-      cursor: pointer;
-      align-items: center;
-
       .btn-text {
-        font-family: din;
-        color: $dark-font-main;
-        font-weight: 700;
-        font-size: 13px;
+        @apply font-[Din] text-sharedFont font-bold text-sm;
         line-height: 100%;
       }
 
       .btn-icon {
-        width: 20px;
-        height: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: $light-primary-btn-icon;
-        border-radius: 50%;
+        @apply size-5 flex items-center justify-center bg-sharedFont/20 rounded-full;
 
         img {
           width: 12px;

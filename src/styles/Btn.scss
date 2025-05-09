@@ -1,33 +1,10 @@
 @import "./variables";
 $default-width: 171px;
 .contact-primary-btn {
-  background-color: $light-primary-btn;
-  color: $dark-font-main;
-  visibility: visible;
-  // width: $default-width;
-  height: 48px;
+  @apply bg-MainColor text-sharedFont visible h-12  gap-2 p-4 items-center cursor-pointer;
   border-radius: 40px;
-  gap: 8px;
-  padding: 16px;
-  align-items: center;
-  cursor: pointer;
-
-  // .btn-text {
-  //   font-family: "din";
-  //   color: $dark-font-main;
-  //   font-weight: 700;
-  //   font-size: 13px;
-  //   line-height: 100%;
-  // }
-
   .btn-icon {
-    width: 20px;
-    height: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $light-primary-btn-icon;
-    border-radius: 50%;
+    @apply size-5 flex items-center justify-center bg-sharedFont/20 rounded-full;
 
     img {
       width: 12px;
@@ -35,10 +12,10 @@ $default-width: 171px;
   }
 }
 .second-btn-clr {
-  background-color: var(--secondary-btn);
+  @apply bg-white/10 !text-MainColor;
   backdrop-filter: blur(14px);
   color: var(--secondary-btn-txt) !important ;
-  .btn-icon {
-    color: var(--secondary-btn);
-  }
+  // .btn-icon {
+  //   color: var(--secondary-btn);
+  // }
 }

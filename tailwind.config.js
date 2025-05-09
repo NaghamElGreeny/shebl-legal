@@ -24,6 +24,7 @@ module.exports = {
         primaryIcon: "ffffff",
         darkIcon: "#33495d",
         MainColor: "#cc966a",
+        overlay: "001c34ec",
       },
     },
     screens: {

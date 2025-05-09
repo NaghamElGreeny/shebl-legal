@@ -2,12 +2,7 @@
   padding-inline: 48px;
   padding-block: 20px;
   .card {
-    @apply min-h-64 bg-primaryCard dark:bg-darkCard rounded-3xl;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    gap: 40px;
-    padding: 32px;
+    @apply min-h-64 flex flex-col gap-10 p-8 bg-primaryCard dark:bg-darkCard rounded-3xl;
 
     .icon {
       @apply size-16 p-3 rounded-full bg-primaryIcon dark:bg-darkIcon;
@@ -19,12 +14,6 @@
     }
     .service {
       @apply flex flex-col gap-5 lg:w-96;
-      // width: 392px;
-      // // height: 91px;
-      // flex-direction: column;
-      // gap: 18px;
-      // display: flex;
-
       h3 {
         @apply font-bold text-2xl text-primaryFont dark:text-darkFont;
         font-family: "Din";
