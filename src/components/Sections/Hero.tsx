@@ -24,15 +24,15 @@ export default function HeroSection() {
                 </div>
             </div>
             <div className="features">
-                <div className="feature-card min-w-[330px]">
+                <div className="feature-card">
                     <img src={'/assets/icons/hero-1.png'} />
                     <div>{t("card1")}</div>
                 </div>
-                <div className="feature-card min-w-[330px]">
+                <div className="feature-card">
                     <img src={'/assets/icons/hero-2.png'} />
                     <div>{t("card2")}</div>
                 </div>
-                <div className="feature-card min-w-[330px]">
+                <div className="feature-card">
                     <img src={'/assets/icons/hero-3.png'} />
                     <div>{t("card3")}</div>
                 </div>
