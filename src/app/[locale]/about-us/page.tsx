@@ -13,8 +13,8 @@ export default function AboutPage() {
             <SectionHero title={t("title")} description={t("description2")} image={t("image")} />
             <AboutUs />
             <OurGoals />
-            {/* <Whyus /> */}
-            {/* <ValuseVision /> */}
+            <Whyus />
+            <ValuseVision />
         </>
     )
 }
