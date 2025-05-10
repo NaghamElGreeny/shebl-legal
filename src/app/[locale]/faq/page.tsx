@@ -5,6 +5,7 @@ import PrimaryBtn from '@/components/ui/PrimaryBtn'
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import React from 'react'
+import { getFaqData } from '../../../../services/ApiHandler'
 export default function FaqPage() {
     const t = useTranslations("Faq")
     return (
