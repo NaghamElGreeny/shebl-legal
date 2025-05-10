@@ -13,7 +13,7 @@ export default function AboutUs() {
         <>
             <div className="about-us w-full grid lg:grid-cols-2 grid-cols-1 gap-14 ">
 
-                <div className="group1 flex flex-col gap-14">
+                <div className="group1 flex flex-col gap-14" data-aos="fade-left">
                     <TitleDescription title={t("title")} description={t("description")} />
                     <div className="our-features grid lg:grid-cols-2  gap-4">
                         <div className="feature-card flex">
@@ -37,7 +37,7 @@ export default function AboutUs() {
                         <Link href={'/about-us'}>  <PrimaryBtn text={t("btnText")} arrow={t("arrow")} /></Link>
                     </div>
                 </div>
-                <div className="group2">
+                <div className="group2" data-aos="fade-right">
                     <img src={'/assets/images/group 1.png'} className='w-auto' />
                 </div>
             </div>

@@ -6,10 +6,13 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { cookies } from "next/headers";
 import ChangeThem from "@/components/layout/changeThem";
+import AosWrapper from "@/components/layout/AosWrapper";
 // export const metadata = {
 //   title: "SHEBL",
 // };
-
+// import "animate.css";
+import "aos/dist/aos.css";
+import ScrollBtn from "@/components/ui/ScrollBtn";
 export default async function LocaleLayout({
   children,
   params,
@@ -37,9 +40,13 @@ export default async function LocaleLayout({
         {/* <ChangeThem /> */}
         <NextIntlClientProvider>
           <>
-            <Navbar />
-            {children}
-            <Footer />
+            <AosWrapper>
+
+              <Navbar />
+              {children}
+              <Footer />
+            </AosWrapper>
+            <ScrollBtn />
           </>
 
         </NextIntlClientProvider>

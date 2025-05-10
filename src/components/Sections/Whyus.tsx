@@ -19,7 +19,7 @@ export default function Whyus() {
     ];
     return (
         <>
-            <div className="wrapper w-full flex justify-center items-center">
+            <div className="wrapper w-full flex justify-center items-center" data-aos="zoom-in-up">
                 <div className="why-us relative flex justify-center items-center w-[95%] h-[90%] rounded-[40px] bg-[url('/assets/images/image.png')] bg-cover ">
                     <div className="overlay absolute inset-0 rounded-[40px]"> </div>
                     <div className="container relative flex flex-col justify-center items-center rounded-[40px] w-full">

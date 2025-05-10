@@ -9,7 +9,7 @@ export default function Faq() {
 
     return (
         <>
-            <div className="wrapper w-full flex justify-center items-center">
+            <div data-aos="zoom-in" className="wrapper w-full flex justify-center items-center">
                 <div className="faq relative flex justify-center items-center w-[95%] gap-16 rounded-[40px] bg-[url('/assets/images/faq.png')] bg-cover  ">
                     <div className="overlay absolute inset-0 rounded-[40px]"> </div>
                     <div className="container relative flex flex-col justify-center items-center  w-full px-3">
