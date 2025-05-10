@@ -19,7 +19,7 @@ export default function HeroSection() {
                     <p className='font-normal sm:text-sm text-xl'> {t("subDescription")} </p>
                 </div>
                 <div className="contact flex wrap items-center">
-                    <ContactBtn />
+                    <Link href={'/contact-us'}> <ContactBtn /></Link>
                     <p> {t("contactAdvice")} </p>
                 </div>
             </div>

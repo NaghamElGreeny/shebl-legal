@@ -11,7 +11,7 @@ export default function PrimaryBtn({ text, arrow, width, classs }: {
     const t = useTranslations('Btns');
     return (
         <div className={`contact-primary-btn ${classs} flex flex-row justify-around content-center gap-1 ${width ? `w-[${width}]` : "w-[171px]"}`}>
-            <div> {text}</div>
+            <div className='sm:text-sm xs:text-xs'> {text}</div>
             <div className="btn-icon">
                 <img src={arrow} alt="arrow-vector" />
             </div>

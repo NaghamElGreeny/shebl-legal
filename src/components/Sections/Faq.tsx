@@ -15,7 +15,7 @@ export default function Faq() {
                     <div className="container relative flex flex-col justify-center items-center  w-full px-3">
                         <div className="group1 flex justify-between w-full">
                             <h3 className='font-bold lg:text-[40px] text-2xl'>{t("title")}</h3>
-                            <Link href={''}>  <PrimaryBtn text={t("btnText")} arrow={t("arrow")} width='151px' classs='second-btn-clr' /></Link>
+                            <Link href={'/faq'}>  <PrimaryBtn text={t("btnText")} arrow={t("arrow")} width='151px' classs='second-btn-clr' /></Link>
                         </div>
                         <div className="group2 flex flex-col justify-between w-full  ">
                             <div className="question">

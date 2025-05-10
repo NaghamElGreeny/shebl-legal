@@ -16,7 +16,7 @@ export default function FaqPage() {
 
                     <div className="container relative flex flex-col justify-center items-center  w-full h-full">
                         <div className="group1 flex justify-between w-full">
-                            <h3 className='font-bold lg:text-[40px] text-2xl' style={{ color: ` var(--font-main)` }}>{t("title")}</h3>
+                            <h3 className='font-bold lg:text-[40px] text-2xl text-primaryFont lg:text-darkFont' >{t("title")}</h3>
                         </div>
                         <div className="group2 flex flex-col justify-between w-full ">
                             <div className="question">

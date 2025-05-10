@@ -17,18 +17,13 @@
         border: 1px solid var(--Secondary-Secondary-80, #33495d);
       }
       .question {
-        display: flex;
-        justify-content: space-between;
-        gap: 16px;
-        color: var(--font-main);
+        @apply flex gap-4 justify-between text-primaryFont dark:text-darkFont;
+
         p {
-          font-family: "din";
-          font-weight: 400;
-          font-size: 16px;
+          font-family: "Din";
           line-height: 100%;
           letter-spacing: 0%;
-          // text-align: right;
-          color: var(--font-sub2);
+          @apply text-SharedFontSub;
         }
       }
     }
