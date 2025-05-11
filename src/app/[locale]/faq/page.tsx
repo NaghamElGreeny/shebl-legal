@@ -1,13 +1,15 @@
+'use client'
 import SectionHero from '@/components/layout/SectionHero'
 import Faq from '@/components/Sections/Faq'
 import '@/styles/Faq-page.scss'
 import PrimaryBtn from '@/components/ui/PrimaryBtn'
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
-import React from 'react'
-import { getFaqData } from '../../../../services/ApiHandler'
+import React, { useEffect, useState } from 'react'
+
 export default function FaqPage() {
-    const t = useTranslations("Faq")
+    const t = useTranslations("Faq");
+
     return (
         <>
             <SectionHero title={t("title")} description={t("description")} image={t("image")} />

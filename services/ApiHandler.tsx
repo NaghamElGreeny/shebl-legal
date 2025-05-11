@@ -30,12 +30,12 @@ const fetchData = async (endpoint: string, errorMsg: string) => {
 // 🔽 Exported API Functions
 export const getHomeData = () => fetchData("/home", "Failed to fetch home");
 
-export const getAboutData = () => fetchData("/about", "Failed to fetch about");
+export const getAboutData = () => fetchData("/why-us", "Failed to fetch about");
 
 export const getSettingsData = () =>
   fetchData("/settings", "Failed to fetch settings");
-export const getFaqData = () =>
-  fetchData("/faq", "Failed to fetch Faq");
+export const getServicesDAta = () =>
+  fetchData("/our-services", "Failed to fetch Faq");
 
 // export const getServiceBySlug = (slug: string) =>
 //   fetchData(`/services/${slug}`, "Failed to fetch service");
