@@ -2,10 +2,10 @@
 import { ServiceItem } from '../../../types';
 import '../../styles/OurServices.scss'
 import { useTranslations } from 'next-intl';
+import SectionHero from '../layout/SectionHero';
 
 export default function OurServices({ servicesArray }: {
     servicesArray: ServiceItem[];
-
 }) {
     const t = useTranslations("Our-Services");
     const services = servicesArray;
@@ -14,8 +14,6 @@ export default function OurServices({ servicesArray }: {
         <>
             <div className="wrapper  w-full flex justify-center items-center">
                 <div className="our-services relative grid lg:grid-cols-3 lg:grid-row-2 grid-cols-1 gap-6 w-full">
-
-
                     {
                         services.map((service: ServiceItem) => (
                             <div

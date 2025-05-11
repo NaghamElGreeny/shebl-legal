@@ -21,7 +21,6 @@ export default function ServicesPage() {
     return (
         <>
             <SectionHero title={services.banner.title} description={services.banner.description} image={services.banner.image} />
-            {/* <SectionHero title={t("title")} description={t("description")} image={t("image")} /> */}
             <OurServices servicesArray={services.our_services} />
 
 

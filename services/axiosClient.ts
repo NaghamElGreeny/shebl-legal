@@ -1,5 +1,5 @@
 // lib/axios.ts
-"use client"
+"use client";
 import axios from "axios";
 import Cookies from "js-cookie";
 const axiosInstance = axios.create({
@@ -9,9 +9,6 @@ const axiosInstance = axios.create({
 axiosInstance.interceptors.request.use(
   (config) => {
     let locale = Cookies.get("NEXT_LOCALE") || "en";
-
-
-
 
     config.headers["Accept-Language"] = locale;
     return config;

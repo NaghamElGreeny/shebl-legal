@@ -30,3 +30,12 @@ export type FaqResponse = {
   banner: Banner;
   faq: FaqItem[];
 };
+
+type Social = {
+  id: number;
+  key: string;
+  value: string;
+};
+export type SocialResponse = {
+  data: Social[];
+};

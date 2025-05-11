@@ -14,6 +14,13 @@ export const getFaq = async () => {
     .then((res) => res.data.data)
     .catch(() => []);
 };
+export const getSocial = async () => {
+  return await axiosInstance
+    .get("/social")
+    .then((res) => res.data.data)
+    .catch(() => []);
+};
+
 
 export const getWhyUsData = async () => {
   try {

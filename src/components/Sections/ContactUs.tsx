@@ -3,50 +3,54 @@ import '../../styles/ContactUs.scss'
 import Link from "next/link";
 import { useTranslations } from 'next-intl';
 import TitleDescription from "../layout/TitleDescription"
+import { Social, SocialResponse } from '../../../types';
 
-export default function ContactUs() {
+export default function ContactUs({ social }: {
+    social: Social[];
+}) {
     const t = useTranslations("Contact-us");
-
+    // const values = social.data;
+    console.log(social);
+    const phone = social?.find(item => item.key === 'phone');
+    const mail = social?.find(item => item.key === 'email');
+    const address = social?.find(item => item.key === 'address');
+    const appoitnments = social?.find(item => item.key === 'appoitnments');
+    // const itemsArray = target ? target : [];
+    console.log("Phone:", phone);
+    console.log("Social Array:", social);
     return (
         <>
             <div className="contact-us w-full  gap-14">
-                <TitleDescription title={t("title")} description={t("description")} />
-                {/* <div className="contact-us-header flex flex-col gap-4  ">
-                    <h2 className='text-primaryFont font-bold  text-4xl'>
-                        {t("title")}
-                    </h2>
-                    <p style={{ color: 'var(--font-sub2)' }} className='text-sub'>
-                        {t("description")}
-                    </p>
-                </div> */}
+                {/* <TitleDescription title={t("title")} description={t("description")} /> */}
+
                 <div className="wrapper grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-1">
                     <div className="group1 flex flex-col gap-6 items-center justify-center">
 
                         <div className="shebl-quote flex flex-col items-center gap-4">
-                            <h2 style={{ color: 'var(--font-main)' }} className='font-bold text-[40px]'>
+                            <h2 className='font-bold text-[40px] text-primaryFont dark:text-darkFont'>
                                 {t("contacts-header")}
                             </h2>
-                            <p style={{ color: 'var(--font-sub2)' }} className='text-base font-normal'>
+                            <p className='text-base font-normal text-SharedFontSub'>
                                 {t("contacts-header-description")}
                             </p>
                         </div>
                         <div className="shebl-contact-info grid lg:grid-cols-2   gap-4">
                             <div className="feature-card flex">
                                 <img src={'/assets/icons/sms.svg'} />
-                                <p>{t("gmail")}</p>
+                                <a href={`mailto:${mail?.value}`}>{mail?.value}</a>
 
                             </div>
                             <div className="feature-card flex">
                                 <img src={'/assets/icons/call.svg'} />
-                                <p>{t("phone")}</p>
+                                <a href={`tel:${phone?.value}`}>{phone?.value}</a>
                             </div>
                             <div className="feature-card flex">
                                 <img src={'/assets/icons/clock.svg'} />
-                                <p>{t("work-hrs")}</p>
+                                <p>{appoitnments?.value}</p>
                             </div>
                             <div className="feature-card flex">
                                 <img src={'/assets/icons/location.svg'} />
-                                <p>{t("location")}</p>
+                                <p>{address?.value}</p>
                             </div>
                         </div>
 
