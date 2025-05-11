@@ -1,29 +1,21 @@
 .faq {
-  padding-top: 80px;
-  padding-right: 48px;
-  padding-bottom: 80px;
-  padding-left: 48px;
-  border-radius: 40px;
+  padding-inline: 48px;
+  padding-block: 80px;
   .container {
-    // width: 1320;
-    min-height: 532px;
     gap: 64px;
-    .group2 {
-      gap: 64px;
-      .line {
-        width: 100%;
-        border-width: 1px;
-        border: 1px solid var(--Secondary-Secondary-80, #33495d);
-      }
-      .question {
-        @apply flex gap-4 justify-between text-primaryFont dark:text-darkFont;
+    .line {
+      width: 100%;
+      border-width: 1px;
+      border: 1px solid var(--Secondary-Secondary-80, #33495d);
+    }
+    .question {
+      @apply flex gap-4 justify-between text-primaryFont dark:text-darkFont;
 
-        p {
-          font-family: "Din";
-          line-height: 100%;
-          letter-spacing: 0%;
-          @apply text-SharedFontSub;
-        }
+      p {
+        font-family: "Din";
+        line-height: 100%;
+        letter-spacing: 0%;
+        @apply text-SharedFontSub;
       }
     }
   }

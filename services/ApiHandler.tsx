@@ -35,7 +35,7 @@ export const getAboutData = () => fetchData("/why-us", "Failed to fetch about");
 export const getSettingsData = () =>
   fetchData("/settings", "Failed to fetch settings");
 export const getServicesDAta = () =>
-  fetchData("/our-services", "Failed to fetch Faq");
+  fetchData("/our-services", "Failed to fetch Services");
 
 // export const getServiceBySlug = (slug: string) =>
 //   fetchData(`/services/${slug}`, "Failed to fetch service");

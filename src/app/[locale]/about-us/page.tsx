@@ -8,25 +8,26 @@ import Whyus from '@/components/Sections/Whyus'
 import { useTranslations } from 'next-intl'
 import React, { useEffect, useState } from 'react'
 import { getAboutData } from '../../../../services/ApiHandler'
+import { getAllServices, getWhyUsData } from "../../../../services/ClientApiHandler";
 export default function AboutPage() {
     const t = useTranslations("About-section");
-    // const data = getAboutData();
-    // console.log(data);
-    const [posts, setPosts] = useState([]);
+    const data = getWhyUsData();
+    console.log(data);
+    // const [posts, setPosts] = useState([]);
 
-    useEffect(() => {
-        const fetchPosts = async () => {
-            try {
-                const res = await axios.get('http://shebl9.azmy.aait-d.com/api/client/preview/why-us');
-                setPosts(res.data);
-            } catch (err) {
-                console.error('Error fetching posts:', err);
-            }
-        };
+    // useEffect(() => {
+    //     const fetchPosts = async () => {
+    //         try {
+    //             const res = await axios.get('http://shebl9.azmy.aait-d.com/api/client/preview/why-us');
+    //             setPosts(res.data);
+    //         } catch (err) {
+    //             console.error('Error fetching posts:', err);
+    //         }
+    //     };
 
-        fetchPosts();
+    //     fetchPosts();
 
-    }, []);
+    // }, []);
     return (
         <>
             <SectionHero title={t("title")} description={t("description2")} image={t("image")} />

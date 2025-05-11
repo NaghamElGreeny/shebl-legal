@@ -9,7 +9,7 @@ export default function SectionHero({ title, description, image }: {
     return (
         <>
             <div className="section-hero">
-                <div className="hero w-full relative flex justify-center items-center" style={{ background: `url(${image})`, backgroundSize: 'cover' }}>
+                <div className="hero w-full relative flex justify-center items-center" style={{ backgroundImage: `url(${image})`, backgroundSize: 'cover' }}>
                     <div className="overlay absolute inset-0"> </div>
                     <div className="container relative flex justify-center items-center  w-3/5 h-[556px] pr-12 pl-12 pt-[206px] flex-col items-cente gap-10">
                         <h2 className='font-bold text-[40px] text-center'>
