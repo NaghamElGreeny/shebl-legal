@@ -20,6 +20,19 @@ export const getSocial = async () => {
     .then((res) => res.data.data)
     .catch(() => []);
 };
+export const getMainPage = async () => {
+  try {
+    const { data } = await axiosInstance.get("", {
+      params: {
+        banner_type: "main_bannerd",
+      },
+    })
+    return data || [];
+  } catch {
+    throw new AppError("Failed to fetch why-us data ,NAghamm", 500);
+  }
+
+};
 
 
 export const getWhyUsData = async () => {

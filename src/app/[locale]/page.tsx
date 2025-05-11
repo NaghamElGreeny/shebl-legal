@@ -6,13 +6,15 @@ import OurServices from "@/components/Sections/OurServices";
 import Faq from "@/components/Sections/Faq";
 import ContactUs from "@/components/Sections/ContactUs";
 import { useEffect, useState } from "react";
-import { getAllServices, getFaq, getSocial } from "../../../services/ClientApiHandler";
-import { FaqResponse, ServicesResponse, Social } from "../../../types";
+import { getAllServices, getFaq, getMainPage, getSocial, getWhyUsData } from "../../../services/ClientApiHandler";
+import { FaqResponse, mainPageResponse, ServicesResponse, Social, WhyUsResponse } from "../../../types";
 
 export default function HomePage() {
   const [social, setSocial] = useState<Social[] | null>(null);
   const [faqData, setFaqData] = useState<FaqResponse | null>(null);
   const [services, setServices] = useState<ServicesResponse | null>(null);
+  const [WhyUsData, setWhyUsData] = useState<WhyUsResponse | null>(null);
+  const [MainData, setMainData] = useState<mainPageResponse | null>(null);
   useEffect(() => {
     getSocial().then((social: Social[]) => {
       setSocial(social);
@@ -23,13 +25,20 @@ export default function HomePage() {
     getAllServices().then((services: ServicesResponse) => {
       setServices(services);
     });
+    getWhyUsData().then((data: WhyUsResponse) => {
+      setWhyUsData(data);
+    });
+    getMainPage().then((maindata: mainPageResponse) => {
+      setMainData(maindata);
+    });
   }, []);
-  if (!social || !faqData || !services) return <div>Loading...</div>;
+  if (!social || !faqData || !services || !WhyUsData || !MainData) return <div>Loading...</div>;
+  console.log(MainData.data);
   return (
     <div className=" space-y-12">
       <HeroSection />
       <AboutUs />
-      <Whyus />
+      <Whyus data={WhyUsData.data} />
       <OurServices servicesArray={services.our_services} />
       <Faq faq={faqData.faq} />
       <ContactUs social={social} />

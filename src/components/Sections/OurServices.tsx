@@ -9,7 +9,7 @@ export default function OurServices({ servicesArray }: {
 }) {
     const t = useTranslations("Our-Services");
     const services = servicesArray;
-    console.log('services: ', services);
+    // console.log('services: ', services);
     return (
         <>
             <div className="wrapper  w-full flex justify-center items-center">

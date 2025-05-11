@@ -9,15 +9,10 @@ export default function ContactUs({ social }: {
     social: Social[];
 }) {
     const t = useTranslations("Contact-us");
-    // const values = social.data;
-    console.log(social);
     const phone = social?.find(item => item.key === 'phone');
     const mail = social?.find(item => item.key === 'email');
     const address = social?.find(item => item.key === 'address');
     const appoitnments = social?.find(item => item.key === 'appoitnments');
-    // const itemsArray = target ? target : [];
-    console.log("Phone:", phone);
-    console.log("Social Array:", social);
     return (
         <>
             <div className="contact-us w-full  gap-14">

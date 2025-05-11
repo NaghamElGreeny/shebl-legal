@@ -16,8 +16,6 @@ export default function ServicesPage() {
     }, []);
 
     if (!services) return <div>Loading...</div>;
-    // console.log('array', arrServices)
-
     return (
         <>
             <SectionHero title={services.banner.title} description={services.banner.description} image={services.banner.image} />
