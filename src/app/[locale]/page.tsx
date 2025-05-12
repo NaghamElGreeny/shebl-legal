@@ -33,11 +33,18 @@ export default function HomePage() {
     });
   }, []);
   if (!social || !faqData || !services || !WhyUsData || !MainData) return <div>Loading...</div>;
-  console.log(MainData.data);
+  // console.log(MainData.data[0].banner);
+  const banner = MainData?.data?.banner;
+  const aboutSection = MainData.data.sections.find(section => section.type === "about");
+
+  if (!aboutSection) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <div className=" space-y-12">
-      <HeroSection />
-      <AboutUs />
+      <HeroSection maindata={banner} />
+      <AboutUs about={aboutSection} />
       <Whyus data={WhyUsData.data} />
       <OurServices servicesArray={services.our_services} />
       <Faq faq={faqData.faq} />

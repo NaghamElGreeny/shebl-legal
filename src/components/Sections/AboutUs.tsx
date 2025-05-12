@@ -4,26 +4,28 @@ import Link from "next/link";
 import PrimaryBtn from "../ui/PrimaryBtn"
 import TitleDescription from "../layout/TitleDescription"
 import { useTranslations, useLocale } from 'next-intl';
+import { FeatureItem, whyusdata } from '../../../types';
 
-export default function AboutUs() {
+export default function AboutUs({ about }: {
+    about: whyusdata;
+}) {
     const t = useTranslations("About-section");
     const locale = useLocale();
-
+    const features = about.features;
+    console.log(features)
     return (
         <>
             <div className="about-us w-full grid lg:grid-cols-2 grid-cols-1 gap-14 ">
 
                 <div className="group1 flex flex-col gap-14" data-aos="fade-left">
-                    <TitleDescription title={t("title")} description={t("description")} />
+                    <TitleDescription title={about.title} description={about.description} />
                     <div className="our-features grid lg:grid-cols-2  gap-4">
-                        <div className="feature-card flex">
-                            <img src={'/assets/icons/hero-title-icon.png'} /> <p style={{ color: 'var(--font-main)' }}>{t("card1")}</p></div>
-                        <div className="feature-card flex">
-                            <img src={'/assets/icons/hero-title-icon.png'} /> <p style={{ color: 'var(--font-main)' }}>{t("card2")}</p></div>
-                        <div className="feature-card flex">
-                            <img src={'/assets/icons/hero-title-icon.png'} /> <p style={{ color: 'var(--font-main)' }}>{t("card3")}</p></div>
-                        <div className="feature-card flex">
-                            <img src={'/assets/icons/hero-title-icon.png'} /> <p style={{ color: 'var(--font-main)' }}>{t("card4")}</p></div>
+                        {features.map((feature: FeatureItem) => (
+                            <div className="feature-card flex" key={feature.id}>
+                                <img src={feature.icon} className='size-8' />
+                                <p className='text-primaryFont dark:text-darkFont'>{feature.value}</p>
+                            </div>
+                        ))}
                     </div>
                     <div className="services-icons flex gap-4 items-center">
                         <div className="groupServices flex relative">

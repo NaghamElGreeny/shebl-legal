@@ -68,14 +68,14 @@ export type WhyUsResponse = {
 type mainData = {
   faq: FaqItem[];
   sections: whyusdata[];
-  banner: whyusdata[];
+  banner: whyusdata;
   footer: string;
 };
 
 export type mainPageResponse = {
   status: string;
   message: string;
-  data: mainData[];
+  data: mainData;
 };
 
 // {
