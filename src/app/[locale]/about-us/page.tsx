@@ -7,7 +7,7 @@ import ValuseVision from '@/components/Sections/ValuseVision'
 import Whyus from '@/components/Sections/Whyus'
 import { useTranslations } from 'next-intl'
 import React, { useEffect, useState } from 'react'
-import { getAboutData } from '../../../../services/ApiHandler'
+// import { getAboutData } from '../../../../services/ApiHandler'
 import { getAllServices, getMainPage, getWhyUsData } from "../../../../services/ClientApiHandler";
 import { mainPageResponse, WhyUsResponse } from "../../../../types";
 export default function AboutPage() {
@@ -34,8 +34,8 @@ export default function AboutPage() {
     const aboutSection = MainData.data.sections.find(section => section.type === "about");
     const goalsSection = MainData.data.sections.find(section => section.type === "goals");
     const valuesSection = MainData.data.sections.find(section => section.type === "core_values");
-    const visionSection = MainData.data.sections.find(section => section.type === "our_vision");
-    if (!aboutSection || !goalsSection || !valuesSection || !visionSection) {
+    const visionsSection = MainData.data.sections.find(section => section.type === "our_vision");
+    if (!aboutSection || !goalsSection || !valuesSection || !visionsSection) {
         return <div>Loading...</div>;
     }
 
@@ -45,7 +45,7 @@ export default function AboutPage() {
             <AboutUs about={aboutSection} />
             <OurGoals goals={goalsSection} />
             <Whyus data={WhyUsData.data} />
-            <ValuseVision values={valuesSection} vision={visionSection} />
+            <ValuseVision values={valuesSection} vision={visionsSection} />
         </>
     )
 }

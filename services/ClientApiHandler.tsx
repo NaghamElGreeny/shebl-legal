@@ -44,7 +44,6 @@ export const getWhyUsData = async () => {
   }
 };
 
-
 // export const getCategoryData = async (id: number) => {
 //   try {
 //     const { data } = await axiosInstance.get(`/categories?category_id=${id}`);

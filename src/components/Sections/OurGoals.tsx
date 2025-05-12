@@ -25,7 +25,7 @@ export default function OurGoals({ goals }: {
                                 '>{goals.description}</p>
                             </div>
                             <div className="goals-sec flex lg:flex-row flex-col">
-                                <ul className='grid grid-cols-2 '>
+                                <ul className='grid lg:grid-cols-2 md:grid-cols-2 gird-cols-1'>
                                     {features.map((goal: FeatureItem) => (
                                         <li key={goal.id}>{goal.value}</li>
                                     ))}

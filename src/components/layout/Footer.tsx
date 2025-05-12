@@ -3,12 +3,23 @@ import '../../styles/Footer.scss'
 import Link from "next/link";
 import { useTranslations, useLocale } from 'next-intl';
 import { useRouter } from 'next/navigation';
+import { Social } from '../../../types';
 
 
-export default function Footer() {
+export default function Footer({ social }: {
+    social: Social[];
+}) {
     const t = useTranslations('Footer');
     const locale = useLocale();
     const router = useRouter();
+    const whatsapp = social.find(social => social.key === "phone");
+    const facebook = social.find(social => social.key === "facebook");
+    const x = social.find(social => social.key === "x");
+    const instagram = social.find(social => social.key === "instagram");
+    const description = social.find(social => social.key === "desc");
+    if (!whatsapp || !facebook || !x || !instagram || !description) {
+        return <div>Loading...</div>;
+    }
     return (
         <>
             <footer className="w-full mt-auto  relative flex justify-center items-center gap-16 bg-[url('/assets/footer/footer.png')] bg-cover  ">
@@ -23,7 +34,7 @@ export default function Footer() {
                                 {t("title")}
                             </h3>
                             <p className='lg:text-sm font-normal text-xs'>
-                                {t("description")}
+                                {description.value}
                             </p>
                         </div>
                     </div>
@@ -36,22 +47,22 @@ export default function Footer() {
                         <div className="social-links">
                             <ul className="flex gap-8">
                                 <li>
-                                    <Link href="https://www.whatsapp.com" target='_blank'>
+                                    <Link href={`https://wa.me/${whatsapp.value}`} target='_blank'>
                                         <img src={'/assets/footer/whatsapp.png'} />
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="https://www.twitter.com" target='_blank'>
+                                    <Link href={x.value} target='_blank'>
                                         <img src={'/assets/footer/x.png'} />
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="https://www.instagram.com" target='_blank' >
+                                    <Link href={instagram.value} target='_blank' >
                                         <img src={'/assets/footer/instagram.png'} />
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="https://www.facebook.com" target='_blank' >
+                                    <Link href={facebook.value} target='_blank' >
                                         <img src={'/assets/footer/facebook.png'} />
                                     </Link>
                                 </li>

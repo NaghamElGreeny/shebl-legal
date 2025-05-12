@@ -13,12 +13,12 @@ export default function ValuseVision({ values, vision }: {
         <>
 
             <div className="values w-full">
-                <div className="main-dev flex flex-col items-center justify-center lg:gap-12 gap-3 lg:bg-[url('/assets/images/Rectangle.png')] bg-cover lg:bg-transparent bg-primaryCard rounded-3xl">
+                <div className="main-dev flex flex-col items-center justify-center lg:gap-12 gap-3 lg:bg-[url('/assets/images/Rectangle.png')] bg-cover lg:bg-transparent bg-primaryCard dark:bg-darkBg rounded-3xl">
                     <div className="icon">
                         <img src="/assets/icons/card-2.png" />
                     </div>
                     <div className="title flex flex-col items-center gap-3">
-                        <h3 >{values.title}</h3>
+                        <h3 className=''>{values.title}</h3>
                         <div className="description flex flex-row gap-2 items-center ">
                             <img src={`/assets/icons/${locale === 'ar' ? 'start' : 'end'}.png`} />
                             <p className='text-center'>{values.description}</p>

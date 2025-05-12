@@ -9,6 +9,9 @@ import ChangeThem from "@/components/layout/changeThem";
 import AosWrapper from "@/components/layout/AosWrapper";
 import "aos/dist/aos.css";
 import ScrollBtn from "@/components/ui/ScrollBtn";
+import { getSocial } from "../../../services/ClientApiHandler";
+import { Social } from "../../../types";
+import { getSocialFooter } from "../../../services/ApiHandler";
 export default async function LocaleLayout({
   children,
   params,
@@ -25,7 +28,16 @@ export default async function LocaleLayout({
   const appCookies = await cookies()
 
   const themeMode = appCookies.get('modeLayout')
+  async function getData() {
+    return getSocialFooter().then((social: Social[]) => {
+      return social || [];
+    });
+  }
 
+  const social = await getData();
+
+  // if (!social) return <div>Loading ...</div>
+  console.log(social)
   return (
     <html className={`${themeMode ? themeMode : ''}`} lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
       <head>
@@ -40,7 +52,7 @@ export default async function LocaleLayout({
 
               <Navbar />
               {children}
-              <Footer />
+              <Footer social={social} />
             </AosWrapper>
             <ScrollBtn />
           </>

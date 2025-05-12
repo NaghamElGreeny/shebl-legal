@@ -12,7 +12,7 @@ export default function AboutUs({ about }: {
     const t = useTranslations("About-section");
     const locale = useLocale();
     const features = about.features;
-    console.log(features)
+    // console.log(features)
     return (
         <>
             <div className="about-us w-full grid lg:grid-cols-2 grid-cols-1 gap-14 ">

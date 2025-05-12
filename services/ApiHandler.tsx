@@ -30,7 +30,7 @@ const fetchData = async (endpoint: string, errorMsg: string) => {
 // 🔽 Exported API Functions
 export const getHomeData = () => fetchData("/home", "Failed to fetch home");
 
-export const getAboutData = () => fetchData("/why-us", "Failed to fetch about");
+export const getSocialFooter = () => fetchData("/social", "Failed to fetch footer social");
 
 export const getSettingsData = () =>
   fetchData("/settings", "Failed to fetch settings");
