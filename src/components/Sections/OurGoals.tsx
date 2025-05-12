@@ -1,8 +1,12 @@
 import React from 'react'
 import { useTranslations } from 'next-intl'
 import '../../styles/OurGoals.scss';
-export default function OurGoals() {
+import { FeatureItem, whyusdata } from '../../../types';
+export default function OurGoals({ goals }: {
+    goals: whyusdata;
+}) {
     const t = useTranslations("Our-goals");
+    const features = goals.features;
     return (
         <>
             <div className="our-goals flex justify-center items-center content-center">
@@ -16,19 +20,15 @@ export default function OurGoals() {
                         <div className="icon rounded-full p-3 gap-2 w-14 h-14 bg-white"><img src="/assets/icons/hero-3.png" /></div>
                         <div className="goals flex flex-col gap-10">
                             <div className="title gap-5 flex flex-col">
-                                <h3 className='font-bold text-[40px]' style={{ color: 'var(--main-color)' }}>{t("title")}</h3>
-                                <p style={{ color: 'var(--font-sub1)' }}>{t("description")}</p>
+                                <h3 className='font-bold text-[40px] text-primaryFont dark:text-darkFont' >{goals.title}</h3>
+                                <p className='text-SharedFontSub
+                                '>{goals.description}</p>
                             </div>
-                            <div className="goals-sec flex lg:flex-row flex-col ">
-                                <ul>
-                                    <li>{t("goal1")}</li>
-                                    <li>{t("goal2")}</li>
-                                    <li>{t("goal3")}</li>
-
-                                </ul>
-                                <ul>
-                                    <li>{t("goal4")}</li>
-                                    <li>{t("goal5")}</li>
+                            <div className="goals-sec flex lg:flex-row flex-col">
+                                <ul className='grid grid-cols-2 '>
+                                    {features.map((goal: FeatureItem) => (
+                                        <li key={goal.id}>{goal.value}</li>
+                                    ))}
                                 </ul>
                             </div>
                         </div>

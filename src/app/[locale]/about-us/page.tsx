@@ -32,8 +32,10 @@ export default function AboutPage() {
     //     (section) => section.type === "about"
     // );
     const aboutSection = MainData.data.sections.find(section => section.type === "about");
-
-    if (!aboutSection) {
+    const goalsSection = MainData.data.sections.find(section => section.type === "goals");
+    const valuesSection = MainData.data.sections.find(section => section.type === "core_values");
+    const visionSection = MainData.data.sections.find(section => section.type === "our_vision");
+    if (!aboutSection || !goalsSection || !valuesSection || !visionSection) {
         return <div>Loading...</div>;
     }
 
@@ -41,9 +43,9 @@ export default function AboutPage() {
         <>
             <SectionHero title={t("title")} description={t("description2")} image={t("image")} />
             <AboutUs about={aboutSection} />
-            <OurGoals />
+            <OurGoals goals={goalsSection} />
             <Whyus data={WhyUsData.data} />
-            <ValuseVision />
+            <ValuseVision values={valuesSection} vision={visionSection} />
         </>
     )
 }
