@@ -16,7 +16,8 @@
           padding: 16px;
           border-radius: 32px;
           border-width: 1px;
-          p {
+          p,
+          a {
             @apply text-primaryFont dark:text-darkFont;
             font-family: "din";
             line-height: 100%;
