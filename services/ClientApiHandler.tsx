@@ -27,6 +27,7 @@ export const getMainPage = async () => {
         banner_type: "main_bannerd",
       },
     })
+
     return data || [];
   } catch {
     throw new AppError("Failed to fetch why-us data ,NAghamm", 500);

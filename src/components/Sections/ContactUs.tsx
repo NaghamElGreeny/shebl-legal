@@ -10,6 +10,7 @@ export default function ContactUs({ social }: {
 }) {
     const t = useTranslations("Contact-us");
     const phone = social?.find(item => item.key === 'phone');
+    const phone_code = social?.find(item => item.key === 'phone_code');
     const mail = social?.find(item => item.key === 'email');
     const address = social?.find(item => item.key === 'address');
     const appoitnments = social?.find(item => item.key === 'appoitnments');
@@ -37,7 +38,7 @@ export default function ContactUs({ social }: {
                             </div>
                             <div className="feature-card flex">
                                 <img src={'/assets/icons/call.svg'} />
-                                <a href={`tel:${phone?.value}`}>{phone?.value}</a>
+                                <a href={`tel:${phone?.value}`} dir='ltr'> {phone_code ? `${phone_code?.value}${phone?.value}` : `${phone?.value}`}</a>
                             </div>
                             <div className="feature-card flex">
                                 <img src={'/assets/icons/clock.svg'} />

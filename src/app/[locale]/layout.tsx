@@ -36,8 +36,8 @@ export default async function LocaleLayout({
 
   const social = await getData();
 
-  // if (!social) return <div>Loading ...</div>
-  console.log(social)
+  if (!social) return <div className='!h-96 w-full bg-zinc-700 text-center flex items-center justify-center'>
+    <h2 className='text-red-500'>No features to display</h2></div>
   return (
     <html className={`${themeMode ? themeMode : ''}`} lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
       <head>

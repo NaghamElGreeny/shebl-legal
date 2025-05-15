@@ -12,6 +12,10 @@ export default function AboutUs({ about }: {
     const t = useTranslations("About-section");
     const locale = useLocale();
     const features = about.features;
+    if (!about || !features) {
+        return <div className='!h-96 w-full bg-zinc-700 text-center absolute top-[100px] flex items-center justify-center'>
+            <h2 className='text-red-500'>No About data to display</h2></div>
+    }
     // console.log(features)
     return (
         <>

@@ -1,28 +1,75 @@
-'use client'
-import SectionHero from '@/components/layout/SectionHero'
-import OurServices from '@/components/Sections/OurServices'
-import { useTranslations } from 'next-intl'
-import React, { useEffect, useState } from 'react'
-import { getAllServices } from '../../../../services/ClientApiHandler'
-import type { ServicesResponse, ServiceItem } from '../../../../types'
+// 'use client'
+// import SectionHero from '@/components/layout/SectionHero'
+// import OurServices from '@/components/Sections/OurServices'
+// import { useTranslations } from 'next-intl'
+// import React, { useEffect, useState } from 'react'
+// import { getAllServices } from '../../../../services/ClientApiHandler'
+// import type { ServicesResponse, ServiceItem } from '../../../../types'
+// export default function ServicesPage() {
+//     // const t = useTranslations("Our-Services");
+//     const [services, setServices] = useState<ServicesResponse | null>(null);
+
+//     useEffect(() => {
+//         getAllServices().then((services: ServicesResponse) => {
+//             setServices(services);
+//         });
+//     }, []);
+
+//     if (!services) return <div>Loading...</div>;
+//     return (
+//         <>
+//             <SectionHero title={services.banner.title} description={services.banner.description} image={services.banner.image} />
+//             <OurServices servicesArray={services.our_services} />
+
+
+//         </>
+//     )
+// }
+
+'use client';
+import SectionHero from '@/components/layout/SectionHero';
+import OurServices from '@/components/Sections/OurServices';
+import React, { useEffect, useState } from 'react';
+import { getAllServices } from '../../../../services/ClientApiHandler';
+import type { ServicesResponse } from '../../../../types';
+
 export default function ServicesPage() {
-    // const t = useTranslations("Our-Services");
     const [services, setServices] = useState<ServicesResponse | null>(null);
 
     useEffect(() => {
-        getAllServices().then((services: ServicesResponse) => {
-            setServices(services);
-        });
+        getAllServices()
+            .then((services: ServicesResponse) => {
+                setServices(services);
+            })
+            .catch((error) => {
+                console.error("Error fetching services:", error);
+                setServices(null);
+            });
     }, []);
 
-    if (!services) return <div>Loading...</div>;
+    if (!services) {
+        return <div className='text-red-500 size-9 '>Loading or no data available...</div>; // ممكن تحط رسالة حسب اللي تحب تظهره للمستخدم
+    }
+
+    const { banner, our_services } = services;
+
     return (
         <>
-            <SectionHero title={services.banner.title} description={services.banner.description} image={services.banner.image} />
-            <OurServices servicesArray={services.our_services} />
-
+            {banner && banner.title && banner.description && banner.image ? (
+                <SectionHero
+                    title={banner.title}
+                    description={banner.description}
+                    image={banner.image}
+                />
+            ) : (
+                <SectionHero
+                    title='No title provided'
+                    description='No desc provide'
+                    image='No image provided'
+                />
+            )}
+            <OurServices servicesArray={our_services} />
 
         </>
-    )
+    );
 }
-

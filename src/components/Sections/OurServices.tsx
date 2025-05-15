@@ -14,7 +14,7 @@ export default function OurServices({ servicesArray }: {
         <>
             <div className="wrapper  w-full flex justify-center items-center">
                 <div className="our-services relative grid lg:grid-cols-3 lg:grid-row-2 grid-cols-1 gap-6 w-full">
-                    {
+                    {Array.isArray(servicesArray) && servicesArray.length > 0 ?
                         services.map((service: ServiceItem) => (
                             <div
                                 key={service.id}
@@ -29,58 +29,11 @@ export default function OurServices({ servicesArray }: {
                                 </div>
                             </div>
                         ))
+                        : <div className='!h-96 w-full bg-zinc-700 text-center flex items-center justify-center'>
+                            <h2 className='text-red-500'>No services to display</h2></div>
                     }
-
-                    {/* <div className="group2 grid w-full lg:grid-cols-3 lg:grid-row-2 "> */}
-                    {/* <div className="card">
-                        <div className="icon">
-                            <img src={'/assets/icons/icon1.png'} />
-                        </div>
-                        <div className="service">
-                            <h3 className=''>{t("service1-title")}</h3>
-                            <p className=''>{t("service1-description")}</p>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <div className="icon">
-                            <img src={'/assets/icons/icon2.png'} />
-                        </div>
-                        <div className="service">
-                            <h3>{t("service2-title")}</h3>
-                            <p>{t("service2-description")}</p>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <div className="icon">
-                            <img src={'/assets/icons/icon3.png'} />
-                        </div>
-                        <div className="service">
-                            <h3>{t("service3-title")}</h3>
-                            <p>{t("service3-description")}</p>
-                        </div>
-                    </div>
-                    <div className="card lg:col-span-2">
-                        <div className="icon">
-                            <img src={'/assets/icons/icon4.png'} />
-                        </div>
-                        <div className="service">
-                            <h3>{t("service4-title")}</h3>
-                            <p>{t("service4-description")}</p>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <div className="icon">
-                            <img src={'/assets/icons/hero-2.png'} />
-
-                        </div>
-                        <div className="service">
-                            <h3>{t("service4-title")}</h3>
-                            <p>{t("service4-description")}</p>
-                        </div>
-                    </div> */}
                 </div>
             </div>
-            {/* </div> */}
 
         </>
     )

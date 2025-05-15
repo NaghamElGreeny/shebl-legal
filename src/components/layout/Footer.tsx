@@ -10,15 +10,14 @@ export default function Footer({ social }: {
     social: Social[];
 }) {
     const t = useTranslations('Footer');
-    const locale = useLocale();
-    const router = useRouter();
     const whatsapp = social.find(social => social.key === "phone");
     const facebook = social.find(social => social.key === "facebook");
     const x = social.find(social => social.key === "x");
     const instagram = social.find(social => social.key === "instagram");
     const description = social.find(social => social.key === "desc");
-    if (!whatsapp || !facebook || !x || !instagram || !description) {
-        return <div>Loading...</div>;
+    if (!whatsapp && !facebook && !x && !instagram && !description) {
+        return <div className='!h-96 w-full bg-zinc-700 text-center flex items-center justify-center'>
+            <h2 className='text-red-500'>Footer data</h2></div>;
     }
     return (
         <>
@@ -34,7 +33,7 @@ export default function Footer({ social }: {
                                 {t("title")}
                             </h3>
                             <p className='lg:text-sm font-normal text-xs'>
-                                {description.value}
+                                {description ? description.value : t("description")}
                             </p>
                         </div>
                     </div>
@@ -47,24 +46,41 @@ export default function Footer({ social }: {
                         <div className="social-links">
                             <ul className="flex gap-8">
                                 <li>
-                                    <Link href={`https://wa.me/${whatsapp.value}`} target='_blank'>
+                                    <Link href={`https://wa.me/${whatsapp?.value}`} target='_blank'>
                                         <img src={'/assets/footer/whatsapp.png'} />
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href={x.value} target='_blank'>
-                                        <img src={'/assets/footer/x.png'} />
-                                    </Link>
+                                    {x?.value ? (
+                                        <Link href={x?.value} target='_blank'>
+                                            <img src={'/assets/footer/x.png'} />
+                                        </Link>
+                                    ) : (
+                                        <Link href='' target='_blank'>
+                                            <img src={'/assets/footer/x.png'} />
+                                        </Link>
+                                    )}
                                 </li>
                                 <li>
-                                    <Link href={instagram.value} target='_blank' >
-                                        <img src={'/assets/footer/instagram.png'} />
-                                    </Link>
+                                    {instagram?.value ? (
+                                        <Link href={instagram?.value} target='_blank'>
+                                            <img src={'/assets/footer/instagram.png'} />
+                                        </Link>
+                                    ) : (
+                                        <Link href='' target='_blank'>
+                                            <img src={'/assets/footer/instagram.png'} />
+                                        </Link>
+                                    )}
                                 </li>
                                 <li>
-                                    <Link href={facebook.value} target='_blank' >
+                                    {facebook?.value ? (
+                                        <Link href={facebook?.value} target='_blank' >
+                                            <img src={'/assets/footer/facebook.png'} />
+                                        </Link>
+                                    ) : (<Link href='' target='_blank' >
                                         <img src={'/assets/footer/facebook.png'} />
-                                    </Link>
+                                    </Link>)}
+
                                 </li>
                             </ul>
                         </div>

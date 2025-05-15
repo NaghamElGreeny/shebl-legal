@@ -10,6 +10,8 @@ export default function HeroSection({ maindata }: {
     maindata: whyusdata;
 }) {
     const t = useTranslations("Hero");
+    if (!maindata) return <div className='!h-96 w-full bg-zinc-700 text-center flex items-center justify-center'>
+        <h2 className='text-red-500'>Hero Section not found</h2></div>
     const features = maindata.features;
     return (
         <div className="hero-section relative flex flex-col  min-h-[1000px] w-full">

@@ -40,7 +40,7 @@ export default function HomePage() {
   if (!aboutSection) {
     return <div>Loading...</div>;
   }
-
+  console.log(MainData.data)
   return (
     <div className=" space-y-12">
       <HeroSection maindata={banner} />
