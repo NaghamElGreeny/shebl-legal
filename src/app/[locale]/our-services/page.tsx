@@ -47,9 +47,7 @@ export default function ServicesPage() {
             });
     }, []);
 
-    if (!services) {
-        return <div className='text-red-500 size-9 '>Loading or no data available...</div>; // ممكن تحط رسالة حسب اللي تحب تظهره للمستخدم
-    }
+    if (!services) { return '' }
 
     const { banner, our_services } = services;
 
@@ -61,13 +59,7 @@ export default function ServicesPage() {
                     description={banner.description}
                     image={banner.image}
                 />
-            ) : (
-                <SectionHero
-                    title='No title provided'
-                    description='No desc provide'
-                    image='No image provided'
-                />
-            )}
+            ) : ''}
             <OurServices servicesArray={our_services} />
 
         </>

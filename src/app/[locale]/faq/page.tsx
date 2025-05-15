@@ -31,21 +31,11 @@ export default function FaqPage() {
                 <SectionHero
                     title={banner.title}
                     description={banner.description}
-                    image={banner.image}
-                // title={banner.title ? banner.title : 'no title'}
-                // description={banner.description ? banner.description : 'no description'}
-                // image={banner.image ? banner.image : ''}
-                />
-            ) : (
-                <SectionHero
-                    title='No title provided'
-                    description='No desc provide'
-                    image='No image provided'
-                />
-            )}
-            {/* <SectionHero title={faqData.banner.title} description={faqData.banner.description} image={faqData.banner.image} /> */}
+                    image={banner.image} />
+
+            ) : ''}
             <div className="wrapper w-full flex justify-center items-center">
-                <div className="faq relative flex justify-center items-center w-full ">
+                <div className="faq relative flex justify-center items-center w-full">
                     <div className="container flex flex-col justify-between w-full ">
                         {faq ?
                             faq.map((q) => (
@@ -61,8 +51,7 @@ export default function FaqPage() {
                                         <img src={`/assets/icons/${openId === q.id ? 'hide' : 'show'}.svg`} alt='toggleicon' className='text-MainColor' />
                                     </button>
                                 </div>
-                            )) : <div className='!h-96 w-full bg-zinc-700 text-center absolute top-[100px] flex items-center justify-center'>
-                                <h2 className='text-red-500'>No Faq to display</h2></div>
+                            )) : ''
                         }
 
                     </div>

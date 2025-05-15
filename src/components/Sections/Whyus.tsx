@@ -8,8 +8,7 @@ export default function Whyus({ data }: {
     data: whyusdata[];
 }) {
     const t = useTranslations("Why-us-section");
-    if (!data[0]) return <div className='!h-96 w-full bg-zinc-700 text-center top-[100px] flex items-center justify-center'>
-        <h2 className='text-red-500'>No DATA </h2></div>
+    if (!data[0]) return ''
     const features = data[0].features;
     console.log(data)
     return (

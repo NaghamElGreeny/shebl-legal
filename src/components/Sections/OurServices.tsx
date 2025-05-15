@@ -29,8 +29,7 @@ export default function OurServices({ servicesArray }: {
                                 </div>
                             </div>
                         ))
-                        : <div className='!h-96 w-full bg-zinc-700 text-center flex items-center justify-center'>
-                            <h2 className='text-red-500'>No services to display</h2></div>
+                        : ''
                     }
                 </div>
             </div>

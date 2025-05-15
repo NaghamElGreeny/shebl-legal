@@ -36,22 +36,18 @@ export default function AboutPage() {
     const valuesSection = MainData.data.sections.find(section => section.type === "core_values");
     const visionsSection = MainData.data.sections.find(section => section.type === "our_vision");
     if (!aboutSection && !goalsSection && !valuesSection && !visionsSection) {
-        return (<div className='!h-96 w-full bg-zinc-700 text-center top-[100px] flex items-center justify-center'>
-            <h2 className='text-red-500'>No About to display</h2></div>)
+        return ('')
     }
 
     return (
         <>
             <SectionHero title={t("title")} description={t("description2")} image={t("image")} />
-            {aboutSection ? <AboutUs about={aboutSection} /> : <div className='!h-96 w-full bg-zinc-700 text-center flex items-center justify-center'>
-                <h2 className='text-red-500'>No About Section </h2></div>}
+            {aboutSection ? <AboutUs about={aboutSection} /> : ''}
 
-            {goalsSection ? <OurGoals goals={goalsSection} /> : <div className='!h-96 w-full bg-zinc-700 text-center flex items-center justify-center'>
-                <h2 className='text-red-500'>No goals Section</h2></div>}
+            {goalsSection ? <OurGoals goals={goalsSection} /> : ''}
 
             <Whyus data={WhyUsData.data} />
-            {valuesSection && visionsSection ? <ValuseVision values={valuesSection} vision={visionsSection} /> : <div className='!h-96 w-full bg-zinc-700 text-center flex items-center justify-center'>
-                <h2 className='text-red-500'>No ValuseVision</h2></div>}
+            {valuesSection && visionsSection ? <ValuseVision values={valuesSection} vision={visionsSection} /> : ''}
 
         </>
     )
