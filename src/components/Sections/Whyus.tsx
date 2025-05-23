@@ -10,7 +10,7 @@ export default function Whyus({ data }: {
     const t = useTranslations("Why-us-section");
     if (!data[0]) return ''
     const features = data[0].features;
-    console.log(data)
+    // console.log('why data', data)
     return (
         <>
             <div className="wrapper w-full flex justify-center items-center" data-aos="zoom-in-up">

@@ -8,7 +8,7 @@ type Banner = {
   is_active: boolean;
 };
 
-type ServiceItem = {
+export type ServiceItem = {
   id: number;
   icon: string;
   background: string;
@@ -57,9 +57,19 @@ type whyusdata = {
   is_active: boolean;
   features: FeatureItem[];
 };
+export type Section = {
+  id: number;
+  type: string;
+  title: string;
+  description: string;
+  image: string;
+  icon: string;
+  is_active: boolean;
+  features: FeatureItem[];
+};
 
 export type WhyUsResponse = {
-  data: whyusdata[];
+  data: Section[];
   status: string;
   message: string;
 };
@@ -78,6 +88,11 @@ export type mainPageResponse = {
   data: mainData;
 };
 
+export interface PageProps {
+  params: {
+    locale: string;
+  };
+}
 // {
 //   "status": "success",
 //   "message": "تم جلب البيانات بنجاح",

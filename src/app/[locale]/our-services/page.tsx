@@ -1,66 +1,26 @@
-// 'use client'
-// import SectionHero from '@/components/layout/SectionHero'
-// import OurServices from '@/components/Sections/OurServices'
-// import { useTranslations } from 'next-intl'
-// import React, { useEffect, useState } from 'react'
-// import { getAllServices } from '../../../../services/ClientApiHandler'
-// import type { ServicesResponse, ServiceItem } from '../../../../types'
-// export default function ServicesPage() {
-//     // const t = useTranslations("Our-Services");
-//     const [services, setServices] = useState<ServicesResponse | null>(null);
-
-//     useEffect(() => {
-//         getAllServices().then((services: ServicesResponse) => {
-//             setServices(services);
-//         });
-//     }, []);
-
-//     if (!services) return <div>Loading...</div>;
-//     return (
-//         <>
-//             <SectionHero title={services.banner.title} description={services.banner.description} image={services.banner.image} />
-//             <OurServices servicesArray={services.our_services} />
-
-
-//         </>
-//     )
-// }
-
-'use client';
 import SectionHero from '@/components/layout/SectionHero';
 import OurServices from '@/components/Sections/OurServices';
-import React, { useEffect, useState } from 'react';
-import { getAllServices } from '../../../../services/ClientApiHandler';
+// import React, { useEffect, useState } from 'react';
+import { getServices } from '../../../../services/ApiHandler';
 import type { ServicesResponse } from '../../../../types';
 
-export default function ServicesPage() {
-    const [services, setServices] = useState<ServicesResponse | null>(null);
+export default async function ServicesPage() {
+    const services: ServicesResponse = await getServices();
 
-    useEffect(() => {
-        getAllServices()
-            .then((services: ServicesResponse) => {
-                setServices(services);
-            })
-            .catch((error) => {
-                console.error("Error fetching services:", error);
-                setServices(null);
-            });
-    }, []);
-
-    if (!services) { return '' }
-
-    const { banner, our_services } = services;
+    const banner = services?.banner;
+    const our_services = services?.our_services;
+    // console.log('services : ', our_services)
 
     return (
         <>
-            {banner && banner.title && banner.description && banner.image ? (
+            {banner && (
                 <SectionHero
                     title={banner.title}
                     description={banner.description}
                     image={banner.image}
                 />
-            ) : ''}
-            <OurServices servicesArray={our_services} />
+            )}
+            {our_services && <OurServices servicesArray={our_services} />}
 
         </>
     );

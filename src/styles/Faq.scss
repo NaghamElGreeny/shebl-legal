@@ -1,7 +1,7 @@
 .faq {
-  .overlay {
-    background: #001c34e6;
-  }
+  // .overlay {
+  //   background: #001c34e6;
+  // }
   .container {
     // width: 1320;
     min-height: 532px;
@@ -10,6 +10,7 @@
       gap: 32px;
       .line {
         width: 100%;
+        // min-height: 400px;
         border-width: 1px;
         border: 1px solid var(--Secondary-Secondary-80, #33495d);
       }

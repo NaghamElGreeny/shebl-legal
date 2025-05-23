@@ -1,20 +1,22 @@
 'use client'
-import { ServiceItem } from '../../../types';
+import { ServiceItem, ServicesResponse } from '../../../types';
 import '../../styles/OurServices.scss'
 import { useTranslations } from 'next-intl';
 import SectionHero from '../layout/SectionHero';
+import { getAllServices } from '../../../services/ClientApiHandler';
+import { useState } from 'react';
 
-export default function OurServices({ servicesArray }: {
+export default function OurServices(servicesArray: {
     servicesArray: ServiceItem[];
 }) {
-    const t = useTranslations("Our-Services");
-    const services = servicesArray;
-    // console.log('services: ', services);
+
+    // console.log(servicesArray.servicesArray)
+    const services = servicesArray.servicesArray;
     return (
         <>
             <div className="wrapper  w-full flex justify-center items-center">
                 <div className="our-services relative grid lg:grid-cols-3 lg:grid-row-2 grid-cols-1 gap-6 w-full">
-                    {Array.isArray(servicesArray) && servicesArray.length > 0 ?
+                    {Array.isArray(services) && services.length > 0 ?
                         services.map((service: ServiceItem) => (
                             <div
                                 key={service.id}
@@ -35,6 +37,6 @@ export default function OurServices({ servicesArray }: {
             </div>
 
         </>
-    )
+    );
 }
 

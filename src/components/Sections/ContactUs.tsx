@@ -8,12 +8,19 @@ import { Social, SocialResponse } from '../../../types';
 export default function ContactUs({ social }: {
     social: Social[];
 }) {
+
     const t = useTranslations("Contact-us");
     const phone = social?.find(item => item.key === 'phone');
     const phone_code = social?.find(item => item.key === 'phone_code');
     const mail = social?.find(item => item.key === 'email');
     const address = social?.find(item => item.key === 'address');
     const appoitnments = social?.find(item => item.key === 'appoitnments');
+    // const [social, setSocial] = useState<Social[] | null>(null);
+    // useEffect(() => {
+    //     getSocial().then((social: Social[]) => {
+    //         setSocial(social);
+    //     });
+    // console.log(social)
     return (
         <>
             <div className="contact-us w-full  gap-14">
@@ -30,7 +37,7 @@ export default function ContactUs({ social }: {
                                 {t("contacts-header-description")}
                             </p>
                         </div>
-                        <div className="shebl-contact-info grid lg:grid-cols-2   gap-4">
+                        <div className="shebl-contact-info grid lg:grid-cols-2  gap-4 py-5">
                             <div className="feature-card flex">
                                 <img src={'/assets/icons/sms.svg'} />
                                 <a href={`mailto:${mail?.value}`}>{mail?.value}</a>

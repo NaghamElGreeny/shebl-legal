@@ -58,7 +58,7 @@ export default function Navbar() {
     }, [isOpen]);
 
     return (
-        <nav className={`navBar fixed  md:flex-shrink-0 w-full z-10 px-8 max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4  ${scrolled ? 'on-scroll' : ''} `}>
+        <nav className={`navBar fixed  md:flex-shrink-0 w-full z-20 px-8 max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4  ${scrolled ? 'on-scroll' : ''} `}>
             <div className='logodiv px-2'>
                 <Link href="/" className="flex items-center space-x-8  rtl:space-x-reverse">
                     <img src={"/assets/logo/Logo-main.png"} className='h-10' alt="shebl-logo" />
