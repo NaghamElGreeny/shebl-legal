@@ -21,6 +21,18 @@ export const getSocial = async () => {
     .then((res) => res.data.data)
     .catch(() => []);
 };
+export const getPrivacy = async () => {
+  return await axiosInstance
+    .get("/privacy")
+    .then((res) => res.data.data)
+    .catch(() => []);
+};
+export const getTerms = async () => {
+  return await axiosInstance
+    .get("/terms")
+    .then((res) => res.data.data)
+    .catch(() => []);
+};
 // export const getMainPage = async () => {
 //   return await axiosInstance
 //     .get("/main_bannerd")
