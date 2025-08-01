@@ -2,7 +2,7 @@
 import React from 'react'
 import '../../styles/TitleDescription.scss'
 
-export default function SectionHero({ title, description }: {
+export default function TitleDescription({ title, description }: {
     title: string;
     description: string;
 }) {

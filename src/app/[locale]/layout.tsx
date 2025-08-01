@@ -5,11 +5,9 @@ import "../globals.scss";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { cookies } from "next/headers";
-import ChangeThem from "@/components/layout/changeThem";
 import AosWrapper from "@/components/layout/AosWrapper";
 import "aos/dist/aos.css";
 import ScrollBtn from "@/components/ui/ScrollBtn";
-// import { getSocialFooter } from "../../../services/ApiHandler";
 export default async function LocaleLayout({
   children,
   params,

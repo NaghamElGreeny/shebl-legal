@@ -4,6 +4,8 @@ import createNextIntlPlugin from "next-intl/plugin";
 const nextConfig: NextConfig = {
   sassOptions: {
     implementation: "sass-embedded",
+  }, images: {
+    domains: ['shebl9.azmy.aait-d.com'],
   },
 };
 

@@ -5,10 +5,11 @@ import { useTranslations } from 'next-intl';
 
 import ContactBtn from '../ui/ContactBtn';
 import { FeatureItem, whyusdata } from '../../../types';
+import Image from 'next/image';
 
 export default function HeroSection({ maindata }: {
     maindata: whyusdata;
-}) {
+}) {    
     const t = useTranslations("Hero");
     if (!maindata) return
     const features = maindata.features;
@@ -16,7 +17,7 @@ export default function HeroSection({ maindata }: {
         <div className="hero-section relative flex flex-col  min-h-[1000px] w-full">
             <div className="hero-container relative lg:ps-12 md:ps-12 sm:ps-3 xs:ps-3 lg:p-48 pt-[150px] ">
                 <div className="title flex wrap ">
-                    <img src={'/assets/icons/hero-title-icon.png'} />
+                    <Image src={'/assets/icons/hero-title-icon.png'} alt='hero' width={60} height={60}/>
                     <p>{t("title")}</p>
                 </div>
                 <div className="description">
@@ -31,7 +32,7 @@ export default function HeroSection({ maindata }: {
             <div className="features">
                 {features.map((feature: FeatureItem) => (
                     <div className="feature-card" key={feature.id}>
-                        <img src={feature.icon} />
+                        <Image src={feature.icon} alt={feature.value} width={24} height={24}/>
                         <div>{feature.value}</div>
                     </div>
                 ))}

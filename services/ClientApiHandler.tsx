@@ -1,7 +1,7 @@
 "use client";
 import AppError from "../utils/appError";
 import axiosInstance from "./axiosClient";
-import type { ServicesResponse } from "../types";
+// import type { ServicesResponse } from "../types";
 export const getAllServices = async () => {
   return await axiosInstance
     .get("/our-services")

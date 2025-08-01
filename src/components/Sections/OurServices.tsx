@@ -1,16 +1,12 @@
 'use client'
-import { ServiceItem, ServicesResponse } from '../../../types';
+import Image from 'next/image';
+import { ServiceItem } from '../../../types';
 import '../../styles/OurServices.scss'
-import { useTranslations } from 'next-intl';
-import SectionHero from '../layout/SectionHero';
-import { getAllServices } from '../../../services/ClientApiHandler';
-import { useState } from 'react';
+
 
 export default function OurServices(servicesArray: {
     servicesArray: ServiceItem[];
 }) {
-
-    // console.log(servicesArray.servicesArray)
     const services = servicesArray.servicesArray;
     return (
         <>
@@ -23,7 +19,7 @@ export default function OurServices(servicesArray: {
                                 className={service.id === 5 ? 'card lg:col-span-2' : 'card'}
                             >
                                 <div className="icon">
-                                    <img src={service.icon} />
+                                    <Image src={service.icon} alt='service-icon' width={40} height={40} />
                                 </div>
                                 <div className="service">
                                     <h3>{service.title}</h3>

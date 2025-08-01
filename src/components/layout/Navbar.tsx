@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useTranslations, useLocale } from 'next-intl';
 import { useRouter, usePathname } from 'next/navigation';
 import ChangeThem from './changeThem';
+import Image from 'next/image';
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
@@ -58,10 +59,10 @@ export default function Navbar() {
     }, [isOpen]);
 
     return (
-        <nav className={`navBar fixed  md:flex-shrink-0 w-full z-20 px-8 max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4  ${scrolled ? 'on-scroll' : ''} `}>
+        <nav className={`navBar fixed  md:flex-shrink-0 w-full z-20 md:px-8 px-1 max-w-screen-xl flex flex-wrap items-center justify-between mx-auto sm:p-4 p-0  ${scrolled ? 'on-scroll' : ''} `}>
             <div className='logodiv px-2'>
                 <Link href="/" className="flex items-center space-x-8  rtl:space-x-reverse">
-                    <img src={"/assets/logo/Logo-main.png"} className='h-10' alt="shebl-logo" />
+                    <Image src={"/assets/logo/Logo-main.png"} className='h-10' alt="shebl-logo" width={40} height={40}/>
                 </Link>
             </div>
             <div className="iconsdiv flex md:order-2 space-x-1 md:space-x-2 rtl:space-x-reverse items-center">
@@ -69,7 +70,7 @@ export default function Navbar() {
                     <div className="contact-btn invisible !sm:invisible flex flex-row justify-around content-center gap-1">
                         <div className="btn-text">{tBtn("contact")}</div>
                         <div className="btn-icon">
-                            <img src={tBtn("arrow")} alt="arrow-vector" />
+                            <Image src={tBtn("arrow")} alt="arrow-vector" width={24} height={24}/>
                         </div>
                     </div>
                 </Link>
@@ -77,13 +78,13 @@ export default function Navbar() {
                     onClick={toggleLocale}
                     className="items-center px-2 py-1 flex flex-row gap-1 "
                 >
-                    <img src={'/assets/icons/lang-icon.png'} />
+                    <Image src={'/assets/icons/lang-icon.png'} alt='lang' width={24} height={24}/>
                     {locale === 'en' ? 'AR' : 'EN'}
                 </button>
                 <button data-collapse-toggle="navbar-sticky" type="button" id='toggleBtn' className="inline-flex items-center  justify-center md:hidden" aria-controls="navbar-sticky" aria-expanded="false" onClick={e => toggleMenu(e)}>
                     <span className="sr-only">Open main menu</span>
-                    <div className="w-10 h-10" aria-hidden="true" >
-                        <img src={'/assets/icons/nav bar.png'} />
+                    <div className="w-10 h-10 me-1" aria-hidden="true" >
+                        <Image src={'/assets/icons/nav bar.png'} alt='navbar' width={40} height={40}/>
                     </div>
                 </button>
                 <ChangeThem />
