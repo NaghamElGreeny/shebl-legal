@@ -53,8 +53,8 @@ export default function ContactUs({ social }: {
 
                     </div>
                     <div className="group2 flex justify-end">
-                        {/* <Image src={'/assets/images/contact.png'} alt='contact-img' width={470} height={460} /> */}
-                        <img src={'/assets/images/contact.png'} alt='contact-img' className='' />
+                        <Image src={'/assets/images/contact.png'} alt='contact-img' width={470} height={460} />
+                        {/* <img src={'/assets/images/contact.png'} alt='contact-img' className='' /> */}
                     </div>
                 </div>
             </div>

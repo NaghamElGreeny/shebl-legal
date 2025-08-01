@@ -1,11 +1,9 @@
 import React from 'react'
-import { useTranslations } from 'next-intl'
 import '../../styles/OurGoals.scss';
 import { FeatureItem, whyusdata } from '../../../types';
 export default function OurGoals({ goals }: {
     goals: whyusdata;
 }) {
-    const t = useTranslations("Our-goals");
     const features = goals.features;
     return (
         <>

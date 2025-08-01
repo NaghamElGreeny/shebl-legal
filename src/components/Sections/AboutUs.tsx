@@ -40,7 +40,7 @@ export default function AboutUs({ about }: {
                     </div>
                 </div>
                 <div className="group2" data-aos="fade-right">
-                    <img src={'/assets/images/group 1.png'} className='w-auto' />
+                    <Image src={'/assets/images/group 1.png'} alt='group-1' className='w-auto' fill/>
                 </div>
             </div>
         </>
