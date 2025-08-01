@@ -22,7 +22,7 @@ A modern legal consultancy website with bilingual support, built using the lates
 
 ## 📁 Main Folder Structure
 
-
+```bash
 ├── src/
 │   ├── app/               # App routing structure (Next.js App Router)
 │   │   ├── [locale]/      # Multi-language support
@@ -34,6 +34,6 @@ A modern legal consultancy website with bilingual support, built using the lates
 │   ├── styles/            # SCSS style files per section/component
 │   ├── i18n/              # Internationalization logic
 │   └── middleware.ts      # Next.js middleware for locale detection
-
+```
 ---
 📦 This project uses **npm** as the package manager.
