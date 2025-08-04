@@ -15,7 +15,6 @@ export default function Whyus({ data }: { data: whyusdata[] }) {
     <>
       <div
         className="wrapper w-full flex justify-center items-center"
-        data-aos="zoom-in-up"
       >
         <div className="why-us relative flex justify-center items-center w-[95%] h-[90%] rounded-[40px] bg-[url('/assets/images/image.png')] bg-cover ">
           <div className="overlay absolute inset-0 rounded-[40px]"> </div>

@@ -36,10 +36,9 @@ export default function Faq({
   return (
     <>
       <div
-        data-aos="zoom-in"
+        // data-aos="zoom-in"
         className="wrapper w-full flex justify-center items-center"
       >
-        {/* <div className="faq relative flex justify-center items-center w-[95%] gap-16 rounded-[40px] bg-[url('/assets/images/faq.png')] bg-cover p-5 "> */}
         <div
           className={`faq relative flex justify-center items-center ${faqClass}`}
         >
