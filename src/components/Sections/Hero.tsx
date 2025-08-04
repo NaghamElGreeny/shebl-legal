@@ -23,7 +23,7 @@ export default function HeroSection({ maindata }: {
                     <p>{t("title")}</p>
                 </div>
                 <div className="description md:w-[80%]">
-                    <h1 className={`font-semibold ${locale==='en'?'lg:text-[60px]':'lg:text-[80px]'}  md:text-[60px] sm:text-[50px] text-[30px]`}>{maindata.title} </h1>
+                    <h1 className={`font-semibold ${locale==='en'?'lg:text-[50px] font-semibold':'lg:text-[80px]'}  md:text-[60px] sm:text-[50px] text-[30px]`}>{maindata.title} </h1>
                     <p className='font-normal sm:text-sm text-xl'> {maindata.description} </p>
                 </div>
                 <div className="contact flex wrap items-center">
