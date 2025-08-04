@@ -1,12 +1,12 @@
 "use client";
-import "../../styles/Footer.scss";
+import "@/src/styles/Footer.scss";
 import Link from "next/link";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { Social } from "../../../types";
+import { Social } from "@/types";
 import { useEffect, useState } from "react";
-import { getSocial } from "../../../services/ClientApiHandler";
 import Popup from "../ui/PopUp";
+import { getSocial } from "@/services/ClientApiHandler";
 
 export default function Footer() {
   const [social, setSocial] = useState<Social[] | null>(null);

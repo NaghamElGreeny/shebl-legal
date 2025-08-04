@@ -3,9 +3,9 @@ import "../../styles/WhyUs.scss";
 import Link from "next/link";
 import PrimaryBtn from "../ui/PrimaryBtn";
 import { useTranslations } from "next-intl";
-import { FeatureItem, whyusdata } from "../../../types";
 import Image from "next/image";
 import FeatureCard from "../ui/FeatureCard";
+import { FeatureItem, whyusdata } from "@/types";
 
 export default function Whyus({ data }: { data: whyusdata[] }) {
   const t = useTranslations("Why-us-section");

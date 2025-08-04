@@ -1,7 +1,7 @@
-import SectionHero from '@/components/layout/SectionHero'
-import Faq from '@/components/Sections/Faq'
-import '@/styles/Faq-page.scss'
-import { getFaq } from '../../../../services/ApiHandler'
+import SectionHero from '@/src/components/layout/SectionHero'
+import Faq from '@/src/components/Sections/Faq'
+import { getFaq } from '@/services/ApiHandler';
+import '@/src/styles/Faq-page.scss'
 
 export default async function FaqPage() {
     const faqData = await getFaq();

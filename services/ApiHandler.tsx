@@ -1,5 +1,5 @@
 import axiosInstance from "./instance";
-import AppError from "../utils/appError";
+import AppError from "@/utils/appError";
 
 const fetchData = async (endpoint: string, errorMsg: string, config = {}) => {
   try {

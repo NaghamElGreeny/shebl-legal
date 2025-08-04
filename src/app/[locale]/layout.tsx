@@ -1,13 +1,13 @@
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
-import { routing } from "@/i18n/routing";
+import { routing } from "@/src/i18n/routing";
 import "../globals.scss";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
+import Navbar from "@/src/components/layout/Navbar";
+import Footer from "@/src/components/layout/Footer";
 import { cookies } from "next/headers";
-import AosWrapper from "@/components/layout/AosWrapper";
+import AosWrapper from "@/src/components/layout/AosWrapper";
 import "aos/dist/aos.css";
-import ScrollBtn from "@/components/ui/ScrollBtn";
+import ScrollBtn from "@/src/components/ui/ScrollBtn";
 export default async function LocaleLayout({
   children,
   params,

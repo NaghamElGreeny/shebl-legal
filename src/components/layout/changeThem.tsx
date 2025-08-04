@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react'
 import Cookies from 'js-cookie'
-import '../../styles/ThemeBtn.scss'
+import '@/src/styles/ThemeBtn.scss'
 export default function ThemeButton() {
     const [theme, setTheme] = useState<'light' | 'dark' | null>(null);
 

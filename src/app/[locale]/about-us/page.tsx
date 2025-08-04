@@ -1,10 +1,10 @@
-import SectionHero from '@/components/layout/SectionHero'
-import AboutUs from '@/components/Sections/AboutUs'
-import OurGoals from '@/components/Sections/OurGoals'
-import ValuseVision from '@/components/Sections/ValuseVision'
-import Whyus from '@/components/Sections/Whyus'
-import { getSections, getWhyUsData } from "../../../../services/ApiHandler";
-import { mainData, Section } from "../../../../types";
+import SectionHero from '@/src/components/layout/SectionHero'
+import AboutUs from '@/src/components/Sections/AboutUs'
+import OurGoals from '@/src/components/Sections/OurGoals'
+import ValuseVision from '@/src/components/Sections/ValuseVision'
+import Whyus from '@/src/components/Sections/Whyus'
+import { getSections, getWhyUsData } from "@/services/ApiHandler";
+import { mainData, Section } from "@/types";
 export default async function AboutPage() {
     const WhyUsData = await getWhyUsData();
     const data: mainData = await getSections();

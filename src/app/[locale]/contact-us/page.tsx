@@ -1,7 +1,8 @@
-import SectionHero from "@/components/layout/SectionHero";
-import ContactUs from "@/components/Sections/ContactUs";
-import { getSections, getSocial } from "../../../../services/ApiHandler";
-import { mainData, Section, Social } from "../../../../types";
+import { getSections, getSocial } from "@/services/ApiHandler";
+import SectionHero from "@/src/components/layout/SectionHero";
+import ContactUs from "@/src/components/Sections/ContactUs";
+import { mainData, Section, Social } from "@/types";
+
 export default async function ContactPage() {
   const social: Social[] = await getSocial();
   const data: mainData = await getSections();

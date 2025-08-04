@@ -8,7 +8,7 @@ const axiosInstance = axios.create({
 
 axiosInstance.interceptors.request.use(
   (config) => {
-    let locale = Cookies.get("NEXT_LOCALE") || "en";
+    const locale = Cookies.get("NEXT_LOCALE") || "en";
 
     config.headers["Accept-Language"] = locale;
     return config;

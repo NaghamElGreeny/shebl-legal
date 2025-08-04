@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useState, useRef } from 'react';
-import '../../styles/Nav.scss'
+import '@/src/styles/Nav.scss'
 import Link from "next/link";
 import { useTranslations, useLocale } from 'next-intl';
 import { useRouter, usePathname } from 'next/navigation';

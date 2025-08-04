@@ -1,10 +1,10 @@
 "use client";
-import "../../styles/AboutUsSection.scss";
+import "@/src/styles/AboutUsSection.scss";
 import Link from "next/link";
 import PrimaryBtn from "../ui/PrimaryBtn";
 import TitleDescription from "../layout/TitleDescription";
 import { useTranslations, useLocale } from "next-intl";
-import { FeatureItem, whyusdata } from "../../../types";
+import { FeatureItem, whyusdata } from "@/types";
 import Image from "next/image";
 
 export default function AboutUs({ about }: { about: whyusdata }) {

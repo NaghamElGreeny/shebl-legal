@@ -1,11 +1,11 @@
-import HeroSection from "@/components/Sections/Hero";
-import AboutUs from "@/components/Sections/AboutUs";
-import Whyus from "@/components/Sections/Whyus";
-import OurServices from "@/components/Sections/OurServices";
-import Faq from "@/components/Sections/Faq";
-import ContactUs from "@/components/Sections/ContactUs";
+import HeroSection from "@/src/components/Sections/Hero";
 import { getServices, getFaq,getSocial, getWhyUsData, getSections } from "../../../services/ApiHandler";
 import { FaqResponse, ServicesResponse, Social, Section, mainData, whyusdata } from "../../../types";
+import AboutUs from "@/src/components/Sections/AboutUs";
+import Whyus from "@/src/components/Sections/Whyus";
+import OurServices from "@/src/components/Sections/OurServices";
+import Faq from "@/src/components/Sections/Faq";
+import ContactUs from "@/src/components/Sections/ContactUs";
 
 
 export default async function HomePage() {
