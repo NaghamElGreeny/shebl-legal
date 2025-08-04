@@ -31,7 +31,7 @@ export default function Footer() {
           <div className="footer-shebl flex gap-6">
             <div className="logo">
               <Image
-                src={"/assets/logo/logo-main.png"}
+                src={"/assets/logo/Logo-main.png"}
                 alt="shebl-logo"
                 width={64}
                 height={64}
