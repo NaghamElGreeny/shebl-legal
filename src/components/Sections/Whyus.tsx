@@ -5,6 +5,8 @@ import PrimaryBtn from "../ui/PrimaryBtn";
 import { useTranslations } from "next-intl";
 import { FeatureItem, whyusdata } from "../../../types";
 import Image from "next/image";
+import FeatureCard from "../ui/FeatureCard";
+
 export default function Whyus({ data }: { data: whyusdata[] }) {
   const t = useTranslations("Why-us-section");
   if (!data[0]) return "";
@@ -19,7 +21,12 @@ export default function Whyus({ data }: { data: whyusdata[] }) {
           <div className="overlay absolute inset-0 rounded-[40px]"> </div>
           <div className="container relative flex flex-col justify-center items-center rounded-[40px] w-full">
             <div className="arrow absolute lg:visible top-0 right-0">
-              <Image src={"/assets/icons/arrow.png"} alt="arrow" width={36} height={42}/>
+              <Image
+                src={"/assets/icons/arrow.png"}
+                alt="arrow"
+                width={36}
+                height={42}
+              />
             </div>
             <div className="group1 flex flex-col items-center justify-center gap-[16px]">
               <h2 className="font-bold text-[40px] text-sharedFont">
@@ -32,22 +39,7 @@ export default function Whyus({ data }: { data: whyusdata[] }) {
             <div className="group2 grid lg:grid-cols-4 lg:gap-0 gap-3 gap-x-5 grid-cols-2 w-full place-items-center relative ">
               {Array.isArray(features) && features.length > 0 ? (
                 features.map((feature: FeatureItem) => (
-                  <div className="card place-items-center" key={feature.id}>
-                    <div className="icon" dir="ltr">
-                      {/* الفاليو دي رقم */}
-                      <h2>{feature.value}</h2>
-                      <div className="plus relative">
-                        +
-                        <Image
-                          src={feature.icon}
-                          alt={feature.key}
-                          className="left-5"
-                          width={40} height={40}
-                        />
-                      </div>
-                    </div>
-                    <p>{feature.key}</p>
-                  </div>
+                  <FeatureCard key={feature.id} feature={feature} />
                 ))
               ) : (
                 <div className="!h-96 w-full bg-zinc-700 text-center absolute top-[100px] flex items-center justify-center">
@@ -58,10 +50,7 @@ export default function Whyus({ data }: { data: whyusdata[] }) {
             <div className="group3">
               <Link href={""}>
                 {" "}
-                <PrimaryBtn
-                  text={t("btnText")}
-                  width="255px"
-                />
+                <PrimaryBtn text={t("btnText")} width="255px" />
               </Link>
             </div>
           </div>
