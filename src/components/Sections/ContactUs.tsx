@@ -22,15 +22,6 @@ export default function ContactUs({ social }: {
                 <div className="wrapper grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-1">
                     <div className="group1 flex flex-col gap-6 items-center justify-center">
                 <TitleDescription title={t("title")} description={t("description")} />
-
-                        {/* <div className="shebl-quote flex flex-col items-center gap-4">
-                            <h2 className='font-bold text-[40px] text-primaryFont dark:text-darkFont'>
-                                {t("contacts-header")}
-                            </h2>
-                            <p className='text-base font-normal text-SharedFontSub'>
-                                {t("contacts-header-description")}
-                            </p>
-                        </div> */}
                         <div className="shebl-contact-info grid lg:grid-cols-2  gap-4 py-5">
                             <div className="feature-card flex">
                                 <Image src={'/assets/icons/sms.svg'} alt='mail' width={24} height={22}/>
@@ -54,7 +45,6 @@ export default function ContactUs({ social }: {
                     </div>
                     <div className="group2 flex justify-end">
                         <Image src={'/assets/images/contact.png'} alt='contact-img' width={470} height={460} />
-                        {/* <img src={'/assets/images/contact.png'} alt='contact-img' className='' /> */}
                     </div>
                 </div>
             </div>

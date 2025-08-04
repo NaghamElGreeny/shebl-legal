@@ -55,7 +55,6 @@ export default function Faq({
                 {" "}
                 <PrimaryBtn
                   text={t("btnText")}
-                  arrow={t("arrow")}
                   width="151px"
                   classs="second-btn-clr"
                 />

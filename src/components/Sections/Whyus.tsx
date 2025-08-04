@@ -34,6 +34,7 @@ export default function Whyus({ data }: { data: whyusdata[] }) {
                 features.map((feature: FeatureItem) => (
                   <div className="card place-items-center" key={feature.id}>
                     <div className="icon" dir="ltr">
+                      {/* الفاليو دي رقم */}
                       <h2>{feature.value}</h2>
                       <div className="plus relative">
                         +
@@ -59,7 +60,6 @@ export default function Whyus({ data }: { data: whyusdata[] }) {
                 {" "}
                 <PrimaryBtn
                   text={t("btnText")}
-                  arrow={t("arrow")}
                   width="255px"
                 />
               </Link>
