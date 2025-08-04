@@ -6,12 +6,12 @@ import { useTranslations, useLocale } from 'next-intl';
 import { useRouter, usePathname } from 'next/navigation';
 import ChangeThem from './changeThem';
 import Image from 'next/image';
+import PrimaryBtn from '../ui/PrimaryBtn';
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const t = useTranslations('Nav');
-    const tBtn = useTranslations('Btns');
     const locale = useLocale();
     const router = useRouter();
     const pathname = usePathname();
@@ -34,7 +34,7 @@ export default function Navbar() {
     };
 
     const toggleMenu = (e: React.MouseEvent<HTMLButtonElement>) => {
-        e.stopPropagation(); // يمنع الكليك من الوصول للـ document
+        e.stopPropagation(); 
         setIsOpen(prevState => !prevState);
     };
 
@@ -59,7 +59,7 @@ export default function Navbar() {
     }, [isOpen]);
 
     return (
-        <nav className={`navBar fixed  md:flex-shrink-0 w-full z-20 md:px-8 px-1 max-w-screen-xl flex flex-wrap items-center justify-between mx-auto sm:p-4 p-0  ${scrolled ? 'on-scroll' : ''} `}>
+        <nav className={`navBar fixed  md:flex-shrink-0 w-full z-50 md:px-8 px-1 max-w-screen-xl flex flex-wrap items-center justify-between mx-auto sm:p-4 p-0  ${scrolled ? 'on-scroll' : ''} `}>
             <div className='logodiv px-2'>
                 <Link href="/" className="flex items-center space-x-8  rtl:space-x-reverse">
                     <Image src={"/assets/logo/Logo-main.png"} className='h-10' alt="shebl-logo" width={40} height={40}/>
@@ -67,12 +67,7 @@ export default function Navbar() {
             </div>
             <div className="iconsdiv flex md:order-2 space-x-1 md:space-x-2 rtl:space-x-reverse items-center">
                 <Link href={'/contact-us'}>
-                    <div className="contact-btn invisible !sm:invisible flex flex-row justify-around content-center gap-1">
-                        <div className="btn-text">{tBtn("contact")}</div>
-                        <div className="btn-icon">
-                            <Image src={tBtn("arrow")} alt="arrow-vector" width={24} height={24}/>
-                        </div>
-                    </div>
+                     <PrimaryBtn text={t("contact")}  />
                 </Link>
                 <button
                     onClick={toggleLocale}
