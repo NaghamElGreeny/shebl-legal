@@ -45,16 +45,16 @@ export default function Faq({
           <div className={`overlay absolute inset-0 ${roundClass} ${bgClass}`}>
             {" "}
           </div>
-          <div className="container relative flex flex-col pt-5 items-center content-evenly  w-full py-3">
-            <div className="group1 flex justify-between w-full">
-              <h3 className={`font-bold lg:text-[40px] text-2xl  ${txtClass}`}>
+          <div className="container relative flex flex-col pt-5 items-center content-evenly  w-full py-3 md:px-4 px-2 ">
+            <div className="group1 flex justify-between w-full items-center">
+              <h3 className={`font-bold lg:text-[40px] sm:text-2xl text-base ${txtClass}`}>
                 {t("title")}
               </h3>
               <Link href={"/faq"} className={`${btnClass}`}>
                 {" "}
                 <PrimaryBtn
                   text={t("btnText")}
-                  width="151px"
+                  width="161px"
                   classs="second-btn-clr"
                 />
               </Link>

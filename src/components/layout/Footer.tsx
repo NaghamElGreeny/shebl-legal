@@ -35,10 +35,11 @@ export default function Footer() {
                 alt="shebl-logo"
                 width={64}
                 height={64}
-                className="lg:w-[78px] lg:h-[98px] md:w-[62px] md:h-[78px] w-[46px] h-[58px]"
+                // className="lg:w-[78px] lg:h-[98px] md:w-[62px] md:h-[78px] w-[46px] h-[58px]"
+                className="w-14 h-17"
               />
             </div>
-            <div className="description flex flex-col justify-end lg:w-[615px] md:w-[615px] w-[299px] h-[98px] gap-3">
+            <div className="description flex flex-col justify-end lg:w-[615px] md:w-[615px] w-[299px] min-h-[98px] gap-3">
               <h3 className="font-bold text-base ">{t("title")}</h3>
               <p className="lg:text-sm font-normal text-xs">
                 {description ? description.value : t("description")}
@@ -52,7 +53,7 @@ export default function Footer() {
             </div>
 
             <div className="social-links">
-              <ul className="flex gap-8">
+              <ul className="flex md:gap-8 gap-5">
                 <li>
                   <Link
                     href={`https://wa.me/${whatsapp?.value}`}

@@ -35,7 +35,7 @@ export default function Whyus({ data }: { data: whyusdata[] }) {
                 {data[0].description}
               </p>
             </div>
-            <div className="group2 grid lg:grid-cols-4 lg:gap-0 gap-3 gap-x-5 grid-cols-2 w-full place-items-center relative ">
+            <div className="group2 grid lg:grid-cols-4 lg:gap-0 gap-6 grid-cols-2 w-full place-items-center relative ">
               {Array.isArray(features) && features.length > 0 ? (
                 features.map((feature: FeatureItem) => (
                   <FeatureCard key={feature.id} feature={feature} />

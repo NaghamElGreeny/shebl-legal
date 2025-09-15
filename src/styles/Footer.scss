@@ -8,7 +8,8 @@ footer {
     @apply bg-overlay;
   }
   .foot-container {
-    @apply pt-10 pr-20 pb-14 pl-20;
+    // @apply pt-10 pr-20 pb-14 pl-20;
+    @apply lg:pt-10 lg:pr-20 lg:pb-14 lg:pl-20 sm:p-8 p-4 pt-8;
 
     .footer-shebl {
       .logo {

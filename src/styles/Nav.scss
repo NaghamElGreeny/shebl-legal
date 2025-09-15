@@ -25,15 +25,8 @@ nav {
     }
     .menublock {
       ul {
-        @apply w-full bg-primaryCard/80 dark:bg-darkCard text-MainColor mt-4;
+        @apply  bg-primaryCard/80 dark:bg-darkCard text-MainColor;
         backdrop-filter: blur(28.2px);
-      }
-    }
-
-    .logodiv {
-      img {
-        width: 57px;
-        height: 72px;
       }
     }
     .iconsdiv {
@@ -47,8 +40,9 @@ nav {
     }
   }
   .menublock {
+    width: 100%;
     ul {
-      @apply w-full bg-primaryNav/90 text-MainColor mt-12;
+      @apply w-[93%] ms-0 bg-primaryNav/90 text-MainColor;
       backdrop-filter: blur(30px);
     }
   }
