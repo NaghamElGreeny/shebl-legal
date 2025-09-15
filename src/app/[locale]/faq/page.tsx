@@ -5,7 +5,7 @@ import '@/src/styles/Faq-page.scss'
 
 export default async function FaqPage() {
     const faqData = await getFaq();
-    const faqClass = "w-full";
+    const faqClass = "w-full !h-fit";
     const btnClass = "hidden";
     const roundClass = "";
     const bgClass = '';
