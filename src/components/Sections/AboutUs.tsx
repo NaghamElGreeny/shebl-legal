@@ -1,5 +1,5 @@
-"use client";
-import "@/src/styles/AboutUsSection.scss";
+'use client';
+
 import Link from "next/link";
 import PrimaryBtn from "../ui/PrimaryBtn";
 import TitleDescription from "../layout/TitleDescription";
@@ -7,15 +7,19 @@ import { useTranslations, useLocale } from "next-intl";
 import { FeatureItem, whyusdata } from "@/types";
 import Image from "next/image";
 
-export default function AboutUs({ about }: { about: whyusdata }) {
+interface AboutUsProps {
+  about: whyusdata;
+}
+
+export default function AboutUs({ about }: AboutUsProps) {
   const t = useTranslations("About-section");
   const locale = useLocale();
-  const features = about.features;
+  const { title, description, features } = about;
 
   const serviceImages = [
-    { src: "/assets/images/serv1.png", z: "z-30", delay: "0" },
-    { src: "/assets/images/serv2.png", z: "z-20", delay: "300" },
-    { src: "/assets/images/serv3.png", z: "z-10", delay: "600" },
+    { src: "/assets/images/serv1.png", z: "z-30", delay: "0", alt: "Service 1" },
+    { src: "/assets/images/serv2.png", z: "z-20", delay: "300", alt: "Service 2" },
+    { src: "/assets/images/serv3.png", z: "z-10", delay: "600", alt: "Service 3" },
   ];
 
   const getAosProps = (delay: string) => ({
@@ -24,42 +28,45 @@ export default function AboutUs({ about }: { about: whyusdata }) {
   });
 
   return (
-    <div className="about-us w-full grid md:grid-cols-2 grid-cols-1 gap-14 pt-7">
-      <div className="group1 flex flex-col gap-14">
-        <TitleDescription title={about.title} description={about.description} />
+    <section className="w-full grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-14 py-10 lg:px-12 sm:px-8 px-4">
+      {/* Left Section */}
+      <div className="flex flex-col gap-10 md:gap-14">
+        <TitleDescription title={title} description={description} />
 
-        <div className="our-features grid lg:grid-cols-2 gap-4">
+        {/* Features */}
+        <div className="grid lg:grid-cols-2 gap-6">
           {features.map((feature: FeatureItem, index: number) => (
             <div
-              className="feature-card flex"
               key={feature.id}
+              className="flex items-start gap-3"
               data-aos="fade-up"
               data-aos-delay={`${index * 200}`}
             >
               <Image
                 src={feature.icon}
-                alt="about"
-                className="size-8"
+                alt={feature.value}
                 width={32}
                 height={32}
+                className="w-8 h-8"
               />
-              <p className="text-primaryFont dark:text-darkFont">
+              <p className="text-primaryFont dark:text-darkFont text-sm sm:text-base">
                 {feature.value}
               </p>
             </div>
           ))}
         </div>
 
-        <div className="services-icons flex gap-4 items-center">
-          <div className="groupServices flex relative">
+        {/* Services Icons */}
+        <div className="flex gap-4 items-center">
+          <div className="flex relative ps-5">
             {serviceImages.map((img, index) => (
               <Image
                 key={index}
                 src={img.src}
-                alt="service"
+                alt={img.alt}
                 width={50}
                 height={50}
-                className={`${img.z} ${
+                className={`w-[50px] h-[50px] rounded-full border-[3.5px] border-[var(--bg-color)] ${img.z} ${
                   locale === "en" ? "-ml-[20px]" : "-mr-[20px]"
                 }`}
                 {...getAosProps(img.delay)}
@@ -67,6 +74,7 @@ export default function AboutUs({ about }: { about: whyusdata }) {
             ))}
           </div>
           <p
+            className="text-sm sm:text-base"
             style={{ color: "var(--font-sub2)" }}
             data-aos="fade-in"
             data-aos-delay="800"
@@ -75,22 +83,27 @@ export default function AboutUs({ about }: { about: whyusdata }) {
           </p>
         </div>
 
-        <div className="btn">
+        {/* Button */}
+        <div>
           <Link href="/about-us">
             <PrimaryBtn text={t("btnText")} />
           </Link>
         </div>
       </div>
 
-      <div className="group2 relative w-full h-[400px]" data-aos="fade-right">
+      {/* Right Section (Image) */}
+      <div
+        className="relative w-full h-[300px] sm:h-[350px] md:h-[400px]"
+        data-aos="fade-right"
+      >
         <Image
           src="/assets/images/group 1.png"
-          alt="group-1"
+          alt="About us group"
           fill
-          //   className="object-contain"
-          className="object-contain h-fit"
+          className="object-contain"
+          priority
         />
       </div>
-    </div>
+    </section>
   );
 }

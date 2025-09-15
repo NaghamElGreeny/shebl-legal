@@ -1,27 +1,35 @@
-'use client'
-import React from 'react'
-import '../../styles/SectionHero.scss'
-export default function SectionHero({ title, description, image }: {
-    title: string;
-    description: string;
-    image: string;
-}) {
-    return (
-        <>
-            <div className="section-hero">
-                <div className="hero w-full relative flex justify-center items-center" style={{ backgroundImage: `url(${image})`, backgroundSize: 'cover' }}>
-                    <div className="overlay absolute inset-0"> </div>
-                    <div className="container relative flex justify-center items-center  w-3/5 h-[556px] pr-12 pl-12 pt-[206px] flex-col items-cente gap-10">
-                        <h2 className='font-bold text-[40px] text-center'>
-                            {title}
-                        </h2>
-                        <p className='text-center'>
-                            {description}
-                        </p>
-                    </div>
-                </div>
-            </div >
-        </>
-    )
+'use client';
+
+import React from 'react';
+
+interface SectionHeroProps {
+  title: string;
+  description: string;
+  image: string;
 }
 
+export default function SectionHero({ title, description, image }: SectionHeroProps) {
+  return (
+    <section className="section-hero relative w-full flex justify-center items-center">
+      {/* Background image */}
+      <div
+        className="hero relative w-full flex justify-center items-center bg-cover bg-center min-h-[400px] md:min-h-[500px] lg:min-h-[556px]"
+        style={{ backgroundImage: `url(${image})` }}
+        role="banner"
+      >
+        {/* Overlay */}
+        <div className="overlay bg-overlay absolute inset-0" />
+
+        {/* Content */}
+        <div className="container relative z-10 flex flex-col items-center justify-center gap-6 px-4 sm:px-8 md:px-12 lg:px-20 text-center max-w-3xl">
+          <h2 className="font-bold text-[clamp(24px,5vw,40px)] leading-tight text-white">
+            {title}
+          </h2>
+          <p className="text-[clamp(14px,3vw,18px)] leading-relaxed text-white/90">
+            {description}
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}

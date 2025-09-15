@@ -1,48 +1,18 @@
-.values {
-  padding: 48px 48px;
-  .main-dev {
-    position: relative;
-    // width: 100%;
-    min-height: 342px;
-    .title {
-      h3 {
-        @apply text-primaryFont text-3xl font-bold;
-        font-family: "Din";
-      }
-      .description {
-        @apply w-4/5 min-h-20 text-SharedFontSub;
-        // width: 80%;
-        // min-height: 87px;
-        // color: #b8b8b8;
-      }
-    }
-    .side-dev {
-      border-radius: 32px;
-      position: absolute;
-      top: 1%;
-      left: 87.5%;
-      img {
-        border-radius: 32px;
-        object-fit: cover;
-      }
-    }
-  }
+.values-title {
+  @apply text-primaryFont text-xl sm:text-2xl lg:text-3xl font-bold;
+  font-family: "Din", sans-serif;
 }
 
-.vision {
-  padding: 40px 48px;
-  .img {
-    box-shadow: 0px 8px 45.1px 0px #001c3408, 0px -53px 52px 0px #00000008 inset;
-  }
-  h3 {
-    @apply text-MainColor text-[248px] absolute z-0 bottom-[53%] left-[47%] sm:left-[45%];
-    font-family: "amoshref-thulth";
-  }
-  .floating-dev {
-    @apply lg:left-[20%] left-[6%];
-    bottom: 108px;
-    p {
-      color: #1a3348;
-    }
-  }
+.vision-title {
+  @apply text-MainColor absolute z-0 left-1/2 transform -translate-x-1/2;
+  font-family: "amoshref-thulth", serif;
+}
+
+.vision-img {
+  box-shadow: 0px 8px 30px 0px #001c3408, 0px -30px 30px 0px #00000008 inset;
+}
+
+.floating-dev {
+  @apply lg:left-[20%] left-[5%] sm:left-[10%];
+  bottom: 60px;
 }
