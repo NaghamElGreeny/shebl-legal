@@ -1,6 +1,6 @@
 .mode {
   @apply w-10 h-5 p-[3px] rounded-3xl relative cursor-pointer flex flex-row items-center justify-center box-content gap-[2px]
-  dark:bg-primaryCard bg-darkCard transition duration-500 ease-in-out border border-2 border-primaryCard dark:border-darkCard;
+  dark:bg-primaryCard bg-darkCard transition duration-500 ease-in-out  border-2 border-primaryCard dark:border-darkCard;
 
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease, color 0.3s ease;

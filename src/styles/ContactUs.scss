@@ -1,16 +1,13 @@
 .contact-us {
   width: 100%;
-
   gap: 32px;
   padding-inline: 48px;
-
   .wrapper {
     width: 100%;
     .group1 {
       .shebl-contact-info {
         .feature-card {
           @apply w-72 h-14 gap-2 p-4 rounded-3xl bg-primaryCard dark:bg-darkCard border-SharedFontSub/30;
-          // width: 282px;
           height: 56px;
           gap: 8px;
           padding: 16px;
@@ -19,16 +16,12 @@
           p,
           a {
             @apply text-primaryFont dark:text-darkFont;
-            font-family: "din";
+            font-family: "din", sans-serif;
             line-height: 100%;
             letter-spacing: 0%;
           }
         }
       }
-    }
-    .group2 {
-      // width: 570px;
-      // height: 511px;
     }
   }
 }

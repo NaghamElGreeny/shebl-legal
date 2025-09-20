@@ -16,11 +16,11 @@
       @apply flex flex-col gap-5 lg:w-96;
       h3 {
         @apply font-bold sm:text-2xl text-lg text-primaryFont dark:text-darkFont;
-        font-family: "Din";
+        font-family: "Din",sans-serif;
       }
       p {
         @apply text-SharedFontSub;
-        font-family: "Din";
+        font-family: "Din",sans-serif;
         line-height: 100%;
       }
     }

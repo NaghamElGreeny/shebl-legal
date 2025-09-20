@@ -1,4 +1,5 @@
-@import "./variables";
+@use "./variables" as *;
+
 $default-width: 171px;
 .contact-primary-btn {
   @apply bg-MainColor text-sharedFont visible h-12  gap-2 p-4 items-center cursor-pointer;
@@ -13,6 +14,7 @@ $default-width: 171px;
 }
 .second-btn-clr {
   @apply bg-white/10 !text-MainColor;
+  -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
   color: var(--secondary-btn-txt) !important ;
   // .btn-icon {

@@ -19,13 +19,14 @@ export default function FeatureCard({ feature }: { feature: FeatureItem }) {
             0
           )}
         </h2> */}
-           {/* <h2 className="font-bold text-[clamp(1.5rem,4vw,2.5rem)]"> */}
-           <h2 className="font-bold ">
+        {/* <h2 className="font-bold text-[clamp(1.5rem,4vw,2.5rem)]"> */}
+        <h2 className="font-bold ">
           {inView ? <CountUp end={Number(feature.value)} duration={3} /> : 0}
         </h2>
         <div className="plus relative">
           +
           <Image
+            loading="lazy"
             src={feature.icon}
             alt={feature.key}
             // className="img left-5"

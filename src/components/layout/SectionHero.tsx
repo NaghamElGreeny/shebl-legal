@@ -3,19 +3,18 @@
 import React from 'react';
 
 interface SectionHeroProps {
-  title: string;
-  description: string;
-  image: string;
+readonly  title: string;
+readonly  description: string;
+readonly  image: string;
 }
 
 export default function SectionHero({ title, description, image }: SectionHeroProps) {
   return (
     <section className="section-hero relative w-full flex justify-center items-center">
       {/* Background image */}
-      <div
-        className="hero relative w-full flex justify-center items-center bg-cover bg-center min-h-[400px] md:min-h-[500px] lg:min-h-[556px]"
+      <header
+        className={`hero relative w-full flex justify-center items-center bg-cover bg-center min-h-[400px] md:min-h-[500px] lg:min-h-[556px]`}
         style={{ backgroundImage: `url(${image})` }}
-        role="banner"
       >
         {/* Overlay */}
         <div className="overlay bg-overlay absolute inset-0" />
@@ -29,7 +28,7 @@ export default function SectionHero({ title, description, image }: SectionHeroPr
             {description}
           </p>
         </div>
-      </div>
+      </header>
     </section>
   );
 }

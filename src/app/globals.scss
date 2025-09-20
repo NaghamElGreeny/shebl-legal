@@ -75,14 +75,7 @@
 }
 
 body {
-  // margin: 0;
-  // padding: 0;
-  // min-width: 100%;
-  // height: auto;
-  // background-color: #f2f4f5 !important;
 
-  // color: var(--foreground);
-  // min-height: 200vh;
   @apply font-[Din] bg-primaryBg dark:bg-darkBg text-sharedFont dark:text-darkFont h-auto min-w-full p-0 m-0;
 
   &::-webkit-scrollbar {

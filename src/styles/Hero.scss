@@ -1,10 +1,9 @@
-@import "./variables";
+@use "./variables" as *;
 
 .hero-section {
   width: 100%;
   min-height: 100vh;
   align-items: center;
-  // position: static;
   background: linear-gradient(
       180deg,
       rgba(0, 28, 52, 0.9) 6.45%,
@@ -24,12 +23,12 @@
     .description {
       h1 {
         @apply text-sharedFont;
-        font-family: "Ya Modern Pro";
+        font-family: "Ya Modern Pro",sans-serif;
         word-spacing: 2%;
       }
 
       p {
-        font-family: "Din";
+        font-family: "Din",sans-serif;
         margin-top: 24px;
       }
     }
@@ -45,9 +44,7 @@
   }
 
   .features {
-    // @apply w-[90%] h-[104px] -bottom-14 absolute justify-between px-8 py-6 lg:gap-x-3 rounded-3xl bg-primaryCard dark:bg-darkCard  z-10 flex flex-row items-center overflow-x-auto overflow-y-hidden;
     @apply w-[90%] h-[104px] -bottom-14 absolute justify-between px-8 py-6 lg:gap-x-3 rounded-3xl bg-primaryCard dark:bg-darkCard  z-10 flex flex-row items-center overflow-x-auto;
-    // -webkit-overflow-scrolling: auto;
     &::-webkit-scrollbar {
       display: none;
     }

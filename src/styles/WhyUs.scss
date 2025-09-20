@@ -1,12 +1,11 @@
-@import "./variables";
-// --numbers-gradient:linear-gradient(264.73deg, #CC966A 4.98%, #D39A6B 93.5%);
+@use "./variables" as *;
 .why-us {
   min-height: fit-content;
   .overlay {
     background: #001c34e6;
   }
   .container {
-    @apply py-10 px-4 md:px-11 lg:px-20; 
+    @apply py-10 px-4 md:px-11 lg:px-20;
     padding: 40px 72px;
 
     gap: 88px;
@@ -18,15 +17,12 @@
 
         .icon {
           position: relative;
-          //   width: 100px;
           display: flex;
           flex-direction: row;
-          // height: 83px;
           min-height: 70px;
           h2 {
-            font-family: "Din";
+            font-family: "Din",sans-serif;
             font-weight: 800;
-            // font-size: 64px;
             font-size: clamp(40px, 6vw, 64px);
             line-height: 100%;
             letter-spacing: 0%;
@@ -35,12 +31,11 @@
           }
 
           .plus {
-            font-family: "Din";
+            font-family: "Din",sans-serif;
             font-weight: 800;
             min-height: 70px;
             min-width: 50px;
             max-width: 60px;
-            // font-size: 64px;
             font-size: clamp(40px, 6vw, 64px);
             line-height: 100%;
             letter-spacing: 0%;
@@ -52,12 +47,10 @@
               bottom: 0;
               width: 40px;
               height: 40px;
-              // width: clamp(30px, 5vw, 40px);
-              // height: clamp(30px, 5vw, 40px);
-              // gap: 8px;
               border-radius: 32px;
               padding: 8px;
               background: rgba(255, 255, 255, 0.14);
+              -webkit-backdrop-filter: blur(28.2px);
               backdrop-filter: blur(28.2px);
               box-shadow: var(--numbers-gradient);
             }
@@ -65,7 +58,7 @@
         }
         p {
           @apply text-sm text-center text-SharedFontSub min-w-full;
-          font-family: "Din";
+          font-family: "Din",sans-serif;
         }
       }
     }

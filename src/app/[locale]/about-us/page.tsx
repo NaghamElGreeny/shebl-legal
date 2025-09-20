@@ -9,7 +9,6 @@ export default async function AboutPage() {
     const WhyUsData = await getWhyUsData();
     const data: mainData = await getSections();
     const banner = data.sections?.find((section: Section) => section.type === "about_banner");
-    // const WhyUsSection = data.sections?.find((section: Section) => section.type === "why_us");
     const aboutSection = data.sections?.find((section: Section) => section.type === "about");
     const goalsSection = data.sections?.find((section: Section) => section.type === "goals");
     const valuesSection = data.sections?.find((section: Section) => section.type === "core_values");

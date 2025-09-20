@@ -4,9 +4,19 @@ import createNextIntlPlugin from "next-intl/plugin";
 const nextConfig: NextConfig = {
   sassOptions: {
     implementation: "sass-embedded",
-  }, images: {
-    domains: ['shebl9.azmy.aait-d.com'],
   },
+  // images: {
+  //   domains: ['shebl9.azmy.aait-d.com'],
+  // },
+  images: {
+  remotePatterns: [
+    {
+      protocol: "https",
+      hostname: 'shebl9.azmy.aait-d.com',
+    },
+  ],
+}
+
 };
 
 const withNextIntl = createNextIntlPlugin();

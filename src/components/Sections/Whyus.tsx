@@ -13,14 +13,13 @@ export default function Whyus({ data }: { data: whyusdata[] }) {
   const features = data[0].features;
   return (
     <>
-      <div
-        className="wrapper w-full flex justify-center items-center"
-      >
+      <div className="wrapper w-full flex justify-center items-center">
         <div className="why-us relative flex justify-center items-center w-[95%] h-[90%] rounded-[40px] bg-[url('/assets/images/image.png')] bg-cover ">
           <div className="overlay absolute inset-0 rounded-[40px]"> </div>
           <div className="container relative flex flex-col justify-center items-center rounded-[40px] w-full">
             <div className="arrow absolute lg:visible top-0 right-0">
               <Image
+                loading="lazy"
                 src={"/assets/icons/arrow.png"}
                 alt="arrow"
                 width={36}

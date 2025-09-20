@@ -12,7 +12,7 @@
       @apply flex gap-4 justify-between text-primaryFont dark:text-darkFont;
 
       p {
-        font-family: "Din";
+        font-family: "Din",sans-serif;
         line-height: 100%;
         letter-spacing: 0%;
         @apply text-SharedFontSub;

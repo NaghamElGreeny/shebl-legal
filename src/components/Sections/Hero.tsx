@@ -9,9 +9,9 @@
 
 // export default function HeroSection({ maindata }: {
 //     maindata: whyusdata;
-// }) {    
+// }) {
 //       const locale = useLocale();
-    
+
 //     const t = useTranslations("Hero");
 //     if (!maindata) return
 //     const features = maindata.features;
@@ -19,7 +19,7 @@
 //         <div className="hero-section relative flex flex-col  h-[110vh] w-full">
 //             <div className="hero-container relative md:ps-12 p-4 lg:p-40 pt-[150px]">
 //                 <div className="title flex wrap items-center">
-//                     <Image src={'/assets/icons/hero-title-icon.png'} alt='hero' width={50} height={50}/>
+//                     <Image loading="lazy"  src={'/assets/icons/hero-title-icon.png'} alt='hero' width={50} height={50}/>
 //                     <p>{t("title")}</p>
 //                 </div>
 //                 <div className="description md:w-[80%]">
@@ -34,7 +34,7 @@
 //             <div className="features">
 //                 {features.map((feature: FeatureItem) => (
 //                     <div className="feature-card" key={feature.id}>
-//                         <Image src={feature.icon} alt={feature.value} width={24} height={24}/>
+//                         <Image loading="lazy"  src={feature.icon} alt={feature.value} width={24} height={24}/>
 //                         <div>{feature.value}</div>
 //                     </div>
 //                 ))}
@@ -43,15 +43,15 @@
 //         </div>
 //     );
 // }
-'use client';
+"use client";
 
-import '../../styles/Hero.scss';
-import Link from 'next/link';
-import Image from 'next/image';
-import { useLocale, useTranslations } from 'next-intl';
+import "../../styles/Hero.scss";
+import Link from "next/link";
+import Image from "next/image";
+import { useLocale, useTranslations } from "next-intl";
 
-import { FeatureItem, whyusdata } from '../../../types';
-import PrimaryBtn from '../ui/PrimaryBtn';
+import { FeatureItem, whyusdata } from "../../../types";
+import PrimaryBtn from "../ui/PrimaryBtn";
 
 type HeroSectionProps = {
   maindata: whyusdata | null;
@@ -59,7 +59,7 @@ type HeroSectionProps = {
 
 export default function HeroSection({ maindata }: HeroSectionProps) {
   const locale = useLocale();
-  const t = useTranslations('Hero');
+  const t = useTranslations("Hero");
 
   if (!maindata) return null;
 
@@ -69,7 +69,6 @@ export default function HeroSection({ maindata }: HeroSectionProps) {
     <section className="hero-section relative flex flex-col h-[110vh] w-full">
       {/* Main Container */}
       <div className="hero-container relative p-4 md:ps-12 lg:p-40 pt-[150px] ">
-        
         {/* Title */}
         <div className="title flex flex-wrap items-center gap-2">
           <Image
@@ -79,16 +78,14 @@ export default function HeroSection({ maindata }: HeroSectionProps) {
             height={50}
             priority
           />
-          <p className="text-lg font-medium">{t('title')}</p>
+          <p className="text-lg font-medium">{t("title")}</p>
         </div>
 
         {/* Description */}
         <div className="description md:w-[80%] mt-4">
           <h1
             className={`font-semibold ${
-              locale === 'en'
-                ? 'lg:text-[50px]'
-                : 'lg:text-[80px]'
+              locale === "en" ? "lg:text-[50px]" : "lg:text-[80px]"
             } md:text-[60px] sm:text-[50px] text-[30px]`}
           >
             {title}
@@ -99,23 +96,28 @@ export default function HeroSection({ maindata }: HeroSectionProps) {
         {/* Contact Section */}
         <div className="contact flex flex-wrap items-center gap-4 mt-6">
           <Link href="/contact-us">
-            <PrimaryBtn text={t('contact')} width="130px" />
+            <PrimaryBtn text={t("contact")} width="130px" />
           </Link>
-          <p className="text-sm">{t('contactAdvice')}</p>
+          <p className="text-sm">{t("contactAdvice")}</p>
         </div>
       </div>
 
       {/* Features */}
       {features?.length > 0 && (
-                    <div className="features">
-                {features.map((feature: FeatureItem) => (
-                    <div className="feature-card" key={feature.id}>
-                        <Image src={feature.icon} alt={feature.value} width={24} height={24}/>
-                        <div>{feature.value}</div>
-                    </div>
-                ))}
-
+        <div className="features">
+          {features.map((feature: FeatureItem) => (
+            <div className="feature-card" key={feature.id}>
+              <Image
+                loading="lazy"
+                src={feature.icon}
+                alt={feature.value}
+                width={24}
+                height={24}
+              />
+              <div>{feature.value}</div>
             </div>
+          ))}
+        </div>
       )}
     </section>
   );

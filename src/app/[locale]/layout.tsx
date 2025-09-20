@@ -10,11 +10,15 @@ import "aos/dist/aos.css";
 import ScrollBtn from "@/src/components/ui/ScrollBtn";
 import { Metadata } from "next";
 
-
-export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: string };
+}): Promise<Metadata> {
   const locale = params.locale;
 
   return {
+    metadataBase: new URL("https://shebl-legal.vercel.app"),
     title: locale === "ar" ? "شبل" : "Shebl",
     description:
       locale === "ar"
@@ -29,7 +33,7 @@ export async function generateMetadata({ params }: { params: { locale: string } 
         locale === "ar"
           ? "تعرف على أهداف شبل ورؤيته وقيمه الأساسية."
           : "Discover Shebl’s goals, vision, and core values.",
-      url: `https:/shebl-legal.vercel.app/${locale}`,
+      url: `https://shebl-legal.vercel.app/${locale}`,
       siteName: "Shebl",
       images: [
         {
@@ -50,33 +54,35 @@ export default async function LocaleLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
+  params: { locale: string };
 }) {
   // Ensure that the incoming `locale` is valid
-  const { locale } = await params;
+  const { locale } = params;
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
 
-  const appCookies = await cookies()
+  const appCookies = await cookies();
 
-  const themeMode = appCookies.get('modeLayout')
+  const themeMode = appCookies.get("modeLayout");
 
   return (
-    <html className={`${themeMode ? themeMode : ''}`} lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
+    <html
+      className={`${themeMode ? themeMode.value : ""}`}
+      lang={locale}
+      dir={locale === "ar" ? "rtl" : "ltr"}
+    >
       <body className=" flex flex-col min-h-screen">
         {/* <ChangeThem /> */}
         <NextIntlClientProvider>
           <>
             <AosWrapper>
-
               <Navbar />
               {children}
               <Footer />
             </AosWrapper>
             <ScrollBtn />
           </>
-
         </NextIntlClientProvider>
       </body>
     </html>

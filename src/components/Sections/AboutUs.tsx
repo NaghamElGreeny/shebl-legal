@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import Link from "next/link";
 import PrimaryBtn from "../ui/PrimaryBtn";
@@ -8,7 +8,7 @@ import { FeatureItem, whyusdata } from "@/types";
 import Image from "next/image";
 
 interface AboutUsProps {
-  about: whyusdata;
+  readonly about: whyusdata;
 }
 
 export default function AboutUs({ about }: AboutUsProps) {
@@ -17,9 +17,24 @@ export default function AboutUs({ about }: AboutUsProps) {
   const { title, description, features } = about;
 
   const serviceImages = [
-    { src: "/assets/images/serv1.png", z: "z-30", delay: "0", alt: "Service 1" },
-    { src: "/assets/images/serv2.png", z: "z-20", delay: "300", alt: "Service 2" },
-    { src: "/assets/images/serv3.png", z: "z-10", delay: "600", alt: "Service 3" },
+    {
+      src: "/assets/images/serv1.png",
+      z: "z-30",
+      delay: "0",
+      alt: "Service 1",
+    },
+    {
+      src: "/assets/images/serv2.png",
+      z: "z-20",
+      delay: "300",
+      alt: "Service 2",
+    },
+    {
+      src: "/assets/images/serv3.png",
+      z: "z-10",
+      delay: "600",
+      alt: "Service 3",
+    },
   ];
 
   const getAosProps = (delay: string) => ({
@@ -43,6 +58,7 @@ export default function AboutUs({ about }: AboutUsProps) {
               data-aos-delay={`${index * 200}`}
             >
               <Image
+                loading="lazy"
                 src={feature.icon}
                 alt={feature.value}
                 width={32}
@@ -59,23 +75,23 @@ export default function AboutUs({ about }: AboutUsProps) {
         {/* Services Icons */}
         <div className="flex gap-4 items-center">
           <div className="flex relative ps-5">
-            {serviceImages.map((img, index) => (
+            {serviceImages.map((img) => (
               <Image
-                key={index}
+                loading="lazy"
+                key={img.z}
                 src={img.src}
                 alt={img.alt}
                 width={50}
                 height={50}
-                className={`w-[50px] h-[50px] rounded-full border-[3.5px] border-[var(--bg-color)] ${img.z} ${
-                  locale === "en" ? "-ml-[20px]" : "-mr-[20px]"
-                }`}
+                className={`w-[50px] h-[50px] rounded-full border-[3.5px] border-[var(--bg-color)] ${
+                  img.z
+                } ${locale === "en" ? "-ml-[20px]" : "-mr-[20px]"}`}
                 {...getAosProps(img.delay)}
               />
             ))}
           </div>
           <p
-            className="text-sm sm:text-base"
-            style={{ color: "var(--font-sub2)" }}
+            className="text-sm sm:text-base text-SharedFontSub"
             data-aos="fade-in"
             data-aos-delay="800"
           >
